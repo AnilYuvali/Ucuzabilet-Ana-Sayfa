@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/other/3d-loading.gif",
+      "fileName": "3d-loading.gif",
+      "mimeType": "image/gif",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2025/12/08/02%20-%20maximum%20-%20loading%20web_20251208113330.jpg",
+      "fileName": "loading-maximum.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/02/25/600x240_20260225090313.jpg",
+      "fileName": "loading-600x240-a.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/02/27/600x240%20%281%29_20260227103409.jpg",
+      "fileName": "loading-600x240-b.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/02/27/600x240-2_20260227103302.jpg",
+      "fileName": "loading-600x240-c.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/02/25/600x240_20260225090019.jpg",
+      "fileName": "loading-600x240-d.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image"
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/icons/favicon-ub-blue.ico",
+      "fileName": "favicon-ub-blue.ico",
+      "mimeType": "image/x-icon",
+      "type": "image"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/firebase-messaging-sw.js?v=1.4.6",
+      "fileName": "firebase-messaging-sw.js",
+      "mimeType": "application/javascript",
+      "type": "Script"
+    }
+  ]
+}

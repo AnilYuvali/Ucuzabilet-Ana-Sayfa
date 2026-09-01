@@ -1,0 +1,60 @@
+/* User-requested desktop header refinement. */
+.homepageHeaderSupport {
+  position: absolute;
+  top: 184px;
+  left: 50%;
+  z-index: 1;
+  width: calc(100% - 48px);
+  max-width: 980px;
+  margin: 0;
+  transform: translateX(-50%);
+  color: #4e4e4e;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #header-navigation .navbar-new .navbar-collapse {
+    gap: 24px;
+    justify-content: flex-start !important;
+  }
+
+  #header-navigation .navbar-brand-web {
+    margin-right: 0 !important;
+  }
+
+  #header-navigation .navbar-new .navbar-nav-right {
+    margin-left: auto !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .homepageHeaderSupport {
+    top: 161px;
+    max-width: 720px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #searchForm.searchFormPosition {
+    padding-top: 125px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .homepageHeaderSupport {
+    top: 48px;
+    width: calc(100% - 32px);
+    max-width: 520px;
+    color: #4e4e4e;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  #searchForm.searchFormPosition {
+    padding-top: 94px !important;
+  }
+}

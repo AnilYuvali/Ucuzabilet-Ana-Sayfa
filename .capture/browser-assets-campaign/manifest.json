@@ -1,0 +1,685 @@
+{
+  "assets": [
+    {
+      "contentType": "image/svg+xml",
+      "id": "78ba0a8190c7a982",
+      "kind": "image",
+      "name": "ub-ets-logo.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/78ba0a8190c7a982.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/ub-ets-logo.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "4f34a2b0e755df71",
+      "kind": "image",
+      "name": "WhatsApp%20Image%202026-07-09%20at%2014.30.21_20260709143037.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/4f34a2b0e755df71.webp",
+      "url": "https://images.ucuzabilet.com/b2c/backgroundManagement/2026/07/09/WhatsApp%20Image%202026-07-09%20at%2014.30.21_20260709143037.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4b6b6adb4d719148",
+      "kind": "image",
+      "name": "ub-ets-logo-new.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/4b6b6adb4d719148.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/ub-ets-logo-new.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "422772a5e45af448",
+      "kind": "image",
+      "name": "calendar.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/422772a5e45af448.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/calendar.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "467ef3647a6ac7b6",
+      "kind": "image",
+      "name": "543x200%20(28)_20260618144321.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/467ef3647a6ac7b6.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/06/18/543x200%20(28)_20260618144321.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f8e1916286bec24c",
+      "kind": "image",
+      "name": "web-543x200%20(47)_20260821094259.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/f8e1916286bec24c.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/08/21/web-543x200%20(47)_20260821094259.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9adf4b5f44a71fcc",
+      "kind": "image",
+      "name": "543x200-1%20(2)_20260609171304.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/9adf4b5f44a71fcc.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/06/09/543x200-1%20(2)_20260609171304.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "de33cf5cd8bd8f9a",
+      "kind": "image",
+      "name": "web-543x200_20260824155111.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/de33cf5cd8bd8f9a.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/08/24/web-543x200_20260824155111.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "616f2b95805e535b",
+      "kind": "image",
+      "name": "web-543x200%20(49)_20260825113435.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/616f2b95805e535b.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/08/25/web-543x200%20(49)_20260825113435.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "5b6fe21a17a1917b",
+      "kind": "image",
+      "name": "web-543x200%20(50)_20260825155348.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/5b6fe21a17a1917b.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/08/25/web-543x200%20(50)_20260825155348.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "adc009f186cbb9fe",
+      "kind": "image",
+      "name": "web-543x200_20260827114014.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/adc009f186cbb9fe.webp",
+      "url": "https://images.ucuzabilet.com/b2c/bannerManagement/2026/08/27/web-543x200_20260827114014.webp"
+    },
+    {
+      "contentType": "image/png",
+      "id": "1b2a84ccb242f199",
+      "kind": "image",
+      "name": "csprite_v3.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/1b2a84ccb242f199.png",
+      "url": "https://images.ucuzabilet.com/resources/img/sprite/csprite_v3.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "12a0f10b2f23ee11",
+      "kind": "image",
+      "name": "brand-ets.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/12a0f10b2f23ee11.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/brand-ets.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "19dd3516b688ec32",
+      "kind": "image",
+      "name": "scribble.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/19dd3516b688ec32.svg",
+      "url": "https://www.ucuzabilet.com/resources/img/icons/scribble.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3902b5ad1c38e75c",
+      "kind": "image",
+      "name": "help.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/3902b5ad1c38e75c.svg",
+      "url": "https://www.ucuzabilet.com/resources/img/icons/help.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "de21fc05a9ea8428",
+      "kind": "image",
+      "name": "signin.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/de21fc05a9ea8428.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/signin.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ef3907d99d8ad074",
+      "kind": "image",
+      "name": "lang-icon.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/ef3907d99d8ad074.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/lang-icon.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "44a66ccca21f794f",
+      "kind": "image",
+      "name": "searchflight.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/44a66ccca21f794f.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchflight.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "0bbf973240c82f31",
+      "kind": "image",
+      "name": "searchhotel.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/0bbf973240c82f31.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchhotel.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "1447da255cd31599",
+      "kind": "image",
+      "name": "buss.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/1447da255cd31599.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/buss.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3b022331ca8ad298",
+      "kind": "image",
+      "name": "searchcar.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/3b022331ca8ad298.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchcar.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "32c46ab9778769c9",
+      "kind": "image",
+      "name": "searchtransfer.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/32c46ab9778769c9.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchtransfer.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b0c4d3ab23b9fdc1",
+      "kind": "image",
+      "name": "plane-departure.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/b0c4d3ab23b9fdc1.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/plane-departure.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "34a1c082ce7132b6",
+      "kind": "image",
+      "name": "exchange.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/34a1c082ce7132b6.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/exchange.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "b40fd563cf355985",
+      "kind": "image",
+      "name": "Frame%201686553012_20260609100242.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/b40fd563cf355985.webp",
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012_20260609100242.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ebab5e87f7509b90",
+      "kind": "image",
+      "name": "plane-arrival.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/ebab5e87f7509b90.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/plane-arrival.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "f725bd360aee8abe",
+      "kind": "image",
+      "name": "passengers.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/f725bd360aee8abe.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/passengers.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "a1910125a10b61a7",
+      "kind": "image",
+      "name": "angle-down.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/a1910125a10b61a7.png",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/angle-down.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f16cbc0e746bed12",
+      "kind": "image",
+      "name": "ikon_20260717091928.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/f16cbc0e746bed12.webp",
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/07/17/ikon_20260717091928.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "fd22a768dadc73ee",
+      "kind": "image",
+      "name": "Frame%201686553012%20(2)_20260609100335.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/fd22a768dadc73ee.webp",
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012%20(2)_20260609100335.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "1d0b714be1559175",
+      "kind": "image",
+      "name": "Frame%201686553012%20(3)_20260609100359.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/1d0b714be1559175.webp",
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012%20(3)_20260609100359.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "fc14e8a13352378e",
+      "kind": "image",
+      "name": "arrow-right-blue.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/fc14e8a13352378e.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/arrow-right-blue.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "5110072a14cbd687",
+      "kind": "image",
+      "name": "360x278%20(66)_20260824132030.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/5110072a14cbd687.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(66)_20260824132030.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "962c36825dd4c619",
+      "kind": "image",
+      "name": "ubMobileAppFlightTr.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/962c36825dd4c619.webp",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/mobile/ubMobileAppFlightTr.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "c0d84724e3bd230a",
+      "kind": "image",
+      "name": "googleplay.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/c0d84724e3bd230a.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/googleplay.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "00ccc124201c8315",
+      "kind": "image",
+      "name": "360x278%20(68)_20260825150936.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/00ccc124201c8315.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(68)_20260825150936.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "42d97ee18cea9bb6",
+      "kind": "image",
+      "name": "appstore.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/42d97ee18cea9bb6.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/appstore.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "64101974db5ea48c",
+      "kind": "image",
+      "name": "mobil-app-qr.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/64101974db5ea48c.webp",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/mobil-app-qr.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "d0693b01a406b1f5",
+      "kind": "image",
+      "name": "appgallery.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/d0693b01a406b1f5.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/appgallery.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "af314a88bf8e25b3",
+      "kind": "image",
+      "name": "25px-VF.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/af314a88bf8e25b3.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-VF.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "38122ce71c0f34bc",
+      "kind": "image",
+      "name": "25px-PC.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/38122ce71c0f34bc.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-PC.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "b0f95b36689a964c",
+      "kind": "image",
+      "name": "25px-DP.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/b0f95b36689a964c.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-DP.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "42f9b41b4c96c517",
+      "kind": "image",
+      "name": "25px-VY.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/42f9b41b4c96c517.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-VY.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f0b58334c8a3f6a6",
+      "kind": "image",
+      "name": "25px-C6.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/f0b58334c8a3f6a6.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-C6.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "0f0c494d8b7b7d48",
+      "kind": "image",
+      "name": "25px-XQ.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/0f0c494d8b7b7d48.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-XQ.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "b18716b64900a6c5",
+      "kind": "image",
+      "name": "25px-W6.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/b18716b64900a6c5.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-W6.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "dcad409d31cb327f",
+      "kind": "image",
+      "name": "25px-MH.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/dcad409d31cb327f.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-MH.png"
+    },
+    {
+      "contentType": "image/gif",
+      "id": "182a177224fac78f",
+      "kind": "image",
+      "name": "bus-loading.gif",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/182a177224fac78f.gif",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/bus-loading.gif"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "715fe6b8c0bad7a1",
+      "kind": "image",
+      "name": "arrow-right.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/715fe6b8c0bad7a1.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/arrow-right.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "2338688a938e8473",
+      "kind": "image",
+      "name": "ub-ets-logo-new-black.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/2338688a938e8473.svg",
+      "url": "https://images.ucuzabilet.com/resources/img/ub-ets-logo-new-black.svg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "0cb08a0b604866df",
+      "kind": "image",
+      "name": "flags@2x.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/0cb08a0b604866df.png",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/flags@2x.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ebdf613a0e803706",
+      "kind": "image",
+      "name": "360x278%20(44)_20260618141746.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/ebdf613a0e803706.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(44)_20260618141746.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "fe0b70e77b1986d5",
+      "kind": "image",
+      "name": "360x278_20260817110135.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/fe0b70e77b1986d5.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260817110135.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "3700fa3661f35d9e",
+      "kind": "image",
+      "name": "360x278%20(62)_20260821131705.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/3700fa3661f35d9e.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(62)_20260821131705.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "4eb596854e31e50d",
+      "kind": "image",
+      "name": "360x278_20260827112823.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/4eb596854e31e50d.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260827112823.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3392bab6ad3e731e",
+      "kind": "image",
+      "name": "arrow-up.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/3392bab6ad3e731e.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/arrow-up.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "d18718bb30b22303",
+      "kind": "image",
+      "name": "25px-TK.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/d18718bb30b22303.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-TK.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "0b06e854eedc6cfa",
+      "kind": "image",
+      "name": "25px-J2.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/0b06e854eedc6cfa.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-J2.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "aba900bd20a72ba8",
+      "kind": "image",
+      "name": "25px-EK.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/aba900bd20a72ba8.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-EK.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "b76d282f2cd8117c",
+      "kind": "image",
+      "name": "25px-SV.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/b76d282f2cd8117c.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-SV.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "d012227fb89e1543",
+      "kind": "image",
+      "name": "25px-LH.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/d012227fb89e1543.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-LH.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "207126cbb05ed18c",
+      "kind": "image",
+      "name": "25px-G9.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/207126cbb05ed18c.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-G9.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "514658e7e9d4f56a",
+      "kind": "image",
+      "name": "25px-KE.png",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/514658e7e9d4f56a.png",
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-KE.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "d30cc1c55f914434",
+      "kind": "image",
+      "name": "facebook-logo.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/d30cc1c55f914434.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/facebook-logo.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "bce5c34277a60546",
+      "kind": "image",
+      "name": "twitter-logo.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/bce5c34277a60546.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/twitter-logo.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "08ad3a2d70573070",
+      "kind": "image",
+      "name": "instagram-logo.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/08ad3a2d70573070.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/instagram-logo.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5316a597dff2ef4d",
+      "kind": "image",
+      "name": "linkedin.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/5316a597dff2ef4d.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/linkedin.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "8a2817c28db9c698",
+      "kind": "image",
+      "name": "contact7.svg",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/8a2817c28db9c698.svg",
+      "url": "https://www.ucuzabilet.com/resources/ub/img/contact7.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f9e451ef8365be92",
+      "kind": "image",
+      "name": "360x278%20(61)_20260820141817.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/f9e451ef8365be92.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(61)_20260820141817.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "a95ae630e9d811ea",
+      "kind": "image",
+      "name": "360x278_20260824154654.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/a95ae630e9d811ea.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260824154654.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "eef2b1bdffd74f0f",
+      "kind": "image",
+      "name": "360x278_20260723140026.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/eef2b1bdffd74f0f.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260723140026.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "6af07376fd89fbcc",
+      "kind": "image",
+      "name": "360x278-6_20260609134214.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/6af07376fd89fbcc.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-6_20260609134214.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "6a901d297b1fb26f",
+      "kind": "image",
+      "name": "360x278-5%20(1)_20260609134112.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/6a901d297b1fb26f.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-5%20(1)_20260609134112.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "065395941bc8eb41",
+      "kind": "image",
+      "name": "360x278-8_20260609134430.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/065395941bc8eb41.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-8_20260609134430.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "6c60df021e689e6d",
+      "kind": "image",
+      "name": "360x278-4%20(2)_20260609171212.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/6c60df021e689e6d.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-4%20(2)_20260609171212.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "724bbd64e0246f02",
+      "kind": "image",
+      "name": "360x278%20(1)_20260730134536.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/724bbd64e0246f02.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(1)_20260730134536.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "e5d34d381d130857",
+      "kind": "image",
+      "name": "360x278-3%20(4)_20260609175226.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/e5d34d381d130857.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-3%20(4)_20260609175226.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "349fe6b6538eb371",
+      "kind": "image",
+      "name": "360x278-2%20(6)_20260609175202.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/349fe6b6538eb371.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-2%20(6)_20260609175202.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "765c4b6f8e4befc3",
+      "kind": "image",
+      "name": "360x278-3%20(2)_20260609134150.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/765c4b6f8e4befc3.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-3%20(2)_20260609134150.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "725c9de1ab8e19d9",
+      "kind": "image",
+      "name": "360x278-9_20260609134051.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/725c9de1ab8e19d9.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-9_20260609134051.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9bdb3103a41f58e5",
+      "kind": "image",
+      "name": "360x278-2%20(5)_20260609170934.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/9bdb3103a41f58e5.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-2%20(5)_20260609170934.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "568dad6978280678",
+      "kind": "image",
+      "name": "360x278-1%20(4)_20260609171108.webp",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/568dad6978280678.webp",
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278-1%20(4)_20260609171108.webp"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "7dfdcfe3e37a4471",
+      "kind": "image",
+      "name": "svg-1",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/7dfdcfe3e37a4471.svg",
+      "url": "inline-svg:7dfdcfe3e37a4471"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "646c412e711c066c",
+      "kind": "image",
+      "name": "svg-2",
+      "path": "/var/folders/cc/6qb59s0n3r35vv65_bf1lgy1jhtxcn/T/browser-use/assets/8183aa13-d01c-4071-8ebd-db83509d72eb/646c412e711c066c.svg",
+      "url": "inline-svg:646c412e711c066c"
+    }
+  ],
+  "failures": [
+    {
+      "contentType": null,
+      "id": "7901e2ef445d00f4",
+      "name": "favicon-ub-blue.ico",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at eX (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://images.ucuzabilet.com/resources/img/icons/favicon-ub-blue.ico"
+    }
+  ]
+}

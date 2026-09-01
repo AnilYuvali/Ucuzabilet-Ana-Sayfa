@@ -1,0 +1,336 @@
+{
+  "assets": [
+    {
+      "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2",
+      "fileName": "3ac757485912-JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2",
+      "mimeType": "font/woff2",
+      "type": "font",
+      "bytes": 21492
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2",
+      "fileName": "7744a5a46dc6-JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2",
+      "mimeType": "font/woff2",
+      "type": "font",
+      "bytes": 24072
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2",
+      "fileName": "155bc5d4aa04-JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2",
+      "mimeType": "font/woff2",
+      "type": "font",
+      "bytes": 10620
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/404/404-background.jpg",
+      "fileName": "4ed295149c2b-404-background.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 248812
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/banner/hotel-campaign/kampanya-banner-arkaplan.jpg",
+      "fileName": "857ec5d263eb-kampanya-banner-arkaplan.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 8948
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/banner/kobi-banner-img.jpg",
+      "fileName": "d2ffe735b91c-kobi-banner-img.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 10930
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/hotel/hotel-preloader-sprite.png",
+      "fileName": "ab7135a68c65-hotel-preloader-sprite.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 27490
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/icons/datepicker-ok.png",
+      "fileName": "2ad937af5642-datepicker-ok.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 194
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/landing/generic-map.jpg",
+      "fileName": "dc9ed9798787-generic-map.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 17549
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/sprite/vakifbank-world-logo.png",
+      "fileName": "8549be819590-vakifbank-world-logo.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 2093
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/yurtdisi-rentacar.jpg",
+      "fileName": "c78fd33d72be-yurtdisi-rentacar.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 41705
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/yurtici-rentacar.jpg",
+      "fileName": "2262d833d816-yurtici-rentacar.jpg",
+      "mimeType": "image/jpeg",
+      "type": "image",
+      "bytes": 26521
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/icons/datepicker-triangle.png",
+      "fileName": "7d89d8577589-datepicker-triangle.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 208
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/icons/dropdown-arrow.svg",
+      "fileName": "316ccb544df3-dropdown-arrow.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 630
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/icons/question-mark-rounded.png",
+      "fileName": "fed7697d166f-question-mark-rounded.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 1245
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/ub_hp_sprite.png",
+      "fileName": "3206f57bdc90-ub_hp_sprite.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 41570
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/datepicker-left.svg",
+      "fileName": "675e52c76518-datepicker-left.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 688
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/datepicker-right.svg",
+      "fileName": "3287a74a0d79-datepicker-right.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 688
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/ui-icons_444444_256x240.png",
+      "fileName": "8908516939a4-ui-icons_444444_256x240.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 3803
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/font/ub-webfont.svg?ypyzcb#ub-webfont",
+      "fileName": "eff1f90b66f2-ub-webfont.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 59097
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/font/ub-webfont.ttf?ypyzcb",
+      "fileName": "7ea1eab3ce57-ub-webfont.ttf",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 16028
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/font/ub-webfont.woff?ypyzcb",
+      "fileName": "d39ccade88b8-ub-webfont.woff",
+      "mimeType": "application/font-woff",
+      "type": "font",
+      "bytes": 16104
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Inter-greek-ext.woff2",
+      "fileName": "839626902ba3-Inter-greek-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 11220
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Inter-vietnamese.woff2",
+      "fileName": "7eac9957ed99-Inter-vietnamese.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 10280
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-Italic-cyrillic-ext.woff2",
+      "fileName": "c50a78828a99-Montserrat-Italic-cyrillic-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 24480
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-Italic-cyrillic.woff2",
+      "fileName": "e355fb608209-Montserrat-Italic-cyrillic.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 22136
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-Italic-latin-ext.woff2",
+      "fileName": "b93d35cfb423-Montserrat-Italic-latin-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 72440
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-Italic-latin.woff2",
+      "fileName": "79890cdb4606-Montserrat-Italic-latin.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 37356
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-Italic-vietnamese.woff2",
+      "fileName": "2d5df6dadbd1-Montserrat-Italic-vietnamese.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 11404
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-cyrillic-ext.woff2",
+      "fileName": "66cc53d93e02-Montserrat-cyrillic-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 24064
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-cyrillic.woff2",
+      "fileName": "c43c4e59a843-Montserrat-cyrillic.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 21500
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-vietnamese.woff2",
+      "fileName": "df8b372a4a4c-Montserrat-vietnamese.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "font",
+      "bytes": 10516
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/arrow-right.svg",
+      "fileName": "7b02de5aa6ef-arrow-right.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 478
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/campaign-background.svg",
+      "fileName": "a28e6155ec94-campaign-background.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 8796
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/flags.png",
+      "fileName": "824e56f361f8-flags.png",
+      "mimeType": "image/png",
+      "type": "image",
+      "bytes": 20037
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/check-circle.svg",
+      "fileName": "5e009df8289d-check-circle.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 544
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/plane-return-offer.webp",
+      "fileName": "39f23f5b7d64-plane-return-offer.webp",
+      "mimeType": "image/webp",
+      "type": "image",
+      "bytes": 111160
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/yellow-ok.svg",
+      "fileName": "8f3d16dc5096-yellow-ok.svg",
+      "mimeType": "image/svg+xml",
+      "type": "image",
+      "bytes": 692
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://fonts.googleapis.com/a42b6e465d3c-JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://fonts.googleapis.com/c4f4a8cd0b92-JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/04a6a0f60f57-Inter-greek.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/04c510dcb540-Inter-latin.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/24ef068564fd-Inter-cyrillic-ext.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/794104f224b3-Inter-cyrillic.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/996cb11a9fea-Montserrat-latin-ext.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/bffb800f99ae-Inter-latin-ext.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/dd8f45a7d816-Montserrat-latin.woff2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/0cb08a0b6048-flags_2x.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/1b2a84ccb242-csprite_v3.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/3392bab6ad3e-arrow-up.svg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/ui-icons_777620_256x240.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/ui-icons_777777_256x240.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/ui-icons_cc0000_256x240.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/css/v2/images/ui-icons_ffffff_256x240.png",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

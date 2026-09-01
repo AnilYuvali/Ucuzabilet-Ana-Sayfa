@@ -1,0 +1,1423 @@
+{
+  "captured": [
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/sprite/csprite_v3.png",
+      "mimeType": "image/png",
+      "type": "Image",
+      "status": 200,
+      "fileName": "1b2a84ccb242-csprite_v3.png",
+      "bytes": 48410,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Inter-greek.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "Font",
+      "status": 200,
+      "fileName": "04a6a0f60f57-Inter-greek.woff2",
+      "bytes": 19072,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Inter-cyrillic.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "Font",
+      "status": 200,
+      "fileName": "794104f224b3-Inter-cyrillic.woff2",
+      "bytes": 18820,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Inter-cyrillic-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "Font",
+      "status": 200,
+      "fileName": "24ef068564fd-Inter-cyrillic-ext.woff2",
+      "bytes": 25908,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-6KNMZ",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "95433809916d-gtm.js",
+      "bytes": 694994,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/brand-ets.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "12a0f10b2f23-brand-ets.svg",
+      "bytes": 8797,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012_20260609100242.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "b40fd563cf35-Frame_1686553012_20260609100242.webp",
+      "bytes": 1208,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/icons/scribble.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "19dd3516b688-scribble.svg",
+      "bytes": 859,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/img/icons/help.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "3902b5ad1c38-help.svg",
+      "bytes": 1134,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/signin.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "de21fc05a9ea-signin.svg",
+      "bytes": 1096,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/lang-icon.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "ef3907d99d8a-lang-icon.svg",
+      "bytes": 1125,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchflight.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "44a66ccca21f-searchflight.svg",
+      "bytes": 511,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/07/17/ikon_20260717091928.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "f16cbc0e746b-ikon_20260717091928.webp",
+      "bytes": 2154,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchhotel.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "0bbf973240c8-searchhotel.svg",
+      "bytes": 1123,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012%20(2)_20260609100335.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "fd22a768dadc-Frame_1686553012_2__20260609100335.webp",
+      "bytes": 1286,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/buss.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "1447da255cd3-buss.svg",
+      "bytes": 2765,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchcar.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "3b022331ca8a-searchcar.svg",
+      "bytes": 734,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/searchtransfer.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "32c46ab97787-searchtransfer.svg",
+      "bytes": 1177,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/b2c/iconManagement/2026/06/09/Frame%201686553012%20(3)_20260609100359.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "1d0b714be155-Frame_1686553012_3__20260609100359.webp",
+      "bytes": 1324,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/plane-departure.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "b0c4d3ab23b9-plane-departure.svg",
+      "bytes": 486,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(66)_20260824132030.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "5110072a14cb-360x278_66__20260824132030.webp",
+      "bytes": 14578,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/exchange.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "34a1c082ce71-exchange.svg",
+      "bytes": 1539,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/plane-arrival.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "ebab5e87f750-plane-arrival.svg",
+      "bytes": 490,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/passengers.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "f725bd360aee-passengers.svg",
+      "bytes": 524,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/angle-down.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "a1910125a10b-angle-down.png",
+      "bytes": 222,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/arrow-right-blue.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "fc14e8a13352-arrow-right-blue.svg",
+      "bytes": 230,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/mobile/ubMobileAppFlightTr.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "962c36825dd4-ubMobileAppFlightTr.webp",
+      "bytes": 21362,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/googleplay.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "c0d84724e3bd-googleplay.svg",
+      "bytes": 5744,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(68)_20260825150936.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "00ccc124201c-360x278_68__20260825150936.webp",
+      "bytes": 15724,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/appstore.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "42d97ee18cea-appstore.svg",
+      "bytes": 6616,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/car-icon/mobil-app-qr.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "64101974db5e-mobil-app-qr.webp",
+      "bytes": 3376,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/bus-loading.gif",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "182a177224fa-bus-loading.gif",
+      "bytes": 147007,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/icons/arrow-right.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "715fe6b8c0ba-arrow-right.svg",
+      "bytes": 394,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/homepage/appgallery.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "d0693b01a406-appgallery.svg",
+      "bytes": 7077,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-DP.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "b0f95b36689a-25px-DP.png",
+      "bytes": 356,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-VY.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "42f9b41b4c96-25px-VY.png",
+      "bytes": 316,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-C6.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "f0b58334c8a3-25px-C6.png",
+      "bytes": 292,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-XQ.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "0f0c494d8b7b-25px-XQ.png",
+      "bytes": 566,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-VF.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "af314a88bf8e-25px-VF.png",
+      "bytes": 440,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-PC.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "38122ce71c0f-25px-PC.png",
+      "bytes": 480,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-W6.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "b18716b64900-25px-W6.png",
+      "bytes": 626,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/flights-logo/logo25x19/25px-MH.png",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "dcad409d31cb-25px-MH.png",
+      "bytes": 438,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "03dc17d51117-email-decode.min.js",
+      "bytes": 1239,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/popper.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "4e22976a6ed5-popper.min.js",
+      "bytes": 21233,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/mailcheck.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "8f925aaed0b3-mailcheck.js",
+      "bytes": 5007,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/email-typo-suggest.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "1264a733f165-email-typo-suggest.js",
+      "bytes": 3847,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/jquery-ui.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "17afcb35ec11-jquery-ui.min.js",
+      "bytes": 69364,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/jquery.timer.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "0f59fefdd852-jquery.timer.js",
+      "bytes": 4129,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib/etsJsLogger.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "5e57208066ed-etsJsLogger.js",
+      "bytes": 5847,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/ub.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "0aad12ce2ac2-ub.js",
+      "bytes": 5099,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/jquery.validate.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "17cfea4253b5-jquery.validate.min.js",
+      "bytes": 24457,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/googleSignUp.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "a9c2348700c9-googleSignUp.js",
+      "bytes": 1967,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/ets.validator.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "93801173ee72-ets.validator.js",
+      "bytes": 50216,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/jquery.inputmask.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "6af2ffa6210b-jquery.inputmask.min.js",
+      "bytes": 96737,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/car/timepicker/jquery.timepicker.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "9fa52375de64-jquery.timepicker.min.js",
+      "bytes": 12134,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/jquery-3.6.1.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "2b3c5b15deec-jquery-3.6.1.min.js",
+      "bytes": 89563,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/bootstrap.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "5a7ee3b134a5-bootstrap.min.js",
+      "bytes": 62563,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/common.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "d4f411fa0ce9-common.js",
+      "bytes": 66088,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/facebookAuth.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "8462715db3a1-facebookAuth.js",
+      "bytes": 1121,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/ga-event.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "5a207558bb71-ga-event.js",
+      "bytes": 35181,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib/md5.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "070ea2bace15-md5.js",
+      "bytes": 3848,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/site-language-currency-new.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "290e77f18f56-site-language-currency-new.js",
+      "bytes": 16055,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib/crypto-js.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "e6fccec10de6-crypto-js.min.js",
+      "bytes": 60814,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/verificationOTP.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "38cfab41c5f4-verificationOTP.js",
+      "bytes": 16145,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/contact-input.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "08117cb7f649-contact-input.js",
+      "bytes": 33874,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "2e505ed5dd82-firebase-app.js",
+      "bytes": 21934,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "31aafe021bea-firebase-messaging.js",
+      "bytes": 40924,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/sw_main.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "f6261dc9d4f2-sw_main.js",
+      "bytes": 6677,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/chatbot.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "cfe4c48269a4-chatbot.js",
+      "bytes": 2575,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/transfer/transfer-search.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "0426378b8bab-transfer-search.js",
+      "bytes": 19587,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/datepicker.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "61a6599ba0cf-datepicker.js",
+      "bytes": 56598,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib/vue/vue.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "a1b68c8a4bc3-vue.min.js",
+      "bytes": 92877,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/homepage.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "b7d0572d4f3b-homepage.js",
+      "bytes": 11873,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/flight-continue-popup.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "8c53b2d33884-flight-continue-popup.js",
+      "bytes": 8161,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/ga-event-car.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "0125d89a5b08-ga-event-car.js",
+      "bytes": 7649,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib/moment-with-locales.min.js?v=1002",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "e1a4d3355759-moment-with-locales.min.js",
+      "bytes": 296152,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/ga-event-hotel.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "b8f0021e9107-ga-event-hotel.js",
+      "bytes": 12551,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/modal-loader.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "93ccbfd04d71-modal-loader.js",
+      "bytes": 1531,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/search.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "f889d02dd619-search.js",
+      "bytes": 116238,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/swiper.min.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "18e1f2d89cdd-swiper.min.js",
+      "bytes": 135225,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/lib-jquery/jquery.smartbanner.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "783bde7f3194-jquery.smartbanner.js",
+      "bytes": 10559,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "c6599192d090-v3d52b47920f24c319d37e2661827c42b1787588026925.js",
+      "bytes": 28467,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/html2canvas.min.js?v=8e447c8",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "764809c24911-html2canvas.min.js",
+      "bytes": 197666,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://static.ads-twitter.com/oct.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "507255b0b63c-oct.js",
+      "bytes": 53566,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://bundles.efilli.com/ucuzabilet.com.prod.js",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "474aff3eae67-ucuzabilet.com.prod.js",
+      "bytes": 210236,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://dynamic.criteo.com/js/ld/ld.js?a=Your_Partner_ID",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "61f8dcb26142-ld.js",
+      "bytes": 74764,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-KNS7Z32Y74&cx=c&gtm=4e68s1",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "c70561a4cebe-js.js",
+      "bytes": 561310,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=AW-1019987698&cx=c&gtm=4e68s1",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "99ad08adbe90-destination.js",
+      "bytes": 466338,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/ajax/chatModule",
+      "mimeType": "application/json",
+      "type": "Fetch",
+      "status": 200,
+      "fileName": "6950a3216cd3-chatModule.json",
+      "bytes": 5,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://browser.etstur.com/registry",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "11aee940812b-registry.js",
+      "bytes": 2896,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://www.clarity.ms/tag/o40wjap1vr?ref=gtm2",
+      "mimeType": "application/x-javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "a38f62816e70-o40wjap1vr.js",
+      "bytes": 617,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.69/clarity.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "01282eed4e40-clarity.js",
+      "bytes": 74499,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://sslwidget.criteo.com/event?a=19753&v=5.48.0&p0=e%3Dce%26m%3D%255B%255D&p1=e%3Dexd%26site_type%3Dd&p2=e%3Dvh&p3=e%3Ddis&bundle=imeH2V9OTWhvczNPbHJZc3FuY250Y2RTcHp0Q2xEM0RHWEdjWDVrb2hhVTI0c2lQNGNCN0JhTTNVanVXcll3cThreWdjT3ZQUHRSVVd1bmo2c3NvZVlBUVBJekM0Tjcxc3pXSlpGdEJlR3owWVpzUUFhVjZWSiUyRjk3WjVmZ3Vrb09FTmNoMzlGVVpXcE5QbHN3MGp6UzJudUxIQSUzRCUzRA&tld=ucuzabilet.com&dy=1&fu=https%253A%252F%252Fwww.ucuzabilet.com%252F&ceid=78c621f3-d3e2-4138-96af-0021b41c27de",
+      "mimeType": "application/x-javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "805097fc17c6-event.js",
+      "bytes": 5087,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi/client?hl=tr",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "9111eb89244b-client.js",
+      "bytes": 272343,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi/style",
+      "mimeType": "text/css",
+      "type": "Stylesheet",
+      "status": 200,
+      "fileName": "4055a3a9f7ab-style.css",
+      "bytes": 696,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap",
+      "mimeType": "text/css",
+      "type": "Stylesheet",
+      "status": 200,
+      "fileName": "de6a9ccac881-css2.css",
+      "bytes": 15328,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/ub-ets-logo-new-black.svg",
+      "mimeType": "image/svg+xml",
+      "type": "Image",
+      "status": 200,
+      "fileName": "2338688a938e-ub-ets-logo-new-black.svg",
+      "bytes": 3956,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-latin.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "Font",
+      "status": 200,
+      "fileName": "dd8f45a7d816-Montserrat-latin.woff2",
+      "bytes": 35468,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/fonts/Montserrat-latin-ext.woff2",
+      "mimeType": "application/octet-stream",
+      "type": "Font",
+      "status": 200,
+      "fileName": "996cb11a9fea-Montserrat-latin-ext.woff2",
+      "bytes": 68348,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+      "mimeType": "font/woff2",
+      "type": "Font",
+      "status": 200,
+      "fileName": "c4f4a8cd0b92-JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+      "bytes": 35508,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2",
+      "mimeType": "font/woff2",
+      "type": "Font",
+      "status": 200,
+      "fileName": "a42b6e465d3c-JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2",
+      "bytes": 68224,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://static.criteo.net/js/ld/ld.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "4825fe4a6fa5-ld.js",
+      "bytes": 74793,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://browser.etstur.com/check?meiro_browser=de025479-201d-4474-ab80-047a2c3d1e1e",
+      "mimeType": "application/json",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "43bbb7dddee1-check.json",
+      "bytes": 24,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/img/flags@2x.png",
+      "mimeType": "image/png",
+      "type": "Image",
+      "status": 200,
+      "fileName": "0cb08a0b6048-flags_2x.png",
+      "bytes": 62821,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/special-days-list",
+      "mimeType": "application/json",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "b74a87a843f7-special-days-list.json",
+      "bytes": 8189,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://wurfl.io/wurfl.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "7a51aa748100-wurfl.js",
+      "bytes": 5225,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://cdp.etstur.com/wbs?segment=2649&attribute=stitching_meiro_user_id&value=4392c685-4ec2-49b5-a55f-b5db0f1ae17c",
+      "mimeType": "application/json",
+      "type": "Fetch",
+      "status": 404,
+      "fileName": "6f7606d184cf-wbs.json",
+      "bytes": 13362,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(44)_20260618141746.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "ebdf613a0e80-360x278_44__20260618141746.webp",
+      "bytes": 15046,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260817110135.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "fe0b70e77b19-360x278_20260817110135.webp",
+      "bytes": 18418,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278%20(62)_20260821131705.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "3700fa3661f3-360x278_62__20260821131705.webp",
+      "bytes": 21320,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/definitions/campaign/360x278_20260827112823.webp",
+      "mimeType": "image/webp",
+      "type": "Image",
+      "status": 200,
+      "fileName": "4eb596854e31-360x278_20260827112823.webp",
+      "bytes": 15466,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/resources/ub/js/v2/libs/utils.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "146bcb88c2c1-utils.js",
+      "bytes": 248810,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/ajax/referrerAnalytics",
+      "mimeType": "application/json",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "a66973a55665-referrerAnalytics.json",
+      "bytes": 5,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://unpkg.com/web-vitals@5.0.1/dist/web-vitals.attribution.iife.js",
+      "mimeType": "text/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "a446a2787d12-web-vitals.attribution.iife.js",
+      "bytes": 11511,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://www.ucuzabilet.com/ajax/page-announcement",
+      "mimeType": "text/html",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "06b4e6931011-page-announcement",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://dbfukofby5ycr.cloudfront.net/a9/js/dlc1.66.js",
+      "mimeType": "application/javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "e458b29bbf0e-dlc1.66.js",
+      "bytes": 82374,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://images.ucuzabilet.com/resources/img/icons/favicon-ub-blue.ico",
+      "mimeType": "image/x-icon",
+      "type": "Other",
+      "status": 200,
+      "fileName": "7901e2ef445d-favicon-ub-blue.ico",
+      "bytes": 15406,
+      "fromDiskCache": true
+    },
+    {
+      "url": "https://accounts.google.com/gsi/status?client_id=54700575270-hc41hhrdhfq4tompgl1b5skllqdbeapq.apps.googleusercontent.com&cas=yy%2BwfDAd9DVk8DPAV3yJosVWF%2BHMGdKJQGOmcqRgKM0&bs=wOXY4jR51gwpf5O7ZGmDHR%2BoN7Tb4ER5dBqjIAod4u0",
+      "mimeType": "application/json",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "038a9764556e-status.json",
+      "bytes": 79,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi/fedcm/config/passive.json",
+      "mimeType": "application/json",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "0c6c7171c575-passive.json",
+      "bytes": 1442,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://www.google.com/.well-known/web-identity",
+      "mimeType": "application/json",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "ac59623c0d71-web-identity.json",
+      "bytes": 218,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://sslwidget.criteo.com/event?a=%5BYour_Partner_ID%5D&v=5.48.0&p0=e%3Dexd%26site_type%3Dd&p1=e%3Dvh%26tms%3DCriteo%2520GTM%2520Enhanced%2520(Retail)%2520(GA4)%2520-%2520v18&p2=e%3Ddis%26a%3D%255B19753%252CYour_Partner_ID%255D&bundle=imeH2V9OTWhvczNPbHJZc3FuY250Y2RTcHp0Q2xEM0RHWEdjWDVrb2hhVTI0c2lQNGNCN0JhTTNVanVXcll3cThreWdjT3ZQUHRSVVd1bmo2c3NvZVlBUVBJekM0Tjcxc3pXSlpGdEJlR3owWVpzUUFhVjZWSiUyRjk3WjVmZ3Vrb09FTmNoMzlGVVpXcE5QbHN3MGp6UzJudUxIQSUzRCUzRA&tld=ucuzabilet.com&dy=1&fu=https%253A%252F%252Fwww.ucuzabilet.com%252F&ceid=6d6734da-e874-4e7c-abd0-85122ee496cd",
+      "mimeType": "application/x-javascript",
+      "type": "Script",
+      "status": 200,
+      "fileName": "2249094b98eb-event.js",
+      "bytes": 15,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://www.ucuzabilet.com/cdn-cgi/rum?",
+      "mimeType": "text/plain",
+      "type": "XHR",
+      "status": 204,
+      "fileName": "a5c31492dc4f-rum",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://ucuzabilet.webinstats.com/d?s=1744&p=flight%20homepage&sunq=1&a=a&cookieenb=1&ps=%2F&bl=en-US&plt=Desktop&os=MacOS&osv=10.15&br=chrome&brv=151&bwh=1280X720&dwh=1265X5705&swh=1440X900X30&ur=https%3A%2F%2Fwww.ucuzabilet.com%2F&ep=flight%20homepage&uids=120c4f17-5bc5-b668-a1fe-d25123f89f65%7C1788235575254%7C1788235575254%7C1788235858831&usrnl=Guest&vc=1&pvc=2&wisrandom=96&wispnsp=1&wis_vstl=1788235575&&adetail[]=%7B%22id%22%3A%22undefined%22%2C%22prc%22%3A%22undefined%22%2C%22qnt%22%3A%221%22%2C%22cat%22%3A%22undefined%22%2C%22ttl%22%3A%22undefined%22%7D",
+      "mimeType": "application/javascript",
+      "type": "XHR",
+      "status": 200,
+      "fileName": "a8dd5f5385ac-d.js",
+      "bytes": 6717,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://f.clarity.ms/collect",
+      "mimeType": "text/plain",
+      "type": "XHR",
+      "status": 204,
+      "fileName": "6135423ede6e-collect",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://f.clarity.ms/collect",
+      "mimeType": "text/plain",
+      "type": "XHR",
+      "status": 204,
+      "fileName": "6135423ede6e-collect",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://criteo-sync.teads.tv/um?eid=80&uid=k-5XRX-cjH9LwImzzu6SlH91MPKH9JV_AFeDRRrA",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "3868fa73ebdd-um.gif",
+      "bytes": 23,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://eb2.3lift.com/xuid?ld=1&mid=2711&xuid=k-GnahQsjH9LwImzzu6SlH91MPKH8LPsl3OIP-NQ&dongle=013b&gdpr=0&cmp_cs=&us_privacy=",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "100e3ec9486a-xuid.gif",
+      "bytes": 37,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://x.bidswitch.net/ul_cb/sync?dsp_id=46&user_id=k-njuze8jH9LwImzzu6SlH91MPKH8f82MQCV3P1w&expires=30",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "08601db17266-sync.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://ad.yieldlab.net/m?dt_id=8664&ext_id=k-_RkNwMjH9LwImzzu6SlH91MPKH_ZXbT1nsMSBg",
+      "mimeType": "text/plain",
+      "type": "Image",
+      "status": 204,
+      "fileName": "bd4256cc5864-m",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://r.casalemedia.com/rum?cm_dsp_id=20&external_user_id=k-LagklMjH9LwImzzu6SlH91MPKH_bb0RfKchy8g&C=1",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "889937d1aa1d-rum.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://dis.criteo.com/dis/rtb/appnexus/cookiematch.aspx?appnxsid=3410240483899764660",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "5a0015794919-cookiematch.aspx",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://dis.criteo.com/dis/rtb/google/cookiematch.aspx?id=&CriteoUserId=k-OYOH58jH9LwImzzu6SlH91MPKH_csqPbk5tQEA&google_gid=CAESEMULfqtq7xm7GWu9DVX7Ejg&google_cver=1&google_ula=913071,0",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "9f080e7c5749-cookiematch.aspx",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://ib.adnxs.com/setuid?entity=52&code=k-lOfhIcjH9LwImzzu6SlH91MPKH-mrXy7Sq2Tkw",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "5dce7588cde6-setuid.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi/fedcm/listaccounts",
+      "mimeType": "application/json",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "7683c8381968-listaccounts.json",
+      "bytes": 92830,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://criteo-partners.tremorhub.com/sync?UICR=k-ooUsEsjH9LwImzzu6SlH91MPKH_5NU1BrkgfHA",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "d3600bf18ca2-sync.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://simage4.pubmatic.com/AdServer/SPug?partnerID=167352&partnerUID=uid:k-zikzMsjH9LwImzzu6SlH91MPKH8QVXhndxDaBg",
+      "mimeType": "text/plain",
+      "type": "Image",
+      "status": 200,
+      "fileName": "a73e00040349-SPug",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://c.bing.com/c.gif?Red3=CTOMS_pd&cbid=k-dCpw8sjH9LwImzzu6SlH91MPKH965x4zAPMULg",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "cfa82f484389-c.gif",
+      "bytes": 42,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi/fedcm/clientmetadata?client_id=54700575270-hc41hhrdhfq4tompgl1b5skllqdbeapq.apps.googleusercontent.com",
+      "mimeType": "application/json",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "2ec5d0be0a5a-clientmetadata.json",
+      "bytes": 260,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://accounts.google.com/gsi-static/google-logo.png",
+      "mimeType": "image/png",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "51ffce66343d-google-logo.png",
+      "bytes": 202,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://lh3.googleusercontent.com/a/ACg8ocIgUurEpZIC6u67F8gRXDJPo0YtBKlychltXbM7CC85Qt5qu-bV=s96-c",
+      "mimeType": "image/jpeg",
+      "type": "FedCM",
+      "status": 200,
+      "fileName": "8840843a8d44-ACg8ocIgUurEpZIC6u67F8gRXDJPo0YtBKlychltXbM7CC85Qt5qu-bV_s96-c.jpg",
+      "bytes": 1802,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://pixel.rubiconproject.com/tap.php?v=6434&nid=2149&put=k-KWi8yMjH9LwImzzu6SlH91MPKH8lITB9V_Jwtg&expires=30",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "299e670816c8-tap.php",
+      "bytes": 42,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://cs.media.net/cksync.php?cs=3&type=crt&ovsid=k-vJ9Ox8jH9LwImzzu6SlH91MPKH-kRGgi7qNlEQ",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "2217651a1a36-cksync.php",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://sync.outbrain.com/cookie-sync?p=criteo&uid=k-qZNxhcjH9LwImzzu6SlH91MPKH95pS28uGWO0A&initiator=partner",
+      "mimeType": "text/plain",
+      "type": "Image",
+      "status": 200,
+      "fileName": "d507b5d143c8-cookie-sync",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://jadserve.postrelease.com/suid/1017?vk=k-txr3NMjH9LwImzzu6SlH91MPKH9100n6gMlkpA",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "ef4e09bb91fe-1017.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://rtb-csync.smartadserver.com/redir/?partnerid=79&partneruserid=k-DW47VMjH9LwImzzu6SlH91MPKH9cSteC0vsgJg",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "46660e5b184a-resource.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://simage2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTE5MjgmdGw9NDMyMDA=&piggybackCookie=uid:k-zikzMsjH9LwImzzu6SlH91MPKH8QVXhndxDaBg",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "e1b35fc41b8e-Pug.gif",
+      "bytes": 42,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://ad.360yield.com/ul_cb/match?publisher_dsp_id=38&external_user_id=k-oaAAmcjH9LwImzzu6SlH91MPKH_fFbOKC9ZOlA",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "952dd29d4edf-match.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://sync-t1.taboola.com/sg/criteortb-network/1/rtb-h/?taboola_hm=k-DWPyHMjH9LwImzzu6SlH91MPKH84vgi_gw7jHQ",
+      "mimeType": "text/plain",
+      "type": "Image",
+      "status": 200,
+      "fileName": "f92ac7efa882-resource",
+      "bytes": 0,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://sync.crwdcntrl.net/qmap?c=16722&tp=MDAG&tpid=xiz70184d3NkcWtBODFtSDFFSkJYWldXb25uemNycWtDaDF6ZXJsOW8xNFVQbjBtUUdGdnM2ZlhKJTJGdUJQZjZHRWowWVA&gdpr=0&gdpr_consent=&lac=y&ct=y",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "3a58997a9fe6-qmap.gif",
+      "bytes": 49,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://dpm.demdex.net/demconf.jpg?et:ibs%7cdata:dpid=28645&dpuuid=1SoiyF84d3NkcWtBODFtSDFFSkJYWldXb25uemNycWtDaDF6ZXJsOW8xNFVQbjBtckJzRHJaYmlWeFZpdnc4dkdyd0Ry",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "286827d644f2-demconf.jpg",
+      "bytes": 42,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://sync.targeting.unrulymedia.com/csync/RX-a7f388fb-1f70-4477-abf0-6767221ec22e-004",
+      "mimeType": "image/gif",
+      "type": "Image",
+      "status": 200,
+      "fileName": "64efc1972500-RX-a7f388fb-1f70-4477-abf0-6767221ec22e-004.gif",
+      "bytes": 43,
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://aa.agkn.com/adscores/g.pixel?sid=9212273938&ct=S-vE4l84d3NkcWtBODFtSDFFSkJYWldXb25uemNycWtDaDF6ZXJsOW8xNFVQbjBrWlloMkRYOXAlMkZxcm9SbnZBV3MwT0Y",
+      "mimeType": "text/plain",
+      "type": "Image",
+      "status": 200,
+      "fileName": "4a2d80f8dff0-g.pixel",
+      "bytes": 0,
+      "fromDiskCache": false
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://gum.criteo.com/syncframe?topUrl=www.ucuzabilet.com&origin=onetag",
+      "mimeType": "text/html",
+      "type": "Document",
+      "status": 200,
+      "error": "Error: No resource with given identifier found"
+    },
+    {
+      "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=8&frm=0&apvc=0&ae=g&tid=AW-1019987698&dl=https%3A%2F%2Fwww.ucuzabilet.com&scrsrc=www.googletagmanager.com&rnd=977248857.1788235858&navt=r&npa=0&ep.flight_pagetype=home&epn.flight_totalvalue=0&ep.ads_data_redaction=1&uid=4392c685-4ec2-49b5-a55f-b5db0f1ae17c&_tu=CA&gtm=45be68s1v895259595z86171979za20gzb6171979zd6171979xea&gcs=G101&gcd=13p3t3l3l5l1&dma=0&tag_exp=115616986~115938465~115938469~118897920~118897930~119404698~120385423&tft=1788235857718&tfd=1294&tids=AW-1019987698&fmt=8",
+      "mimeType": "text/plain",
+      "type": "Fetch",
+      "status": 200,
+      "error": "Error: No data found for resource with given identifier"
+    },
+    {
+      "url": "https://accounts.google.com/gsi/button?type=standard&theme=outline&text=continue_with&shape=rectangular&logo_alignment=left&is_fedcm_supported=true&client_id=54700575270-hc41hhrdhfq4tompgl1b5skllqdbeapq.apps.googleusercontent.com&iframe_id=gsi_857899_556128&cas=yy%2BwfDAd9DVk8DPAV3yJosVWF%2BHMGdKJQGOmcqRgKM0&hl=tr",
+      "mimeType": "text/html",
+      "type": "Document",
+      "status": 200,
+      "error": "Error: No resource with given identifier found"
+    },
+    {
+      "url": "https://accounts.google.com/gsi/button?type=standard&theme=outline&text=continue_with&shape=rectangular&logo_alignment=left&is_fedcm_supported=true&client_id=54700575270-hc41hhrdhfq4tompgl1b5skllqdbeapq.apps.googleusercontent.com&iframe_id=gsi_857897_637990&cas=yy%2BwfDAd9DVk8DPAV3yJosVWF%2BHMGdKJQGOmcqRgKM0&hl=tr",
+      "mimeType": "text/html",
+      "type": "Document",
+      "status": 200,
+      "error": "Error: No resource with given identifier found"
+    },
+    {
+      "url": "https://me.ucuzabilet.com/",
+      "mimeType": "",
+      "type": "Preflight",
+      "status": 204,
+      "error": "Error: No resource with given identifier found"
+    },
+    {
+      "url": "https://me.ucuzabilet.com/",
+      "mimeType": "",
+      "type": "Fetch",
+      "status": 200,
+      "error": "Error: No data found for resource with given identifier"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-KNS7Z32Y74&gtm=45je68s1v880017447z86171979za20gzb6171979zd6171979&_p=1788235856741&gcs=G101&gcd=13p3t3l3l5l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=1785005242.1788235575&frm=0&pscdl=denied&rcb=4&sr=1440x900&uaa=arm&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.174%7CChromium%3B151.0.7922.174&uam=&uamb=0&uap=macOS&uapv=14.4.1&uaw=0&ul=en-us&gaf=2&tag_exp=115938465~115938468~118869188~118897920~118897930~120213116~120385422&sid=1788235573&sct=1&seg=1&dl=https%3A%2F%2Fwww.ucuzabilet.com%2F&dt=Ucuzabilet.com%20%7C%20Ucuz%20U%C3%A7ak%20Bileti%20Al%20%26%20En%20Uygun%20U%C3%A7ak%20Bileti%20Fiyatlar%C4%B1&_tu=CA&_s=1&tfd=6302",
+      "mimeType": "text/plain",
+      "type": "Fetch",
+      "status": 204,
+      "error": "Error: No data found for resource with given identifier"
+    }
+  ]
+}
