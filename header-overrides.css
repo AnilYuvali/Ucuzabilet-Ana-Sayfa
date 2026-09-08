@@ -58,3 +58,546 @@
     padding-top: 94px !important;
   }
 }
+
+/* Popular flight deals between campaigns and the mobile app promotion. */
+.popular-flight-deals {
+  margin: 28px 0 32px;
+  padding: 28px;
+  overflow: hidden;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-radius: 20px;
+  color: #00121c;
+  font-family: Inter, sans-serif;
+}
+
+.popular-flight-deals__header {
+  margin-bottom: 22px;
+}
+
+.popular-flight-deals__eyebrow {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #007fe8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.popular-flight-deals__header h2 {
+  margin: 0;
+  color: #34383c;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.popular-flight-deals__header p {
+  margin: 10px 0 0;
+  color: #5a6570;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.popular-flight-deals__updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 7px;
+  color: #74787c;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.popular-flight-deals__updated > i {
+  display: inline-flex;
+  width: 4px;
+  height: 4px;
+  flex: 0 0 4px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #32bd7b !important;
+  font-size: 6px;
+  line-height: 4px;
+  box-shadow: 0 0 0 2px rgba(50, 189, 123, 0.14);
+  border-radius: 50%;
+}
+
+.popular-flight-deals__updated strong {
+  color: inherit;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.popular-flight-deals__carousel {
+  position: relative;
+}
+
+.popular-flight-deals__carousel::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 152px;
+  background: linear-gradient(90deg, rgba(244, 248, 252, 0), rgba(244, 248, 252, 0.68));
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.popular-flight-deals__carousel::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 152px;
+  background: linear-gradient(270deg, rgba(244, 248, 252, 0), rgba(244, 248, 252, 0.68));
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.popular-flight-deals__carousel.is-scrollable:not(.is-at-end)::after {
+  opacity: 1;
+}
+
+.popular-flight-deals__carousel.is-scrollable:not(.is-at-start)::before {
+  opacity: 1;
+}
+
+.popular-flight-deals__grid {
+  display: grid;
+  grid-auto-columns: calc((100% - 36px) / 3);
+  grid-auto-flow: column;
+  gap: 18px;
+  margin-bottom: -12px;
+  padding-bottom: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.popular-flight-deals__grid::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-flight-deals__grid:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 4px;
+}
+
+.popular-flight-deals__previous,
+.popular-flight-deals__next {
+  position: absolute;
+  z-index: 2;
+  top: 58px;
+  display: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 127, 232, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 54, 99, 0.16);
+  color: #007fe8;
+  cursor: pointer;
+  transform: none;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  backdrop-filter: blur(6px);
+}
+
+.popular-flight-deals__previous {
+  left: 6px;
+}
+
+.popular-flight-deals__next {
+  right: 6px;
+}
+
+.popular-flight-deals__carousel.is-scrollable:not(.is-at-start) .popular-flight-deals__previous {
+  display: inline-flex;
+}
+
+.popular-flight-deals__carousel.is-scrollable:not(.is-at-end) .popular-flight-deals__next {
+  display: inline-flex;
+}
+
+.popular-flight-deals__previous:hover,
+.popular-flight-deals__next:hover {
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(0, 89, 163, 0.22);
+  transform: translateX(2px);
+}
+
+.popular-flight-deals__previous:focus-visible,
+.popular-flight-deals__next:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 3px;
+}
+
+.popular-flight-deals__previous img,
+.popular-flight-deals__next img {
+  width: 13px;
+  height: 14px;
+}
+
+.popular-flight-deals__previous img {
+  transform: rotate(180deg);
+}
+
+.popular-flight-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2ebf2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 32, 59, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  scroll-snap-align: start;
+}
+
+.popular-flight-card:hover {
+  border-color: #b9dcf8;
+  box-shadow: 0 14px 32px rgba(0, 89, 163, 0.14);
+  transform: translateY(-4px);
+}
+
+.popular-flight-card > a,
+.popular-flight-card > a:hover {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.popular-flight-card__media {
+  position: relative;
+  height: 152px;
+  overflow: hidden;
+  background: #dcecf8;
+}
+
+.popular-flight-card__media::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 42%;
+  background: linear-gradient(180deg, rgba(0, 18, 28, 0), rgba(0, 18, 28, 0.42));
+  content: "";
+  pointer-events: none;
+}
+
+.popular-flight-card__media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.popular-flight-card:hover .popular-flight-card__media > img {
+  transform: scale(1.035);
+}
+
+.popular-flight-card__badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 999px;
+  color: #00121c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  backdrop-filter: blur(5px);
+}
+
+.popular-flight-card__body {
+  padding: 18px;
+}
+
+.popular-flight-card__route {
+  display: grid;
+  grid-template-columns: 1fr 26px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.popular-flight-card__route > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-flight-card__route > span:last-child {
+  text-align: right;
+}
+
+.popular-flight-card__route strong {
+  color: #00121c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.popular-flight-card__route small {
+  color: #717c85;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.popular-flight-card__route > img {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(96%) saturate(3084%) hue-rotate(194deg) brightness(101%) contrast(101%);
+}
+
+.popular-flight-card__date {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: -2px 0 13px;
+  padding: 8px 10px;
+  background: #f1f8fe;
+  border: 1px solid #dceefa;
+  border-radius: 10px;
+}
+
+.popular-flight-card__date-icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 7px;
+}
+
+.popular-flight-card__date-icon > img {
+  width: 11px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(96%) saturate(3084%) hue-rotate(194deg) brightness(101%) contrast(101%);
+}
+
+.popular-flight-card__date > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.popular-flight-card__date small {
+  color: #71808b;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.popular-flight-card__date strong {
+  overflow: hidden;
+  color: #174f78;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-flight-card h3 {
+  min-height: 44px;
+  margin: 0 0 14px;
+  color: #1f2a33;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.popular-flight-card__details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 14px 0;
+  border-top: 1px solid #edf2f6;
+  border-bottom: 1px solid #edf2f6;
+  list-style: none;
+}
+
+.popular-flight-card__details li {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.popular-flight-card__details i {
+  width: 13px;
+  margin: 2px 0 0;
+  color: #008cff;
+  font-size: 13px;
+  text-align: center;
+}
+
+.popular-flight-card__details span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.popular-flight-card__details small {
+  overflow: hidden;
+  color: #7a848c;
+  font-size: 9px;
+  line-height: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-flight-card__details strong {
+  overflow: hidden;
+  color: #303a42;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-flight-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.popular-flight-card__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-flight-card__price strong {
+  color: #007fe8;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.popular-flight-card__price small {
+  color: #6f7981;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.popular-flight-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 3px;
+  color: #007fe8;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.popular-flight-card__cta img {
+  width: 14px;
+  height: 15px;
+  transition: transform 180ms ease;
+}
+
+.popular-flight-card:hover .popular-flight-card__cta img {
+  transform: translateX(3px);
+}
+
+.popular-flight-deals__definition {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #dceaf5;
+  border-left: 4px solid #008cff;
+  border-radius: 10px;
+}
+
+.popular-flight-deals__definition-label {
+  padding: 5px 9px;
+  background: #e6f4ff;
+  border-radius: 999px;
+  color: #007fe8;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.popular-flight-deals__definition p {
+  margin: 0;
+  color: #4e5b65;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+@media (max-width: 991.98px) {
+  .popular-flight-deals {
+    padding: 22px;
+  }
+
+  .popular-flight-deals__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .popular-flight-deals__grid {
+    grid-auto-columns: min(82vw, 338px);
+  }
+
+  .popular-flight-card__media {
+    height: 190px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .popular-flight-deals {
+    margin: 20px 0 24px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .popular-flight-deals__header h2 {
+    font-size: 21px;
+  }
+
+  .popular-flight-deals__updated {
+    white-space: normal;
+  }
+
+  .popular-flight-card__details {
+    gap: 5px;
+  }
+
+  .popular-flight-deals__definition {
+    grid-template-columns: 1fr;
+  }
+
+  .popular-flight-deals__definition-label {
+    width: max-content;
+  }
+}

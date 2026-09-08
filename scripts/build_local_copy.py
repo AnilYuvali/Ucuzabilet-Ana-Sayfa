@@ -22,7 +22,7 @@ NETWORK_FILES = CAPTURE / "network-resources"
 PAGE_ASSET_DIRS = [CAPTURE / "browser-assets", CAPTURE / "browser-assets-campaign"]
 MANUAL_RESOURCE_DIR = CAPTURE / "manual-resources"
 CSS_DEPENDENCY_DIR = CAPTURE / "css-dependencies"
-COMPONENT_DIR = Path(__file__).resolve().parent / "components"
+LOCAL_ASSET_DIR = ROOT / "custom-assets"
 OUTPUT_ASSETS = ROOT / "assets"
 BASE_URL = "https://www.ucuzabilet.com/"
 STATIC_ALIASES = {
@@ -146,6 +146,23 @@ def copy_captures() -> tuple[dict[str, str], list[dict[str, object]]]:
                 }
             )
 
+    if LOCAL_ASSET_DIR.exists():
+        for source in sorted(LOCAL_ASSET_DIR.iterdir()):
+            if not source.is_file():
+                continue
+            destination = OUTPUT_ASSETS / source.name
+            shutil.copy2(source, destination)
+            records.append(
+                {
+                    "url": f"local-asset:{source.name}",
+                    "mimeType": mimetypes.guess_type(source.name)[0],
+                    "type": "local-asset",
+                    "bytes": destination.stat().st_size,
+                    "localPath": f"assets/{destination.name}",
+                    "capture": "approved-local-asset",
+                }
+            )
+
     return url_map, records
 
 
@@ -238,19 +255,248 @@ def apply_local_customizations(html: str) -> str:
             count=1,
             flags=re.DOTALL,
         )
-    # Cheapest-routes row between the campaign carousel and the mobile app banner.
-    if 'class="row cheapestRoutesRow"' not in html:
-        component = (COMPONENT_DIR / "cheapest-routes.html").read_text(encoding="utf-8")
-        anchor = '<div class="mobileAppLanding">'
-        html = html.replace(anchor, f"{component}{anchor}", 1)
+    popular_flights_markup = """
+<section class="popular-flight-deals" id="popular-flight-deals" aria-labelledby="popular-flight-deals-title">
+  <div class="popular-flight-deals__header">
+    <div>
+      <span class="popular-flight-deals__eyebrow">Uçuş fırsatları</span>
+      <h2 id="popular-flight-deals-title">En Ucuz Uçak Bileti Fırsatları</h2>
+      <div class="popular-flight-deals__updated" aria-label="Fiyatların güncellenme tarihi ve saati">
+        <i class="ubicon-dot-single" aria-hidden="true"></i>
+        <span>Fiyatlar <strong data-summary-field="updated">1 Eylül 2026</strong>, <strong data-summary-field="updatedTime">10:23</strong> itibarıyla güncellendi</span>
+      </div>
+      <p>En çok aranan rotaları tek bakışta karşılaştır, seyahatine uygun fırsatı kolayca yakala.</p>
+    </div>
+  </div>
 
-    stylesheets = [
-        '<link rel="stylesheet" href="header-overrides.css?v=4">',
-        '<link rel="stylesheet" href="cheapest-routes.css?v=1">',
-    ]
-    for stylesheet in stylesheets:
-        if stylesheet not in html:
-            html = html.replace("</head>", f"    {stylesheet}\n</head>", 1)
+  <div class="popular-flight-deals__carousel" data-flight-carousel>
+  <div class="popular-flight-deals__grid" data-flight-carousel-track tabindex="0" role="region" aria-label="Popüler uçuş fırsatları, yatay kaydırılabilir liste">
+    <article class="popular-flight-card" data-deal-index="0">
+      <a href="#searchForm" aria-label="İstanbul Antalya uçak bileti fırsatını incele">
+        <div class="popular-flight-card__media">
+          <img src="assets/popular-flight-antalya.png" width="560" height="315" loading="lazy" alt="Antalya kıyıları ve Akdeniz manzarası">
+          <span class="popular-flight-card__badge" data-field="airline">SunExpress</span>
+        </div>
+        <div class="popular-flight-card__body">
+          <div class="popular-flight-card__route">
+            <span><strong data-field="originCode">IST</strong><small data-field="origin">İstanbul</small></span>
+            <img src="assets/b0c4d3ab23b9-plane-departure.svg" width="22" height="22" alt="">
+            <span><strong data-field="destinationCode">AYT</strong><small data-field="destination">Antalya</small></span>
+          </div>
+          <div class="popular-flight-card__date"><span class="popular-flight-card__date-icon" aria-hidden="true"><img src="assets/422772a5e45a-calendar.svg" width="10" height="11" alt=""></span><span><small>Uçuş tarihi</small><strong data-field="flightDate">9 Eylül 2026, Çarşamba</strong></span></div>
+          <h3 data-field="title">En Ucuz İstanbul – Antalya Uçak Bileti</h3>
+          <ul class="popular-flight-card__details" aria-label="Uçuş detayları">
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><small>Uçuş süresi</small><strong data-field="duration">1 sa 10 dk</strong></span></li>
+            <li><i class="fa fa-random" aria-hidden="true"></i><span><small>Aktarma</small><strong data-field="stops">Direkt</strong></span></li>
+            <li><i class="fa fa-briefcase" aria-hidden="true"></i><span><small>Sınıf</small><strong data-field="cabin">Ekonomi</strong></span></li>
+          </ul>
+          <div class="popular-flight-card__footer">
+            <span class="popular-flight-card__price"><strong data-field="price">1.179 TL</strong><small>’den başlayan</small></span>
+            <span class="popular-flight-card__cta">Bileti incele <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="16" height="17" alt=""></span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="popular-flight-card" data-deal-index="1">
+      <a href="#searchForm" aria-label="İstanbul İzmir uçak bileti fırsatını incele">
+        <div class="popular-flight-card__media">
+          <img src="assets/popular-flight-izmir.png" width="560" height="315" loading="lazy" alt="İzmir Saat Kulesi ve Kordon manzarası">
+          <span class="popular-flight-card__badge" data-field="airline">AJet</span>
+        </div>
+        <div class="popular-flight-card__body">
+          <div class="popular-flight-card__route">
+            <span><strong data-field="originCode">IST</strong><small data-field="origin">İstanbul</small></span>
+            <img src="assets/b0c4d3ab23b9-plane-departure.svg" width="22" height="22" alt="">
+            <span><strong data-field="destinationCode">ADB</strong><small data-field="destination">İzmir</small></span>
+          </div>
+          <div class="popular-flight-card__date"><span class="popular-flight-card__date-icon" aria-hidden="true"><img src="assets/422772a5e45a-calendar.svg" width="10" height="11" alt=""></span><span><small>Uçuş tarihi</small><strong data-field="flightDate">12 Eylül 2026, Cumartesi</strong></span></div>
+          <h3 data-field="title">En Ucuz İstanbul – İzmir Uçak Bileti</h3>
+          <ul class="popular-flight-card__details" aria-label="Uçuş detayları">
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><small>Uçuş süresi</small><strong data-field="duration">1 sa 05 dk</strong></span></li>
+            <li><i class="fa fa-random" aria-hidden="true"></i><span><small>Aktarma</small><strong data-field="stops">Direkt</strong></span></li>
+            <li><i class="fa fa-briefcase" aria-hidden="true"></i><span><small>Sınıf</small><strong data-field="cabin">Ekonomi</strong></span></li>
+          </ul>
+          <div class="popular-flight-card__footer">
+            <span class="popular-flight-card__price"><strong data-field="price">1.289 TL</strong><small>’den başlayan</small></span>
+            <span class="popular-flight-card__cta">Bileti incele <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="16" height="17" alt=""></span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="popular-flight-card" data-deal-index="2">
+      <a href="#searchForm" aria-label="İstanbul Bodrum uçak bileti fırsatını incele">
+        <div class="popular-flight-card__media">
+          <img src="assets/popular-flight-bodrum.png" width="560" height="315" loading="lazy" alt="Bodrum koyu, beyaz evler ve kale manzarası">
+          <span class="popular-flight-card__badge" data-field="airline">Pegasus</span>
+        </div>
+        <div class="popular-flight-card__body">
+          <div class="popular-flight-card__route">
+            <span><strong data-field="originCode">SAW</strong><small data-field="origin">İstanbul</small></span>
+            <img src="assets/b0c4d3ab23b9-plane-departure.svg" width="22" height="22" alt="">
+            <span><strong data-field="destinationCode">BJV</strong><small data-field="destination">Bodrum</small></span>
+          </div>
+          <div class="popular-flight-card__date"><span class="popular-flight-card__date-icon" aria-hidden="true"><img src="assets/422772a5e45a-calendar.svg" width="10" height="11" alt=""></span><span><small>Uçuş tarihi</small><strong data-field="flightDate">18 Eylül 2026, Cuma</strong></span></div>
+          <h3 data-field="title">En Ucuz İstanbul – Bodrum Uçak Bileti</h3>
+          <ul class="popular-flight-card__details" aria-label="Uçuş detayları">
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><small>Uçuş süresi</small><strong data-field="duration">1 sa 15 dk</strong></span></li>
+            <li><i class="fa fa-random" aria-hidden="true"></i><span><small>Aktarma</small><strong data-field="stops">Direkt</strong></span></li>
+            <li><i class="fa fa-briefcase" aria-hidden="true"></i><span><small>Sınıf</small><strong data-field="cabin">Ekonomi</strong></span></li>
+          </ul>
+          <div class="popular-flight-card__footer">
+            <span class="popular-flight-card__price"><strong data-field="price">1.499 TL</strong><small>’den başlayan</small></span>
+            <span class="popular-flight-card__cta">Bileti incele <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="16" height="17" alt=""></span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="popular-flight-card" data-deal-index="3">
+      <a href="#searchForm" aria-label="İstanbul Ankara uçak bileti fırsatını incele">
+        <div class="popular-flight-card__media">
+          <img src="assets/popular-flight-ankara.png" width="560" height="315" loading="lazy" alt="Anıtkabir ve Ankara şehir manzarası">
+          <span class="popular-flight-card__badge" data-field="airline">AJet</span>
+        </div>
+        <div class="popular-flight-card__body">
+          <div class="popular-flight-card__route">
+            <span><strong data-field="originCode">IST</strong><small data-field="origin">İstanbul</small></span>
+            <img src="assets/b0c4d3ab23b9-plane-departure.svg" width="22" height="22" alt="">
+            <span><strong data-field="destinationCode">ESB</strong><small data-field="destination">Ankara</small></span>
+          </div>
+          <div class="popular-flight-card__date"><span class="popular-flight-card__date-icon" aria-hidden="true"><img src="assets/422772a5e45a-calendar.svg" width="10" height="11" alt=""></span><span><small>Uçuş tarihi</small><strong data-field="flightDate">7 Eylül 2026, Pazartesi</strong></span></div>
+          <h3 data-field="title">En Ucuz İstanbul – Ankara Uçak Bileti</h3>
+          <ul class="popular-flight-card__details" aria-label="Uçuş detayları">
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><small>Uçuş süresi</small><strong data-field="duration">1 sa 05 dk</strong></span></li>
+            <li><i class="fa fa-random" aria-hidden="true"></i><span><small>Aktarma</small><strong data-field="stops">Direkt</strong></span></li>
+            <li><i class="fa fa-briefcase" aria-hidden="true"></i><span><small>Sınıf</small><strong data-field="cabin">Ekonomi</strong></span></li>
+          </ul>
+          <div class="popular-flight-card__footer">
+            <span class="popular-flight-card__price"><strong data-field="price">1.249 TL</strong><small>’den başlayan</small></span>
+            <span class="popular-flight-card__cta">Bileti incele <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="16" height="17" alt=""></span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="popular-flight-card" data-deal-index="4">
+      <a href="#searchForm" aria-label="İstanbul Çukurova uçak bileti fırsatını incele">
+        <div class="popular-flight-card__media">
+          <img src="assets/popular-flight-cukurova.png" width="560" height="315" loading="lazy" alt="Seyhan Nehri, Taşköprü ve Adana şehir manzarası">
+          <span class="popular-flight-card__badge" data-field="airline">Türk Hava Yolları</span>
+        </div>
+        <div class="popular-flight-card__body">
+          <div class="popular-flight-card__route">
+            <span><strong data-field="originCode">IST</strong><small data-field="origin">İstanbul</small></span>
+            <img src="assets/b0c4d3ab23b9-plane-departure.svg" width="22" height="22" alt="">
+            <span><strong data-field="destinationCode">COV</strong><small data-field="destination">Çukurova</small></span>
+          </div>
+          <div class="popular-flight-card__date"><span class="popular-flight-card__date-icon" aria-hidden="true"><img src="assets/422772a5e45a-calendar.svg" width="10" height="11" alt=""></span><span><small>Uçuş tarihi</small><strong data-field="flightDate">21 Eylül 2026, Pazartesi</strong></span></div>
+          <h3 data-field="title">En Ucuz İstanbul – Çukurova Uçak Bileti</h3>
+          <ul class="popular-flight-card__details" aria-label="Uçuş detayları">
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><small>Uçuş süresi</small><strong data-field="duration">1 sa 30 dk</strong></span></li>
+            <li><i class="fa fa-random" aria-hidden="true"></i><span><small>Aktarma</small><strong data-field="stops">Direkt</strong></span></li>
+            <li><i class="fa fa-briefcase" aria-hidden="true"></i><span><small>Sınıf</small><strong data-field="cabin">Ekonomi</strong></span></li>
+          </ul>
+          <div class="popular-flight-card__footer">
+            <span class="popular-flight-card__price"><strong data-field="price">1.379 TL</strong><small>’den başlayan</small></span>
+            <span class="popular-flight-card__cta">Bileti incele <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="16" height="17" alt=""></span>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+  <button class="popular-flight-deals__previous" type="button" data-flight-carousel-previous aria-label="Önceki uçuş fırsatlarını göster">
+    <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="14" height="15" alt="">
+  </button>
+  <button class="popular-flight-deals__next" type="button" data-flight-carousel-next aria-label="Sonraki uçuş fırsatlarını göster">
+    <img src="assets/fc14e8a13352-arrow-right-blue.svg" width="14" height="15" alt="">
+  </button>
+  </div>
+
+  <div class="popular-flight-deals__definition" aria-label="En ucuz uçak bileti fiyat özeti">
+    <span class="popular-flight-deals__definition-label">Fiyat özeti</span>
+    <p id="popular-flight-definition"><span data-definition-sentence="0">En ucuz uçak bileti fiyatı, seçili tarih ve rotada karşılaştırılan hava yolları arasındaki en düşük başlangıç ücretini ifade eder; 9 Eylül 2026 için İstanbul–Antalya hattında SunExpress ile görülen güncel fırsat 1.179 TL’den başlıyor.</span> <span data-definition-sentence="1">Yoğun ilgi gören İstanbul–İzmir uçuşlarında 1.289 TL’den ve İstanbul–Ankara uçuşlarında 1.249 TL’den başlayan seçenekler, kısa şehir kaçamakları ve iş seyahatleri için öne çıkıyor.</span> <span data-definition-sentence="2">Yaz rotalarında ise İstanbul–Bodrum için 1.499 TL’den, İstanbul–Çukurova için 1.379 TL’den başlayan fiyatları karşılaştırarak toplam beş popüler destinasyon arasından planına en uygun bileti seçebilirsin.</span></p>
+  </div>
+
+  <script type="application/json" id="popular-flight-deals-data">{"updated":"1 Eylül 2026","updatedTime":"10:23","searchDate":"9 Eylül 2026","cards":[{"origin":"İstanbul","originCode":"IST","destination":"Antalya","destinationCode":"AYT","airline":"SunExpress","flightDate":"9 Eylül 2026, Çarşamba","duration":"1 sa 10 dk","stops":"Direkt","cabin":"Ekonomi","price":"1.179 TL"},{"origin":"İstanbul","originCode":"IST","destination":"İzmir","destinationCode":"ADB","airline":"AJet","flightDate":"12 Eylül 2026, Cumartesi","duration":"1 sa 05 dk","stops":"Direkt","cabin":"Ekonomi","price":"1.289 TL"},{"origin":"İstanbul","originCode":"SAW","destination":"Bodrum","destinationCode":"BJV","airline":"Pegasus","flightDate":"18 Eylül 2026, Cuma","duration":"1 sa 15 dk","stops":"Direkt","cabin":"Ekonomi","price":"1.499 TL"},{"origin":"İstanbul","originCode":"IST","destination":"Ankara","destinationCode":"ESB","airline":"AJet","flightDate":"7 Eylül 2026, Pazartesi","duration":"1 sa 05 dk","stops":"Direkt","cabin":"Ekonomi","price":"1.249 TL"},{"origin":"İstanbul","originCode":"IST","destination":"Çukurova","destinationCode":"COV","airline":"Türk Hava Yolları","flightDate":"21 Eylül 2026, Pazartesi","duration":"1 sa 30 dk","stops":"Direkt","cabin":"Ekonomi","price":"1.379 TL"}],"popularRoutes":[{"name":"İstanbul–Antalya","price":"1.179 TL"},{"name":"İstanbul–İzmir","price":"1.289 TL"},{"name":"İstanbul–Ankara","price":"1.249 TL"},{"name":"İstanbul–Bodrum","price":"1.499 TL"},{"name":"İstanbul–Çukurova","price":"1.379 TL"}]}</script>
+  <script>
+    (function () {
+      var root = document.getElementById('popular-flight-deals');
+      var dataNode = document.getElementById('popular-flight-deals-data');
+      if (!root || !dataNode) return;
+      var data;
+      try { data = JSON.parse(dataNode.textContent); } catch (error) { return; }
+
+      var updated = root.querySelector('[data-summary-field="updated"]');
+      if (updated) updated.textContent = data.updated;
+      var updatedTime = root.querySelector('[data-summary-field="updatedTime"]');
+      if (updatedTime) updatedTime.textContent = data.updatedTime;
+      root.querySelectorAll('[data-deal-index]').forEach(function (card, index) {
+        var deal = data.cards[index];
+        if (!deal) return;
+        Object.keys(deal).forEach(function (field) {
+          var target = card.querySelector('[data-field="' + field + '"]');
+          if (target) target.textContent = deal[field];
+        });
+        var title = card.querySelector('[data-field="title"]');
+        if (title) title.textContent = 'En Ucuz ' + deal.origin + ' – ' + deal.destination + ' Uçak Bileti';
+      });
+
+      var routes = data.popularRoutes;
+      var sentences = [
+        'En ucuz uçak bileti fiyatı, seçili tarih ve rotada karşılaştırılan hava yolları arasındaki en düşük başlangıç ücretini ifade eder; ' + data.searchDate + ' için ' + routes[0].name + ' hattında ' + data.cards[0].airline + ' ile görülen güncel fırsat ' + routes[0].price + '’den başlıyor.',
+        'Yoğun ilgi gören ' + routes[1].name + ' uçuşlarında ' + routes[1].price + '’den ve ' + routes[2].name + ' uçuşlarında ' + routes[2].price + '’den başlayan seçenekler, kısa şehir kaçamakları ve iş seyahatleri için öne çıkıyor.',
+        'Yaz rotalarında ise ' + routes[3].name + ' için ' + routes[3].price + '’den, ' + routes[4].name + ' için ' + routes[4].price + '’den başlayan fiyatları karşılaştırarak toplam beş popüler destinasyon arasından planına en uygun bileti seçebilirsin.'
+      ];
+      sentences.forEach(function (sentence, index) {
+        var target = root.querySelector('[data-definition-sentence="' + index + '"]');
+        if (target) target.textContent = sentence;
+      });
+
+      var carousel = root.querySelector('[data-flight-carousel]');
+      var track = root.querySelector('[data-flight-carousel-track]');
+      var previous = root.querySelector('[data-flight-carousel-previous]');
+      var next = root.querySelector('[data-flight-carousel-next]');
+      if (carousel && track && previous && next) {
+        var updateCarouselState = function () {
+          var canScroll = track.scrollWidth > track.clientWidth + 2;
+          var isAtStart = track.scrollLeft <= 2;
+          var isAtEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+          carousel.classList.toggle('is-scrollable', canScroll);
+          carousel.classList.toggle('is-at-start', isAtStart);
+          carousel.classList.toggle('is-at-end', isAtEnd);
+          previous.hidden = !canScroll || isAtStart;
+          next.hidden = !canScroll || isAtEnd;
+        };
+        previous.addEventListener('click', function () {
+          var card = track.querySelector('.popular-flight-card');
+          var gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+          track.scrollBy({ left: -(card ? card.getBoundingClientRect().width + gap : track.clientWidth), behavior: 'smooth' });
+        });
+        next.addEventListener('click', function () {
+          var card = track.querySelector('.popular-flight-card');
+          var gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+          track.scrollBy({ left: card ? card.getBoundingClientRect().width + gap : track.clientWidth, behavior: 'smooth' });
+        });
+        track.addEventListener('scroll', updateCarouselState, { passive: true });
+        window.addEventListener('resize', updateCarouselState);
+        updateCarouselState();
+      }
+    }());
+  </script>
+</section>
+""".strip()
+    if 'id="popular-flight-deals"' not in html:
+        html = html.replace(
+            '<div class="mobileAppLanding">',
+            f'{popular_flights_markup}\n<div class="mobileAppLanding">',
+            1,
+        )
+
+    stylesheet = '<link rel="stylesheet" href="header-overrides.css?v=11">'
+    if stylesheet not in html:
+        html = html.replace("</head>", f"    {stylesheet}\n</head>", 1)
     return html
 
 
