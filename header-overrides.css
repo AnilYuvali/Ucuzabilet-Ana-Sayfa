@@ -601,3 +601,848 @@
     width: max-content;
   }
 }
+
+/* Flight price comparison chart below the popular flight deals. */
+.flight-price-compare {
+  margin: 0 0 32px;
+  padding: 28px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2ebf2;
+  border-radius: 20px;
+  color: #00121c;
+  font-family: Inter, sans-serif;
+}
+
+.flight-price-compare__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.flight-price-compare__eyebrow {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #007fe8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.flight-price-compare__header h2 {
+  margin: 0;
+  color: #34383c;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.flight-price-compare__header p {
+  max-width: 640px;
+  margin: 10px 0 0;
+  color: #5a6570;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.flight-price-compare__view {
+  display: inline-flex;
+  flex: 0 0 auto;
+  padding: 3px;
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+
+.flight-price-compare__view button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: #5a6570;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.flight-price-compare__view button[aria-pressed="true"] {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 32, 59, 0.12);
+  color: #00121c;
+}
+
+.flight-price-compare__view button:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.flight-price-compare__view i {
+  color: #007fe8;
+  font-size: 12px;
+}
+
+.flight-price-compare__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-radius: 14px;
+}
+
+.flight-price-compare__field {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 170px;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flight-price-compare__field--compact {
+  flex: 0 1 auto;
+}
+
+.flight-price-compare__field > span {
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.flight-price-compare__select {
+  position: relative;
+}
+
+.flight-price-compare__select select {
+  width: 100%;
+  height: 44px;
+  padding: 0 38px 0 40px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 11px;
+  color: #00121c;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.flight-price-compare__select select:hover {
+  border-color: #b9dcf8;
+}
+
+.flight-price-compare__select select:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 0 3px rgba(0, 140, 255, 0.16);
+  outline: none;
+}
+
+.flight-price-compare__select > img,
+.flight-price-compare__select > i {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(96%) saturate(3084%) hue-rotate(194deg) brightness(101%) contrast(101%);
+}
+
+.flight-price-compare__select > i {
+  width: auto;
+  height: auto;
+  color: #007fe8;
+  font-size: 14px;
+  filter: none;
+}
+
+.flight-price-compare__select::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #5a6570;
+  border-bottom: 2px solid #5a6570;
+  transform: translateY(-70%) rotate(45deg);
+  content: "";
+  pointer-events: none;
+}
+
+.flight-price-compare__swap {
+  display: inline-flex;
+  width: 40px;
+  height: 44px;
+  flex: 0 0 40px;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin: 0 -4px;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 11px;
+  color: #007fe8;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.flight-price-compare__swap:hover {
+  border-color: #b9dcf8;
+  background: #f1f8fe;
+}
+
+.flight-price-compare__swap:active {
+  transform: rotate(180deg);
+}
+
+.flight-price-compare__swap:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.flight-price-compare__swap i {
+  font-size: 14px;
+}
+
+.flight-price-compare__segmented {
+  display: inline-flex;
+  height: 44px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 11px;
+}
+
+.flight-price-compare__segmented button {
+  padding: 0 14px;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #5a6570;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.flight-price-compare__segmented button[aria-pressed="true"] {
+  background: #e6f4ff;
+  color: #007fe8;
+}
+
+.flight-price-compare__segmented button:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.flight-price-compare__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 272px;
+  gap: 18px;
+}
+
+.flight-price-compare__panel {
+  position: relative;
+  min-width: 0;
+  padding: 20px 20px 16px;
+  background: #fff;
+  border: 1px solid #e2ebf2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 32, 59, 0.06);
+}
+
+.flight-price-compare__panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.flight-price-compare__route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00121c;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.flight-price-compare__route small {
+  display: block;
+  color: #717c85;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.flight-price-compare__route > img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(46%) sepia(96%) saturate(3084%) hue-rotate(194deg) brightness(101%) contrast(101%);
+}
+
+.flight-price-compare__route > span:last-of-type {
+  text-align: left;
+}
+
+.flight-price-compare__meta {
+  flex: 0 0 auto;
+  color: #74787c;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.flight-price-compare__meta strong {
+  display: block;
+  color: #34383c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flight-price-compare__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.flight-price-compare__legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #4e5b65;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.flight-price-compare__legend i {
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.flight-price-compare__legend i::after {
+  display: none;
+}
+
+.flight-price-compare__chart {
+  position: relative;
+  min-height: 300px;
+  transition: opacity 160ms ease;
+}
+
+.flight-price-compare__chart.is-updating {
+  opacity: 0.45;
+}
+
+.flight-price-compare__chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: Inter, sans-serif;
+}
+
+.flight-price-compare__chart svg:focus {
+  outline: none;
+}
+
+.flight-price-compare__chart svg:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+.flight-price-compare__chart .fpc-grid {
+  stroke: #edf2f6;
+  stroke-width: 1;
+}
+
+.flight-price-compare__chart .fpc-axis {
+  fill: #7a848c;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-price-compare__chart .fpc-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 160ms ease;
+}
+
+.flight-price-compare__chart .fpc-area {
+  opacity: 0.1;
+}
+
+.flight-price-compare__chart .fpc-dot {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.flight-price-compare__chart .fpc-crosshair {
+  stroke: #b9c7d2;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.flight-price-compare__chart .fpc-min-label {
+  fill: #00121c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.flight-price-compare__chart .fpc-min-badge {
+  fill: #fff;
+  stroke: #dceaf5;
+  stroke-width: 1;
+}
+
+.flight-price-compare__chart .fpc-min-tag {
+  fill: #32bd7b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.flight-price-compare__chart .fpc-hit {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+.flight-price-compare__chart .fpc-col-hover {
+  fill: rgba(0, 127, 232, 0.05);
+  pointer-events: none;
+}
+
+.flight-price-compare__tooltip {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  min-width: 180px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #dceaf5;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 32, 59, 0.16);
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.flight-price-compare__tooltip[hidden] {
+  display: none;
+}
+
+.flight-price-compare__tooltip-title {
+  margin: 0 0 6px;
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.flight-price-compare__tooltip ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flight-price-compare__tooltip li {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.flight-price-compare__tooltip li i {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.flight-price-compare__tooltip li span {
+  color: #5a6570;
+}
+
+.flight-price-compare__tooltip li strong {
+  color: #00121c;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-price-compare__tooltip li.is-min strong {
+  color: #007fe8 !important;
+}
+
+.flight-price-compare__table {
+  overflow-x: auto;
+}
+
+.flight-price-compare__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.flight-price-compare__table th,
+.flight-price-compare__table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #edf2f6;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.flight-price-compare__table th:first-child,
+.flight-price-compare__table td:first-child {
+  text-align: left;
+}
+
+.flight-price-compare__table thead th {
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.flight-price-compare__table tbody td {
+  color: #303a42;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-price-compare__table tbody td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00121c;
+  font-weight: 600;
+}
+
+.flight-price-compare__table tbody td:first-child i {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.flight-price-compare__table td.is-min {
+  color: #007fe8;
+  font-weight: 700;
+}
+
+.flight-price-compare__footnote {
+  margin: 12px 0 0;
+  color: #7a848c;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.flight-price-compare__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flight-price-compare__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.flight-price-compare__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-radius: 14px;
+}
+
+.flight-price-compare__stat--hero {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #007fe8 0%, #0064c2 100%);
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(0, 100, 194, 0.24);
+  color: #fff;
+}
+
+.flight-price-compare__stat small {
+  color: #71808b;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.flight-price-compare__stat--hero small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.flight-price-compare__stat strong {
+  color: #00121c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.flight-price-compare__stat--hero strong {
+  color: #fff !important;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.flight-price-compare__stat span {
+  color: #4e5b65;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.flight-price-compare__stat--hero span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.flight-price-compare__stat--hero span i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #7ff0b6;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(127, 240, 182, 0.28);
+}
+
+.flight-price-compare__delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.flight-price-compare__delta.is-down {
+  color: #1f9d5f;
+}
+
+.flight-price-compare__delta.is-up {
+  color: #d64550;
+}
+
+.flight-price-compare__insight {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #dceaf5;
+  border-left: 4px solid #32bd7b;
+  border-radius: 12px;
+}
+
+.flight-price-compare__insight i {
+  margin-top: 2px;
+  color: #32bd7b;
+  font-size: 15px;
+}
+
+.flight-price-compare__insight p {
+  margin: 0;
+  color: #4e5b65;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.flight-price-compare__insight strong {
+  color: #00121c;
+  font-weight: 600;
+}
+
+.flight-price-compare__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 13px 18px;
+  background: #007fe8;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.flight-price-compare__cta:hover,
+.flight-price-compare__cta:focus-visible {
+  background: #0069c2;
+  box-shadow: 0 8px 20px rgba(0, 105, 194, 0.28);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.flight-price-compare__cta img {
+  width: 14px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+  transition: transform 160ms ease;
+}
+
+.flight-price-compare__cta:hover img {
+  transform: translateX(3px);
+}
+
+.flight-price-compare__empty {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  color: #5a6570;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.flight-price-compare__empty i {
+  margin-bottom: 6px;
+  color: #b9c7d2;
+  font-size: 28px;
+}
+
+.flight-price-compare__empty strong {
+  color: #34383c;
+  font-size: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .flight-price-compare {
+    padding: 22px;
+  }
+
+  .flight-price-compare__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .flight-price-compare__body {
+    grid-template-columns: 1fr;
+  }
+
+  .flight-price-compare__stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .flight-price-compare__stat--hero {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .flight-price-compare {
+    margin: 0 0 24px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .flight-price-compare__header h2 {
+    font-size: 21px;
+  }
+
+  .flight-price-compare__filters {
+    padding: 14px;
+  }
+
+  .flight-price-compare__field {
+    flex-basis: 100%;
+  }
+
+  .flight-price-compare__field--compact {
+    flex-basis: 100%;
+  }
+
+  .flight-price-compare__swap {
+    align-self: center;
+    margin: -4px auto;
+    transform: rotate(90deg);
+  }
+
+  .flight-price-compare__swap:active {
+    transform: rotate(270deg);
+  }
+
+  .flight-price-compare__segmented {
+    width: 100%;
+  }
+
+  .flight-price-compare__segmented button {
+    flex: 1 1 0;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  .flight-price-compare__panel {
+    padding: 16px 14px 12px;
+  }
+
+  .flight-price-compare__panel-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .flight-price-compare__meta {
+    text-align: left;
+  }
+
+  .flight-price-compare__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flight-price-compare__stat--hero {
+    grid-column: 1 / -1;
+  }
+
+  .flight-price-compare__chart {
+    min-height: 240px;
+  }
+}
