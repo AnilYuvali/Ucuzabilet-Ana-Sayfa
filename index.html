@@ -327,7 +327,7 @@
 			<script>
 	  var userModel = ``;
 	</script>
-      <link rel="stylesheet" href="header-overrides.css?v=18">
+      <link rel="stylesheet" href="header-overrides.css?v=19">
 </head><body>
 
 
@@ -3061,7 +3061,18 @@
         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </label>
-    <p class="cheap-flights__count" data-cf-count aria-live="polite"></p>
+    <div class="cheap-flights__sortby">
+      <label class="cheap-flights__sortby-label" for="cheap-flights-sort">Sırala</label>
+      <span class="cheap-flights__select">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 3v10M4.5 13 2 10.5M11.5 13V3M11.5 3 14 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <select id="cheap-flights-sort" data-cf-sort-select>
+          <option value="recommended">Önerilen sıralama</option>
+          <option value="price-asc">Fiyat: düşükten yükseğe</option>
+          <option value="date-asc">Tarih: en yakın</option>
+        </select>
+      </span>
+    </div>
+    <p class="sr-only" data-cf-count aria-live="polite"></p>
   </div>
 
   <div class="cheap-flights__table-wrap" data-cf-table-wrap>
@@ -3092,7 +3103,7 @@
     </button>
   </div>
 
-  <script type="application/json" id="cheap-domestic-flights-data">{"updated":"1 Eylül 2026, 10:23","cities":{"istanbul":{"name":"İstanbul","codes":["IST","SAW"],"slug":"istanbul"},"ankara":{"name":"Ankara","codes":["ESB"],"slug":"ankara"},"izmir":{"name":"İzmir","codes":["ADB"],"slug":"izmir"},"adana":{"name":"Adana","codes":["ADA"],"slug":"adana"},"trabzon":{"name":"Trabzon","codes":["TZX"],"slug":"trabzon"},"gaziantep":{"name":"Gaziantep","codes":["GZT"],"slug":"gaziantep"},"antalya":{"name":"Antalya","codes":["AYT"],"slug":"antalya"},"bursa":{"name":"Bursa","codes":["YEI"],"slug":"bursa"},"samsun":{"name":"Samsun","codes":["SZF"],"slug":"samsun"},"kayseri":{"name":"Kayseri","codes":["ASR"],"slug":"kayseri"},"van":{"name":"Van","codes":["VAN"],"slug":"van"},"diyarbakir":{"name":"Diyarbakır","codes":["DIY"],"slug":"diyarbakir"},"sanliurfa":{"name":"Şanlıurfa","codes":["GNY"],"slug":"sanliurfa"},"erzurum":{"name":"Erzurum","codes":["ERZ"],"slug":"erzurum"},"konya":{"name":"Konya","codes":["KYA"],"slug":"konya"},"eskisehir":{"name":"Eskişehir","codes":["AOE"],"slug":"eskisehir"},"bodrum":{"name":"Bodrum","codes":["BJV"],"slug":"bodrum"},"mardin":{"name":"Mardin","codes":["MQM"],"slug":"mardin"},"malatya":{"name":"Malatya","codes":["MLX"],"slug":"malatya"},"hatay":{"name":"Hatay","codes":["HTY"],"slug":"hatay"},"denizli":{"name":"Denizli","codes":["DNZ"],"slug":"denizli"},"balikesir":{"name":"Balıkesir","codes":["BZI","EDO"],"slug":"balikesir"}},"rows":[{"o":"balikesir","d":"istanbul","oc":"EDO","dc":"IST","date":"2026-12-18","dur":55,"stops":0,"price":1189},{"o":"istanbul","d":"balikesir","oc":"IST","dc":"BZI","date":"2026-10-01","dur":55,"stops":0,"price":1209},{"o":"istanbul","d":"eskisehir","oc":"IST","dc":"AOE","date":"2026-12-20","dur":55,"stops":0,"price":1239},{"o":"ankara","d":"istanbul","oc":"ESB","dc":"IST","date":"2027-01-15","dur":70,"stops":0,"price":1249},{"o":"istanbul","d":"antalya","oc":"SAW","dc":"AYT","date":"2026-12-19","dur":70,"stops":0,"price":1259},{"o":"antalya","d":"istanbul","oc":"AYT","dc":"IST","date":"2026-11-27","dur":75,"stops":0,"price":1259},{"o":"eskisehir","d":"istanbul","oc":"AOE","dc":"IST","date":"2026-12-21","dur":60,"stops":0,"price":1259},{"o":"denizli","d":"istanbul","oc":"DNZ","dc":"IST","date":"2026-10-26","dur":75,"stops":0,"price":1279},{"o":"antalya","d":"ankara","oc":"AYT","dc":"ESB","date":"2026-11-19","dur":75,"stops":0,"price":1289},{"o":"istanbul","d":"konya","oc":"SAW","dc":"KYA","date":"2026-10-18","dur":75,"stops":0,"price":1299},{"o":"ankara","d":"antalya","oc":"ESB","dc":"AYT","date":"2026-09-23","dur":70,"stops":0,"price":1299},{"o":"istanbul","d":"ankara","oc":"SAW","dc":"ESB","date":"2026-10-23","dur":65,"stops":0,"price":1309},{"o":"izmir","d":"istanbul","oc":"ADB","dc":"IST","date":"2026-09-16","dur":65,"stops":0,"price":1319},{"o":"samsun","d":"istanbul","oc":"SZF","dc":"IST","date":"2026-10-23","dur":80,"stops":0,"price":1319},{"o":"istanbul","d":"izmir","oc":"SAW","dc":"ADB","date":"2026-09-15","dur":65,"stops":0,"price":1329},{"o":"kayseri","d":"istanbul","oc":"ASR","dc":"IST","date":"2026-12-24","dur":90,"stops":0,"price":1329},{"o":"konya","d":"istanbul","oc":"KYA","dc":"IST","date":"2026-10-21","dur":80,"stops":0,"price":1329},{"o":"adana","d":"istanbul","oc":"ADA","dc":"IST","date":"2026-09-23","dur":95,"stops":0,"price":1349},{"o":"izmir","d":"ankara","oc":"ADB","dc":"ESB","date":"2026-09-18","dur":80,"stops":0,"price":1359},{"o":"istanbul","d":"samsun","oc":"SAW","dc":"SZF","date":"2026-10-22","dur":85,"stops":0,"price":1369},{"o":"ankara","d":"izmir","oc":"ESB","dc":"ADB","date":"2026-12-11","dur":80,"stops":0,"price":1369},{"o":"izmir","d":"antalya","oc":"ADB","dc":"AYT","date":"2026-11-03","dur":60,"stops":0,"price":1369},{"o":"istanbul","d":"denizli","oc":"IST","dc":"DNZ","date":"2026-10-13","dur":70,"stops":0,"price":1379},{"o":"ankara","d":"trabzon","oc":"ESB","dc":"TZX","date":"2026-12-06","dur":85,"stops":0,"price":1399},{"o":"trabzon","d":"ankara","oc":"TZX","dc":"ESB","date":"2026-12-11","dur":90,"stops":0,"price":1399},{"o":"bursa","d":"antalya","oc":"YEI","dc":"AYT","date":"2026-11-25","dur":80,"stops":0,"price":1399},{"o":"antalya","d":"bursa","oc":"AYT","dc":"YEI","date":"2026-12-09","dur":80,"stops":0,"price":1399},{"o":"istanbul","d":"kayseri","oc":"SAW","dc":"ASR","date":"2026-11-18","dur":85,"stops":0,"price":1409},{"o":"istanbul","d":"adana","oc":"IST","dc":"ADA","date":"2026-11-15","dur":90,"stops":0,"price":1419},{"o":"bodrum","d":"istanbul","oc":"BJV","dc":"IST","date":"2026-10-21","dur":70,"stops":0,"price":1439},{"o":"istanbul","d":"trabzon","oc":"SAW","dc":"TZX","date":"2026-12-29","dur":105,"stops":0,"price":1449},{"o":"bursa","d":"trabzon","oc":"YEI","dc":"TZX","date":"2026-11-14","dur":95,"stops":0,"price":1459},{"o":"trabzon","d":"bursa","oc":"TZX","dc":"YEI","date":"2026-10-31","dur":100,"stops":0,"price":1469},{"o":"erzurum","d":"istanbul","oc":"ERZ","dc":"IST","date":"2026-10-15","dur":125,"stops":0,"price":1499},{"o":"gaziantep","d":"istanbul","oc":"GZT","dc":"IST","date":"2026-10-05","dur":105,"stops":0,"price":1519},{"o":"istanbul","d":"bodrum","oc":"IST","dc":"BJV","date":"2027-01-04","dur":75,"stops":0,"price":1519},{"o":"istanbul","d":"hatay","oc":"SAW","dc":"HTY","date":"2027-01-03","dur":100,"stops":0,"price":1529},{"o":"hatay","d":"istanbul","oc":"HTY","dc":"IST","date":"2026-10-03","dur":105,"stops":0,"price":1529},{"o":"ankara","d":"van","oc":"ESB","dc":"VAN","date":"2026-11-13","dur":110,"stops":0,"price":1529},{"o":"trabzon","d":"istanbul","oc":"TZX","dc":"IST","date":"2026-12-04","dur":110,"stops":0,"price":1539},{"o":"malatya","d":"istanbul","oc":"MLX","dc":"IST","date":"2026-11-26","dur":110,"stops":0,"price":1539},{"o":"ankara","d":"diyarbakir","oc":"ESB","dc":"DIY","date":"2027-01-03","dur":95,"stops":0,"price":1539},{"o":"istanbul","d":"malatya","oc":"SAW","dc":"MLX","date":"2027-01-17","dur":105,"stops":0,"price":1549},{"o":"izmir","d":"adana","oc":"ADB","dc":"ADA","date":"2026-12-09","dur":95,"stops":0,"price":1549},{"o":"ankara","d":"erzurum","oc":"ESB","dc":"ERZ","date":"2026-12-06","dur":95,"stops":0,"price":1549},{"o":"istanbul","d":"gaziantep","oc":"IST","dc":"GZT","date":"2026-10-03","dur":100,"stops":0,"price":1579},{"o":"istanbul","d":"diyarbakir","oc":"IST","dc":"DIY","date":"2026-11-14","dur":115,"stops":0,"price":1579},{"o":"diyarbakir","d":"istanbul","oc":"DIY","dc":"IST","date":"2026-12-20","dur":120,"stops":0,"price":1579},{"o":"bodrum","d":"ankara","oc":"BJV","dc":"ESB","date":"2026-10-30","dur":90,"stops":0,"price":1589},{"o":"istanbul","d":"erzurum","oc":"IST","dc":"ERZ","date":"2027-01-12","dur":120,"stops":0,"price":1609},{"o":"sanliurfa","d":"istanbul","oc":"GNY","dc":"IST","date":"2027-01-12","dur":115,"stops":0,"price":1619},{"o":"izmir","d":"trabzon","oc":"ADB","dc":"TZX","date":"2026-10-21","dur":105,"stops":0,"price":1629},{"o":"istanbul","d":"sanliurfa","oc":"IST","dc":"GNY","date":"2026-10-03","dur":110,"stops":0,"price":1679},{"o":"mardin","d":"istanbul","oc":"MQM","dc":"IST","date":"2026-10-05","dur":125,"stops":0,"price":1679},{"o":"van","d":"istanbul","oc":"VAN","dc":"IST","date":"2026-10-06","dur":130,"stops":0,"price":1689},{"o":"istanbul","d":"mardin","oc":"IST","dc":"MQM","date":"2026-12-26","dur":120,"stops":0,"price":1739},{"o":"istanbul","d":"van","oc":"IST","dc":"VAN","date":"2027-01-04","dur":125,"stops":0,"price":1749},{"o":"antalya","d":"adana","oc":"AYT","dc":"ADA","date":"2026-11-28","dur":215,"stops":1,"price":1749},{"o":"izmir","d":"gaziantep","oc":"ADB","dc":"GZT","date":"2026-10-02","dur":225,"stops":1,"price":1959},{"o":"izmir","d":"diyarbakir","oc":"ADB","dc":"DIY","date":"2026-12-14","dur":235,"stops":1,"price":1969}]}</script>
+  <script type="application/json" id="cheap-domestic-flights-data">{"updated":"1 Eylül 2026, 10:23","cities":{"istanbul":{"name":"İstanbul","codes":["IST","SAW"],"slug":"istanbul"},"ankara":{"name":"Ankara","codes":["ESB"],"slug":"ankara"},"izmir":{"name":"İzmir","codes":["ADB"],"slug":"izmir"},"adana":{"name":"Adana","codes":["ADA"],"slug":"adana"},"trabzon":{"name":"Trabzon","codes":["TZX"],"slug":"trabzon"},"gaziantep":{"name":"Gaziantep","codes":["GZT"],"slug":"gaziantep"},"antalya":{"name":"Antalya","codes":["AYT"],"slug":"antalya"},"bursa":{"name":"Bursa","codes":["YEI"],"slug":"bursa"},"samsun":{"name":"Samsun","codes":["SZF"],"slug":"samsun"},"kayseri":{"name":"Kayseri","codes":["ASR"],"slug":"kayseri"},"van":{"name":"Van","codes":["VAN"],"slug":"van"},"diyarbakir":{"name":"Diyarbakır","codes":["DIY"],"slug":"diyarbakir"},"sanliurfa":{"name":"Şanlıurfa","codes":["GNY"],"slug":"sanliurfa"},"erzurum":{"name":"Erzurum","codes":["ERZ"],"slug":"erzurum"},"konya":{"name":"Konya","codes":["KYA"],"slug":"konya"},"eskisehir":{"name":"Eskişehir","codes":["AOE"],"slug":"eskisehir"},"bodrum":{"name":"Bodrum","codes":["BJV"],"slug":"bodrum"},"mardin":{"name":"Mardin","codes":["MQM"],"slug":"mardin"},"malatya":{"name":"Malatya","codes":["MLX"],"slug":"malatya"},"hatay":{"name":"Hatay","codes":["HTY"],"slug":"hatay"},"denizli":{"name":"Denizli","codes":["DNZ"],"slug":"denizli"},"balikesir":{"name":"Balıkesir","codes":["BZI","EDO"],"slug":"balikesir"}},"rows":[{"o":"istanbul","d":"antalya","oc":"SAW","dc":"AYT","date":"2026-12-19","dur":70,"stops":0,"price":1259,"pop":1},{"o":"ankara","d":"istanbul","oc":"ESB","dc":"IST","date":"2027-01-15","dur":70,"stops":0,"price":1249,"pop":2},{"o":"izmir","d":"istanbul","oc":"ADB","dc":"IST","date":"2026-09-16","dur":65,"stops":0,"price":1319,"pop":3},{"o":"antalya","d":"istanbul","oc":"AYT","dc":"IST","date":"2026-11-27","dur":75,"stops":0,"price":1259,"pop":4},{"o":"istanbul","d":"izmir","oc":"SAW","dc":"ADB","date":"2026-09-15","dur":65,"stops":0,"price":1329,"pop":5},{"o":"kayseri","d":"istanbul","oc":"ASR","dc":"IST","date":"2026-12-24","dur":90,"stops":0,"price":1329,"pop":6},{"o":"van","d":"istanbul","oc":"VAN","dc":"IST","date":"2026-10-06","dur":130,"stops":0,"price":1689,"pop":7},{"o":"ankara","d":"izmir","oc":"ESB","dc":"ADB","date":"2026-12-11","dur":80,"stops":0,"price":1369,"pop":8},{"o":"ankara","d":"antalya","oc":"ESB","dc":"AYT","date":"2026-09-23","dur":70,"stops":0,"price":1299,"pop":9},{"o":"istanbul","d":"ankara","oc":"SAW","dc":"ESB","date":"2026-10-23","dur":65,"stops":0,"price":1309,"pop":10},{"o":"istanbul","d":"trabzon","oc":"SAW","dc":"TZX","date":"2026-12-29","dur":105,"stops":0,"price":1449,"pop":11},{"o":"trabzon","d":"istanbul","oc":"TZX","dc":"IST","date":"2026-12-04","dur":110,"stops":0,"price":1539,"pop":12},{"o":"istanbul","d":"adana","oc":"IST","dc":"ADA","date":"2026-11-15","dur":90,"stops":0,"price":1419,"pop":13},{"o":"adana","d":"istanbul","oc":"ADA","dc":"IST","date":"2026-09-23","dur":95,"stops":0,"price":1349,"pop":14},{"o":"istanbul","d":"diyarbakir","oc":"IST","dc":"DIY","date":"2026-11-14","dur":115,"stops":0,"price":1579,"pop":15},{"o":"diyarbakir","d":"istanbul","oc":"DIY","dc":"IST","date":"2026-12-20","dur":120,"stops":0,"price":1579,"pop":16},{"o":"istanbul","d":"gaziantep","oc":"IST","dc":"GZT","date":"2026-10-03","dur":100,"stops":0,"price":1579,"pop":17},{"o":"gaziantep","d":"istanbul","oc":"GZT","dc":"IST","date":"2026-10-05","dur":105,"stops":0,"price":1519,"pop":18},{"o":"istanbul","d":"kayseri","oc":"SAW","dc":"ASR","date":"2026-11-18","dur":85,"stops":0,"price":1409,"pop":19},{"o":"istanbul","d":"van","oc":"IST","dc":"VAN","date":"2027-01-04","dur":125,"stops":0,"price":1749,"pop":20},{"o":"istanbul","d":"bodrum","oc":"IST","dc":"BJV","date":"2027-01-04","dur":75,"stops":0,"price":1519,"pop":21},{"o":"bodrum","d":"istanbul","oc":"BJV","dc":"IST","date":"2026-10-21","dur":70,"stops":0,"price":1439,"pop":22},{"o":"istanbul","d":"erzurum","oc":"IST","dc":"ERZ","date":"2027-01-12","dur":120,"stops":0,"price":1609,"pop":23},{"o":"erzurum","d":"istanbul","oc":"ERZ","dc":"IST","date":"2026-10-15","dur":125,"stops":0,"price":1499,"pop":24},{"o":"izmir","d":"ankara","oc":"ADB","dc":"ESB","date":"2026-09-18","dur":80,"stops":0,"price":1359,"pop":25},{"o":"antalya","d":"ankara","oc":"AYT","dc":"ESB","date":"2026-11-19","dur":75,"stops":0,"price":1289,"pop":26},{"o":"istanbul","d":"samsun","oc":"SAW","dc":"SZF","date":"2026-10-22","dur":85,"stops":0,"price":1369,"pop":27},{"o":"samsun","d":"istanbul","oc":"SZF","dc":"IST","date":"2026-10-23","dur":80,"stops":0,"price":1319,"pop":28},{"o":"istanbul","d":"sanliurfa","oc":"IST","dc":"GNY","date":"2026-10-03","dur":110,"stops":0,"price":1679,"pop":29},{"o":"sanliurfa","d":"istanbul","oc":"GNY","dc":"IST","date":"2027-01-12","dur":115,"stops":0,"price":1619,"pop":30},{"o":"istanbul","d":"malatya","oc":"SAW","dc":"MLX","date":"2027-01-17","dur":105,"stops":0,"price":1549,"pop":31},{"o":"malatya","d":"istanbul","oc":"MLX","dc":"IST","date":"2026-11-26","dur":110,"stops":0,"price":1539,"pop":32},{"o":"istanbul","d":"hatay","oc":"SAW","dc":"HTY","date":"2027-01-03","dur":100,"stops":0,"price":1529,"pop":33},{"o":"hatay","d":"istanbul","oc":"HTY","dc":"IST","date":"2026-10-03","dur":105,"stops":0,"price":1529,"pop":34},{"o":"istanbul","d":"mardin","oc":"IST","dc":"MQM","date":"2026-12-26","dur":120,"stops":0,"price":1739,"pop":35},{"o":"mardin","d":"istanbul","oc":"MQM","dc":"IST","date":"2026-10-05","dur":125,"stops":0,"price":1679,"pop":36},{"o":"ankara","d":"trabzon","oc":"ESB","dc":"TZX","date":"2026-12-06","dur":85,"stops":0,"price":1399,"pop":37},{"o":"trabzon","d":"ankara","oc":"TZX","dc":"ESB","date":"2026-12-11","dur":90,"stops":0,"price":1399,"pop":38},{"o":"istanbul","d":"konya","oc":"SAW","dc":"KYA","date":"2026-10-18","dur":75,"stops":0,"price":1299,"pop":39},{"o":"konya","d":"istanbul","oc":"KYA","dc":"IST","date":"2026-10-21","dur":80,"stops":0,"price":1329,"pop":40},{"o":"istanbul","d":"denizli","oc":"IST","dc":"DNZ","date":"2026-10-13","dur":70,"stops":0,"price":1379,"pop":41},{"o":"denizli","d":"istanbul","oc":"DNZ","dc":"IST","date":"2026-10-26","dur":75,"stops":0,"price":1279,"pop":42},{"o":"ankara","d":"van","oc":"ESB","dc":"VAN","date":"2026-11-13","dur":110,"stops":0,"price":1529,"pop":43},{"o":"ankara","d":"diyarbakir","oc":"ESB","dc":"DIY","date":"2027-01-03","dur":95,"stops":0,"price":1539,"pop":44},{"o":"ankara","d":"erzurum","oc":"ESB","dc":"ERZ","date":"2026-12-06","dur":95,"stops":0,"price":1549,"pop":45},{"o":"izmir","d":"antalya","oc":"ADB","dc":"AYT","date":"2026-11-03","dur":60,"stops":0,"price":1369,"pop":46},{"o":"izmir","d":"trabzon","oc":"ADB","dc":"TZX","date":"2026-10-21","dur":105,"stops":0,"price":1629,"pop":47},{"o":"izmir","d":"adana","oc":"ADB","dc":"ADA","date":"2026-12-09","dur":95,"stops":0,"price":1549,"pop":48},{"o":"izmir","d":"gaziantep","oc":"ADB","dc":"GZT","date":"2026-10-02","dur":225,"stops":1,"price":1959,"pop":49},{"o":"izmir","d":"diyarbakir","oc":"ADB","dc":"DIY","date":"2026-12-14","dur":235,"stops":1,"price":1969,"pop":50},{"o":"bodrum","d":"ankara","oc":"BJV","dc":"ESB","date":"2026-10-30","dur":90,"stops":0,"price":1589,"pop":51},{"o":"antalya","d":"adana","oc":"AYT","dc":"ADA","date":"2026-11-28","dur":215,"stops":1,"price":1749,"pop":52},{"o":"bursa","d":"trabzon","oc":"YEI","dc":"TZX","date":"2026-11-14","dur":95,"stops":0,"price":1459,"pop":53},{"o":"trabzon","d":"bursa","oc":"TZX","dc":"YEI","date":"2026-10-31","dur":100,"stops":0,"price":1469,"pop":54},{"o":"bursa","d":"antalya","oc":"YEI","dc":"AYT","date":"2026-11-25","dur":80,"stops":0,"price":1399,"pop":55},{"o":"antalya","d":"bursa","oc":"AYT","dc":"YEI","date":"2026-12-09","dur":80,"stops":0,"price":1399,"pop":56},{"o":"istanbul","d":"balikesir","oc":"IST","dc":"BZI","date":"2026-10-01","dur":55,"stops":0,"price":1209,"pop":57},{"o":"balikesir","d":"istanbul","oc":"EDO","dc":"IST","date":"2026-12-18","dur":55,"stops":0,"price":1189,"pop":58},{"o":"istanbul","d":"eskisehir","oc":"IST","dc":"AOE","date":"2026-12-20","dur":55,"stops":0,"price":1239,"pop":59},{"o":"eskisehir","d":"istanbul","oc":"AOE","dc":"IST","date":"2026-12-21","dur":60,"stops":0,"price":1259,"pop":60}]}</script>
   <script>
     (function () {
       var root = document.getElementById('cheap-domestic-flights');
@@ -3111,6 +3122,7 @@
       var searchInput = q('[data-cf-search]');
       var searchClear = q('[data-cf-search-clear]');
       var count = q('[data-cf-count]');
+      var sortSelect = q('[data-cf-sort-select]');
       var tableWrap = q('[data-cf-table-wrap]');
       var body = q('[data-cf-body]');
       var moreButton = q('[data-cf-more]');
@@ -3121,7 +3133,8 @@
       var MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
       var DAYS = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
       var PAGE_SIZE = 8;
-      var state = { city: '', query: '', sortKey: 'price', sortDir: 'asc', limit: PAGE_SIZE };
+      var SORT_OPTIONS = { recommended: ['pop', 'asc'], 'price-asc': ['price', 'asc'], 'date-asc': ['date', 'asc'] };
+      var state = { city: '', query: '', sortKey: 'pop', sortDir: 'asc', limit: PAGE_SIZE };
 
       function parseDate(iso) {
         var parts = iso.split('-');
@@ -3251,7 +3264,7 @@
 
         return {
           el: tr, info: info, href: href, cities: [row.o, row.d],
-          date: row.date, dur: row.dur, price: row.price,
+          date: row.date, dur: row.dur, price: row.price, pop: row.pop,
           haystack: normalize([routeName, row.oc, row.dc, dateText, formatDay(row.date), durationText, stopsText, priceText, String(row.price)].join(' '))
         };
       });
@@ -3282,16 +3295,13 @@
         tableWrap.classList.toggle('is-empty', matched === 0);
         moreButton.hidden = shown >= matched;
         moreText.textContent = 'Daha fazla göster (' + (matched - shown) + ')';
-        count.innerHTML = '';
-        var strong = document.createElement('strong');
         if (matched === 0) {
           count.textContent = 'Sonuç bulunamadı';
         } else {
-          strong.textContent = shown + ' / ' + matched;
-          count.appendChild(strong);
           var cityName = state.city && data.cities[state.city] ? data.cities[state.city].name : '';
-          count.appendChild(document.createTextNode(' uçuş gösteriliyor' + (cityName ? ' · ' + cityName : '')));
+          count.textContent = shown + ' / ' + matched + ' uçuş gösteriliyor' + (cityName ? ' · ' + cityName : '');
         }
+        syncSortSelect();
         root.querySelectorAll('[data-cf-sort-col]').forEach(function (th) {
           if (th.getAttribute('data-cf-sort-col') === state.sortKey) th.setAttribute('aria-sort', state.sortDir === 'asc' ? 'ascending' : 'descending');
           else th.removeAttribute('aria-sort');
@@ -3343,6 +3353,34 @@
       });
 
       /* ---------- sort & paging ---------- */
+      var customOption = document.createElement('option');
+      customOption.value = 'custom';
+      customOption.textContent = 'Özel sıralama';
+
+      function syncSortSelect() {
+        var current = state.sortKey + '-' + state.sortDir;
+        var value = '';
+        Object.keys(SORT_OPTIONS).forEach(function (key) {
+          if (SORT_OPTIONS[key].join('-') === current) value = key;
+        });
+        if (value) {
+          if (customOption.parentNode) customOption.parentNode.removeChild(customOption);
+          sortSelect.value = value;
+        } else {
+          if (!customOption.parentNode) sortSelect.appendChild(customOption);
+          sortSelect.value = 'custom';
+        }
+      }
+
+      sortSelect.addEventListener('change', function () {
+        var option = SORT_OPTIONS[sortSelect.value];
+        if (!option) return;
+        state.sortKey = option[0];
+        state.sortDir = option[1];
+        state.limit = PAGE_SIZE;
+        apply();
+      });
+
       root.querySelectorAll('[data-cf-sort]').forEach(function (button) {
         button.addEventListener('click', function () {
           var key = button.getAttribute('data-cf-sort');

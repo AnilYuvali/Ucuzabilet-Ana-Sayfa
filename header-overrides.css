@@ -2306,3 +2306,92 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
     max-width: min(280px, 80vw);
   }
 }
+
+/* Sort control in the cheapest-flights toolbar. */
+.cheap-flights__sortby {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.cheap-flights__sortby-label {
+  margin: 0;
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cheap-flights__select {
+  position: relative;
+  display: inline-block;
+}
+
+.cheap-flights__select > svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  width: 15px;
+  height: 15px;
+  color: #007fe8;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.cheap-flights__select::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #5a6570;
+  border-bottom: 2px solid #5a6570;
+  transform: translateY(-70%) rotate(45deg);
+  content: "";
+  pointer-events: none;
+}
+
+.cheap-flights__select select {
+  height: 44px;
+  min-width: 224px;
+  padding: 0 38px 0 36px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 11px;
+  color: #29485e;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.cheap-flights__select select:hover {
+  border-color: #b9dcf8;
+}
+
+.cheap-flights__select select:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 0 3px rgba(0, 140, 255, 0.16);
+  outline: none;
+}
+
+@media (max-width: 767.98px) {
+  .cheap-flights__sortby {
+    width: 100%;
+  }
+
+  .cheap-flights__select {
+    flex: 1 1 auto;
+  }
+
+  .cheap-flights__select select {
+    width: 100%;
+    min-width: 0;
+  }
+}
