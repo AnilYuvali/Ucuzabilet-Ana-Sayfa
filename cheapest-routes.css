@@ -1,0 +1,328 @@
+/* Homepage "En Ucuz Uçak Bileti Fırsatları" row.
+   Sits between the campaign carousel and the mobile app landing banner. */
+
+.cheapestRoutesRow {
+  padding: 8px 0 0;
+}
+
+.cheapestRoutesHead {
+  align-items: flex-end;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 0 0 28px;
+}
+
+.cheapestRoutesHead .homepageRowHeader {
+  margin: 0;
+}
+
+.cheapestRoutesHeadText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cheapestRoutesUpdated {
+  align-items: center;
+  color: #797979;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 6px;
+  line-height: 16px;
+}
+
+.cheapestRoutesPulse {
+  background: #2bb673;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(43, 182, 115, 0.18);
+  display: inline-block;
+  flex-shrink: 0;
+  height: 6px;
+  width: 6px;
+}
+
+.cheapestRoutesRow .cheapestRoutesAllLink {
+  align-items: center;
+  color: #007bff;
+  display: inline-flex;
+  flex-shrink: 0;
+  float: none;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 5px;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cheapestRoutesRow .cheapestRoutesAllLink:hover {
+  color: #0069d9;
+  text-decoration: none;
+}
+
+/* Card grid */
+.cheapestRoutesGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cheapestRouteCard {
+  display: flex;
+  margin: 0;
+}
+
+.cheapestRouteLink {
+  background:
+    linear-gradient(180deg, #f4f8fc 0%, rgba(244, 248, 252, 0) 78px),
+    #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  color: #292929;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 20px 18px;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.cheapestRouteLink:hover,
+.cheapestRouteLink:focus-visible {
+  border-color: #008cff;
+  box-shadow: 0 10px 24px rgba(0, 33, 59, 0.1);
+  color: #292929;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.cheapestRouteLink:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+/* City chip pinned on the top border, as in the reference structure */
+.cheapestRouteChip {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 40px;
+  box-shadow: 0 2px 6px rgba(0, 33, 59, 0.06);
+  color: #292929;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 6px;
+  left: 20px;
+  line-height: 16px;
+  padding: 5px 12px 5px 6px;
+  position: absolute;
+  top: -14px;
+}
+
+.cheapestRouteChipFlag {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  height: 18px;
+  object-fit: cover;
+  width: 18px;
+}
+
+.cheapestRouteBadge {
+  background: #fec60a;
+  border-radius: 40px;
+  color: #292929;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+  padding: 4px 10px;
+  position: absolute;
+  right: 16px;
+  top: -12px;
+}
+
+.cheapestRouteTitle {
+  color: #292929;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 6px 0 0;
+  /* Reserve two lines so the fact rows stay aligned across cards. */
+  min-height: 48px;
+}
+
+.cheapestRouteMeta {
+  align-items: center;
+  color: #797979;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  gap: 6px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+.cheapestRouteMetaDot {
+  background: #d9d9d9;
+  border-radius: 50%;
+  height: 3px;
+  width: 3px;
+}
+
+.cheapestRouteMetaAirline {
+  color: #4e4e4e;
+  font-weight: 600;
+}
+
+.cheapestRouteFacts {
+  border-top: 1px solid #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 14px 0 0;
+}
+
+.cheapestRouteFacts li {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  line-height: 18px;
+  margin: 0;
+}
+
+.cheapestRouteFactIcon {
+  color: #008cff;
+  flex-shrink: 0;
+}
+
+.cheapestRouteFactLabel {
+  color: #797979;
+  font-size: 13px;
+}
+
+.cheapestRouteFactValue {
+  color: #292929;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cheapestRoutePrice {
+  align-items: center;
+  color: #007bff;
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  gap: 6px;
+  line-height: 20px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.cheapestRoutePriceAmount {
+  font-size: 17px;
+}
+
+.cheapestRoutePriceNote {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cheapestRoutePriceArrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.cheapestRouteLink:hover .cheapestRoutePriceArrow {
+  transform: translateX(3px);
+}
+
+/* Programmatically refreshed definition copy */
+.cheapestRoutesDefinition {
+  background: #f4f8fc;
+  border-radius: 12px;
+  color: #4e4e4e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 20px 0 0;
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.cheapestRoutesDefinition .cheapestRoutesVar {
+  color: #292929;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+  .cheapestRoutesGrid {
+    gap: 16px;
+  }
+
+  .cheapestRouteTitle {
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cheapestRoutesHead {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .cheapestRoutesHead .homepageRowHeader {
+    margin: 0;
+    text-align: center;
+  }
+
+  .cheapestRoutesHeadText {
+    align-items: center;
+  }
+
+  .cheapestRoutesGrid {
+    -ms-overflow-style: none;
+    display: flex;
+    margin: 0 -15px;
+    overflow-x: auto;
+    padding: 14px 15px 4px;
+    scroll-padding-left: 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .cheapestRoutesGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cheapestRouteCard {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cheapestRouteCard {
+    width: 84%;
+  }
+
+  .cheapestRoutesDefinition {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 14px 16px;
+  }
+}

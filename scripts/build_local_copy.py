@@ -22,6 +22,7 @@ NETWORK_FILES = CAPTURE / "network-resources"
 PAGE_ASSET_DIRS = [CAPTURE / "browser-assets", CAPTURE / "browser-assets-campaign"]
 MANUAL_RESOURCE_DIR = CAPTURE / "manual-resources"
 CSS_DEPENDENCY_DIR = CAPTURE / "css-dependencies"
+COMPONENT_DIR = Path(__file__).resolve().parent / "components"
 OUTPUT_ASSETS = ROOT / "assets"
 BASE_URL = "https://www.ucuzabilet.com/"
 STATIC_ALIASES = {
@@ -237,9 +238,19 @@ def apply_local_customizations(html: str) -> str:
             count=1,
             flags=re.DOTALL,
         )
-    stylesheet = '<link rel="stylesheet" href="header-overrides.css?v=4">'
-    if stylesheet not in html:
-        html = html.replace("</head>", f"    {stylesheet}\n</head>", 1)
+    # Cheapest-routes row between the campaign carousel and the mobile app banner.
+    if 'class="row cheapestRoutesRow"' not in html:
+        component = (COMPONENT_DIR / "cheapest-routes.html").read_text(encoding="utf-8")
+        anchor = '<div class="mobileAppLanding">'
+        html = html.replace(anchor, f"{component}{anchor}", 1)
+
+    stylesheets = [
+        '<link rel="stylesheet" href="header-overrides.css?v=4">',
+        '<link rel="stylesheet" href="cheapest-routes.css?v=1">',
+    ]
+    for stylesheet in stylesheets:
+        if stylesheet not in html:
+            html = html.replace("</head>", f"    {stylesheet}\n</head>", 1)
     return html
 
 
