@@ -1,6 +1,6 @@
 {
   "source": "https://www.ucuzabilet.com/",
-  "resourceCount": 314,
+  "resourceCount": 319,
   "resources": [
     {
       "url": "https://aa.agkn.com/adscores/g.pixel?sid=9212273938&ct=S-vE4l84d3NkcWtBODFtSDFFSkJYWldXb25uemNycWtDaDF6ZXJsOW8xNFVQbjBrWlloMkRYOXAlMkZxcm9SbnZBV3MwT0Y",
@@ -3133,6 +3133,46 @@
       "fromDiskCache": false,
       "localPath": "assets/08601db17266-sync.gif",
       "capture": "network-response"
+    },
+    {
+      "url": "local-asset:popular-flight-ankara.png",
+      "mimeType": "image/png",
+      "type": "local-asset",
+      "bytes": 1049614,
+      "localPath": "assets/popular-flight-ankara.png",
+      "capture": "approved-local-asset"
+    },
+    {
+      "url": "local-asset:popular-flight-antalya.png",
+      "mimeType": "image/png",
+      "type": "local-asset",
+      "bytes": 1061374,
+      "localPath": "assets/popular-flight-antalya.png",
+      "capture": "approved-local-asset"
+    },
+    {
+      "url": "local-asset:popular-flight-bodrum.png",
+      "mimeType": "image/png",
+      "type": "local-asset",
+      "bytes": 938618,
+      "localPath": "assets/popular-flight-bodrum.png",
+      "capture": "approved-local-asset"
+    },
+    {
+      "url": "local-asset:popular-flight-cukurova.png",
+      "mimeType": "image/png",
+      "type": "local-asset",
+      "bytes": 964711,
+      "localPath": "assets/popular-flight-cukurova.png",
+      "capture": "approved-local-asset"
+    },
+    {
+      "url": "local-asset:popular-flight-izmir.png",
+      "mimeType": "image/png",
+      "type": "local-asset",
+      "bytes": 940879,
+      "localPath": "assets/popular-flight-izmir.png",
+      "capture": "approved-local-asset"
     }
   ],
   "captureFailures": {
