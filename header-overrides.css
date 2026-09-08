@@ -1446,3 +1446,863 @@
     min-height: 240px;
   }
 }
+
+/* Cheapest domestic flights: city headings, search and a clickable table. */
+.cheap-flights {
+  margin: 0 0 32px;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e2ebf2;
+  border-radius: 20px;
+  color: #00121c;
+  font-family: Inter, sans-serif;
+}
+
+.cheap-flights__header {
+  margin-bottom: 18px;
+}
+
+.cheap-flights__eyebrow {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #007fe8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cheap-flights__header h2 {
+  margin: 0;
+  color: #34383c;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.cheap-flights__header p {
+  max-width: 680px;
+  margin: 10px 0 0;
+  color: #5a6570;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* City heading cloud: collapsed to two rows, expandable. */
+.cheap-flights__cities {
+  position: relative;
+  margin-bottom: 18px;
+  padding: 16px 18px 14px;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-radius: 14px;
+}
+
+.cheap-flights__cities-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cheap-flights__cities-label {
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cheap-flights__clear {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #007fe8;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cheap-flights__cities.has-active .cheap-flights__clear {
+  display: inline-flex;
+}
+
+.cheap-flights__clear:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.cheap-flights__chips {
+  position: relative;
+  max-height: 78px;
+  overflow: hidden;
+  transition: max-height 240ms ease;
+}
+
+.cheap-flights__chips::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 36px;
+  background: linear-gradient(180deg, rgba(244, 248, 252, 0), #f4f8fc);
+  content: "";
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.cheap-flights__cities.is-expanded .cheap-flights__chips {
+  max-height: 600px;
+}
+
+.cheap-flights__cities.is-expanded .cheap-flights__chips::after {
+  opacity: 0;
+}
+
+.cheap-flights__chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cheap-flights__chip-list h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.cheap-flights__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 32px;
+  padding: 6px 11px 6px 9px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 999px;
+  color: #4e5b65;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.cheap-flights__chip:hover,
+.cheap-flights__chip:focus-visible {
+  border-color: #b9dcf8;
+  background: #f1f8fe;
+  color: #00121c;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.cheap-flights__chip:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.cheap-flights__chip strong {
+  color: #29485e !important;
+  font-weight: 600;
+}
+
+.cheap-flights__chip .cheap-flights__chip-code {
+  padding: 2px 6px;
+  background: #e6f4ff;
+  border-radius: 6px;
+  color: #007fe8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 12px;
+}
+
+.cheap-flights__chip .cheap-flights__chip-pin {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: #007fe8;
+}
+
+.cheap-flights__chip .cheap-flights__chip-pin svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cheap-flights__chip.is-active {
+  border-color: #007fe8;
+  background: #007fe8;
+  box-shadow: 0 6px 16px rgba(0, 127, 232, 0.28);
+  color: #fff;
+}
+
+.cheap-flights__chip.is-active strong,
+.cheap-flights__chip.is-active .cheap-flights__chip-pin {
+  color: #fff !important;
+}
+
+.cheap-flights__chip.is-active .cheap-flights__chip-code {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.cheap-flights__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #007fe8;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cheap-flights__toggle svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 200ms ease;
+}
+
+.cheap-flights__cities.is-expanded .cheap-flights__toggle svg {
+  transform: rotate(180deg);
+}
+
+.cheap-flights__toggle:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Toolbar: search + result count. */
+.cheap-flights__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cheap-flights__search {
+  position: relative;
+  flex: 1 1 320px;
+  max-width: 480px;
+}
+
+.cheap-flights__search svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  color: #71808b;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.cheap-flights__search input {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px 0 40px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 11px;
+  color: #00121c;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.cheap-flights__search input::placeholder {
+  color: #8a949c;
+}
+
+.cheap-flights__search input:hover {
+  border-color: #b9dcf8;
+}
+
+.cheap-flights__search input:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 0 3px rgba(0, 140, 255, 0.16);
+  outline: none;
+}
+
+.cheap-flights__search-clear {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  display: none;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #f1f5f9;
+  border: 0;
+  border-radius: 50%;
+  color: #5a6570;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.cheap-flights__search.has-value .cheap-flights__search-clear {
+  display: inline-flex;
+}
+
+.cheap-flights__search-clear svg {
+  position: static;
+  width: 12px;
+  height: 12px;
+  color: inherit;
+  transform: none;
+}
+
+.cheap-flights__count {
+  color: #74787c;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.cheap-flights__count strong {
+  color: #34383c !important;
+  font-weight: 600;
+}
+
+/* Table. */
+.cheap-flights__table-wrap {
+  border: 1px solid #e2ebf2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 32, 59, 0.06);
+}
+
+.cheap-flights__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.cheap-flights__table thead th {
+  padding: 13px 16px;
+  background: #f4f8fc;
+  border-bottom: 1px solid #e2ebf2;
+  color: #71808b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 15px;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cheap-flights__table thead th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.cheap-flights__table thead th:last-child {
+  border-top-right-radius: 16px;
+  text-align: right;
+}
+
+.cheap-flights__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.cheap-flights__sort svg {
+  width: 10px;
+  height: 10px;
+  opacity: 0.45;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+th[aria-sort] .cheap-flights__sort {
+  color: #007fe8;
+}
+
+th[aria-sort] .cheap-flights__sort svg {
+  opacity: 1;
+}
+
+th[aria-sort="descending"] .cheap-flights__sort svg {
+  transform: rotate(180deg);
+}
+
+.cheap-flights__sort:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.cheap-flights__table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf2f6;
+  color: #303a42;
+  vertical-align: middle;
+}
+
+.cheap-flights__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.cheap-flights__table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.cheap-flights__table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+.cheap-flights__row {
+  cursor: pointer;
+  transition: background 140ms ease;
+}
+
+.cheap-flights__row:hover,
+.cheap-flights__row:focus-within {
+  background: #f6fafe;
+}
+
+.cheap-flights__row[hidden] {
+  display: none;
+}
+
+.cheap-flights__route {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cheap-flights__route-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cheap-flights__route a {
+  color: #29485e;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.cheap-flights__route a:hover,
+.cheap-flights__row:hover .cheap-flights__route a {
+  color: #007fe8;
+  text-decoration: none;
+}
+
+.cheap-flights__route a:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.cheap-flights__codes {
+  color: #717c85;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+}
+
+.cheap-flights__codes svg {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  color: #007fe8;
+  vertical-align: -1px;
+}
+
+.cheap-flights__info {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #e6f4ff;
+  border: 0;
+  border-radius: 50%;
+  color: #007fe8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  cursor: help;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.cheap-flights__info:hover,
+.cheap-flights__info:focus-visible,
+.cheap-flights__info.is-open {
+  background: #007fe8;
+  color: #fff;
+}
+
+.cheap-flights__info:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.cheap-flights__tooltip {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 10px);
+  left: 0;
+  width: max-content;
+  max-width: 320px;
+  padding: 10px 12px;
+  background: #00121c;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 18, 28, 0.28);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 140ms ease, transform 140ms ease;
+  visibility: hidden;
+}
+
+.cheap-flights__tooltip::before {
+  position: absolute;
+  top: -5px;
+  left: 18px;
+  width: 10px;
+  height: 10px;
+  background: #00121c;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.cheap-flights__tooltip strong {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.cheap-flights__info:hover + .cheap-flights__tooltip,
+.cheap-flights__info:focus-visible + .cheap-flights__tooltip,
+.cheap-flights__info.is-open + .cheap-flights__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.cheap-flights__date strong {
+  display: block;
+  color: #00121c !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.cheap-flights__date small {
+  color: #717c85;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.cheap-flights__duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #303a42;
+  font-weight: 500;
+}
+
+.cheap-flights__duration svg {
+  width: 14px;
+  height: 14px;
+  color: #008cff;
+}
+
+.cheap-flights__stops {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.cheap-flights__stops::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.cheap-flights__stops--direct {
+  background: #e7f8ef;
+  color: #1f9d5f;
+}
+
+.cheap-flights__stops--transfer {
+  background: #fff4e0;
+  color: #b7700a;
+}
+
+.cheap-flights__price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  text-align: right;
+}
+
+.cheap-flights__price-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cheap-flights__price-value strong {
+  color: #007fe8 !important;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.cheap-flights__price-value small {
+  color: #6f7981;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.cheap-flights__price-arrow {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  background: #f1f8fe;
+  border-radius: 50%;
+  color: #007fe8;
+  transition: background 140ms ease, transform 140ms ease;
+}
+
+.cheap-flights__price-arrow svg {
+  width: 12px;
+  height: 12px;
+}
+
+.cheap-flights__row:hover .cheap-flights__price-arrow {
+  background: #007fe8;
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.cheap-flights__empty {
+  display: none;
+  padding: 36px 20px;
+  color: #5a6570;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.cheap-flights__empty strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #34383c !important;
+  font-size: 15px;
+}
+
+.cheap-flights__table-wrap.is-empty .cheap-flights__empty {
+  display: block;
+}
+
+.cheap-flights__table-wrap.is-empty .cheap-flights__table {
+  display: none;
+}
+
+.cheap-flights__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.cheap-flights__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: #fff;
+  border: 1px solid #b9dcf8;
+  border-radius: 11px;
+  color: #007fe8;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, box-shadow 160ms ease;
+}
+
+.cheap-flights__more:hover {
+  background: #f1f8fe;
+  box-shadow: 0 6px 16px rgba(0, 127, 232, 0.14);
+}
+
+.cheap-flights__more:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.cheap-flights__more[hidden] {
+  display: none;
+}
+
+.cheap-flights__footnote {
+  margin: 0;
+  color: #7a848c;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .cheap-flights {
+    padding: 22px;
+  }
+
+  .cheap-flights__table thead th,
+  .cheap-flights__table tbody td {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cheap-flights {
+    margin: 0 0 24px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .cheap-flights__header h2 {
+    font-size: 21px;
+  }
+
+  .cheap-flights__cities {
+    padding: 14px;
+  }
+
+  .cheap-flights__chips {
+    max-height: 128px;
+  }
+
+  .cheap-flights__search {
+    max-width: none;
+  }
+
+  /* Rows become cards on small screens. */
+  .cheap-flights__table-wrap {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cheap-flights__table,
+  .cheap-flights__table tbody,
+  .cheap-flights__table tr,
+  .cheap-flights__table td {
+    display: block;
+  }
+
+  .cheap-flights__table thead {
+    display: none;
+  }
+
+  .cheap-flights__row {
+    display: grid !important;
+    grid-template-areas:
+      "route route route price"
+      "date duration stops stops";
+    grid-template-columns: auto auto auto 1fr;
+    gap: 12px 14px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #e2ebf2;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 32, 59, 0.06);
+  }
+
+  .cheap-flights__row[hidden] {
+    display: none !important;
+  }
+
+  .cheap-flights__table tbody td {
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+  }
+
+  .cheap-flights__table tbody td:nth-child(1) { grid-area: route; }
+  .cheap-flights__table tbody td:nth-child(2) { grid-area: date; }
+  .cheap-flights__table tbody td:nth-child(3) { grid-area: duration; }
+  .cheap-flights__table tbody td:nth-child(4) { grid-area: stops; justify-self: start; }
+  .cheap-flights__table tbody td:nth-child(5) { grid-area: price; justify-self: end; }
+
+  .cheap-flights__date strong {
+    display: inline;
+    font-size: 12px;
+  }
+
+  .cheap-flights__date small {
+    display: none;
+  }
+
+  .cheap-flights__price {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .cheap-flights__tooltip {
+    max-width: min(280px, 80vw);
+  }
+}

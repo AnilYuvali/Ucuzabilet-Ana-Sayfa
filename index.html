@@ -327,7 +327,7 @@
 			<script>
 	  var userModel = ``;
 	</script>
-      <link rel="stylesheet" href="header-overrides.css?v=14">
+      <link rel="stylesheet" href="header-overrides.css?v=18">
 </head><body>
 
 
@@ -3002,6 +3002,396 @@
       });
 
       update();
+    }());
+  </script>
+</section>
+<section class="cheap-flights" id="cheap-domestic-flights" aria-labelledby="cheap-domestic-flights-title">
+  <div class="cheap-flights__header">
+    <span class="cheap-flights__eyebrow">Yurt içi rotalar</span>
+    <h2 id="cheap-domestic-flights-title">En Uygun Yurt İçi Uçak Biletleri</h2>
+    <p>Şehrini seç ya da rota, tarih veya fiyat yaz; önümüzdeki aylarda görülen en düşük yurt içi bilet fiyatlarını tek listede karşılaştır.</p>
+  </div>
+
+  <nav class="cheap-flights__cities" data-cf-cities aria-label="Şehre göre uçak bileti fırsatları">
+    <div class="cheap-flights__cities-top">
+      <span class="cheap-flights__cities-label">Şehre göre filtrele</span>
+      <button class="cheap-flights__clear" type="button" data-cf-clear>
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Filtreyi temizle
+      </button>
+    </div>
+    <div class="cheap-flights__chips" data-cf-chips>
+      <ul class="cheap-flights__chip-list">
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="istanbul"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>İstanbul</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">IST, SAW</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="ankara"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Ankara</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">ESB</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="izmir"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>İzmir</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">ADB</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="adana"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Adana</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">ADA</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="trabzon"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Trabzon</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">TZX</span><span class="sr-only">)</span> Uçak Biletleri Fiyatları</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="gaziantep"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Gazi Antep</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">GZT</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="antalya"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Antalya</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">AYT</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="bursa"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Bursa</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">YEI</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="samsun"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Samsun</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">SZF</span><span class="sr-only">)</span> Uçak Biletleri Fiyatları</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="kayseri"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Kayseri</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">ASR</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="van"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Van</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">VAN</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="diyarbakir"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Diyarbakır</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">DIY</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="sanliurfa"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Şanlıurfa</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">GNY</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="erzurum"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Erzurum</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">ERZ</span><span class="sr-only">)</span> Uçak Biletleri Fiyatları</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="konya"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Konya</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">KYA</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="eskisehir"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Eskişehir</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">AOE</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="bodrum"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Bodrum</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">BJV</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="mardin"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Mardin</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">MQM</span><span class="sr-only">)</span> Uçak Biletleri Fiyatları</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="malatya"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Malatya</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">MLX</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="hatay"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Hatay</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">HTY</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="denizli"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Uygun <strong>Denizli</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">DNZ</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      <li><h4><a class="cheap-flights__chip" href="#" data-city="balikesir"><span class="cheap-flights__chip-pin" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5s4.5-4.2 4.5-8A4.5 4.5 0 0 0 3.5 6.5c0 3.8 4.5 8 4.5 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.6" fill="currentColor"/></svg></span>En Ucuz <strong>Balıkesir</strong> <span class="sr-only">(</span><span class="cheap-flights__chip-code">BZI, EDO</span><span class="sr-only">)</span> Uçak Biletleri</a></h4></li>
+      </ul>
+    </div>
+    <button class="cheap-flights__toggle" type="button" data-cf-toggle aria-expanded="false">
+      <span data-cf-toggle-text>Tüm şehirleri göster</span>
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </nav>
+
+  <div class="cheap-flights__toolbar">
+    <label class="cheap-flights__search" data-cf-search-wrap>
+      <span class="sr-only">Rota, tarih veya fiyat ara</span>
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" data-cf-search placeholder="Rota, tarih veya fiyat bilgisi girin..." autocomplete="off">
+      <button class="cheap-flights__search-clear" type="button" data-cf-search-clear aria-label="Aramayı temizle">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </label>
+    <p class="cheap-flights__count" data-cf-count aria-live="polite"></p>
+  </div>
+
+  <div class="cheap-flights__table-wrap" data-cf-table-wrap>
+    <table class="cheap-flights__table">
+      <caption class="sr-only">Yurt içi rotalarda görülen en düşük uçak bileti fiyatları</caption>
+      <thead>
+        <tr>
+          <th scope="col">Rota</th>
+          <th scope="col" data-cf-sort-col="date"><button class="cheap-flights__sort" type="button" data-cf-sort="date">Tarih <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+          <th scope="col" data-cf-sort-col="dur"><button class="cheap-flights__sort" type="button" data-cf-sort="dur">Uçuş Süresi <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+          <th scope="col">Aktarma Sayısı</th>
+          <th scope="col" data-cf-sort-col="price" aria-sort="ascending"><button class="cheap-flights__sort" type="button" data-cf-sort="price">Fiyat <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+        </tr>
+      </thead>
+      <tbody data-cf-body></tbody>
+    </table>
+    <div class="cheap-flights__empty" role="status">
+      <strong>Aramanla eşleşen uçuş bulunamadı</strong>
+      Farklı bir şehir seçebilir veya arama kutusunu temizleyip tüm rotaları görebilirsin.
+    </div>
+  </div>
+
+  <div class="cheap-flights__footer">
+    <p class="cheap-flights__footnote">Fiyatlar tek yön, kişi başı en düşük başlangıç ücretidir; <span data-cf-updated>1 Eylül 2026, 10:23</span> itibarıyla güncellendi.</p>
+    <button class="cheap-flights__more" type="button" data-cf-more hidden>
+      <span data-cf-more-text>Daha fazla göster</span>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <script type="application/json" id="cheap-domestic-flights-data">{"updated":"1 Eylül 2026, 10:23","cities":{"istanbul":{"name":"İstanbul","codes":["IST","SAW"],"slug":"istanbul"},"ankara":{"name":"Ankara","codes":["ESB"],"slug":"ankara"},"izmir":{"name":"İzmir","codes":["ADB"],"slug":"izmir"},"adana":{"name":"Adana","codes":["ADA"],"slug":"adana"},"trabzon":{"name":"Trabzon","codes":["TZX"],"slug":"trabzon"},"gaziantep":{"name":"Gaziantep","codes":["GZT"],"slug":"gaziantep"},"antalya":{"name":"Antalya","codes":["AYT"],"slug":"antalya"},"bursa":{"name":"Bursa","codes":["YEI"],"slug":"bursa"},"samsun":{"name":"Samsun","codes":["SZF"],"slug":"samsun"},"kayseri":{"name":"Kayseri","codes":["ASR"],"slug":"kayseri"},"van":{"name":"Van","codes":["VAN"],"slug":"van"},"diyarbakir":{"name":"Diyarbakır","codes":["DIY"],"slug":"diyarbakir"},"sanliurfa":{"name":"Şanlıurfa","codes":["GNY"],"slug":"sanliurfa"},"erzurum":{"name":"Erzurum","codes":["ERZ"],"slug":"erzurum"},"konya":{"name":"Konya","codes":["KYA"],"slug":"konya"},"eskisehir":{"name":"Eskişehir","codes":["AOE"],"slug":"eskisehir"},"bodrum":{"name":"Bodrum","codes":["BJV"],"slug":"bodrum"},"mardin":{"name":"Mardin","codes":["MQM"],"slug":"mardin"},"malatya":{"name":"Malatya","codes":["MLX"],"slug":"malatya"},"hatay":{"name":"Hatay","codes":["HTY"],"slug":"hatay"},"denizli":{"name":"Denizli","codes":["DNZ"],"slug":"denizli"},"balikesir":{"name":"Balıkesir","codes":["BZI","EDO"],"slug":"balikesir"}},"rows":[{"o":"balikesir","d":"istanbul","oc":"EDO","dc":"IST","date":"2026-12-18","dur":55,"stops":0,"price":1189},{"o":"istanbul","d":"balikesir","oc":"IST","dc":"BZI","date":"2026-10-01","dur":55,"stops":0,"price":1209},{"o":"istanbul","d":"eskisehir","oc":"IST","dc":"AOE","date":"2026-12-20","dur":55,"stops":0,"price":1239},{"o":"ankara","d":"istanbul","oc":"ESB","dc":"IST","date":"2027-01-15","dur":70,"stops":0,"price":1249},{"o":"istanbul","d":"antalya","oc":"SAW","dc":"AYT","date":"2026-12-19","dur":70,"stops":0,"price":1259},{"o":"antalya","d":"istanbul","oc":"AYT","dc":"IST","date":"2026-11-27","dur":75,"stops":0,"price":1259},{"o":"eskisehir","d":"istanbul","oc":"AOE","dc":"IST","date":"2026-12-21","dur":60,"stops":0,"price":1259},{"o":"denizli","d":"istanbul","oc":"DNZ","dc":"IST","date":"2026-10-26","dur":75,"stops":0,"price":1279},{"o":"antalya","d":"ankara","oc":"AYT","dc":"ESB","date":"2026-11-19","dur":75,"stops":0,"price":1289},{"o":"istanbul","d":"konya","oc":"SAW","dc":"KYA","date":"2026-10-18","dur":75,"stops":0,"price":1299},{"o":"ankara","d":"antalya","oc":"ESB","dc":"AYT","date":"2026-09-23","dur":70,"stops":0,"price":1299},{"o":"istanbul","d":"ankara","oc":"SAW","dc":"ESB","date":"2026-10-23","dur":65,"stops":0,"price":1309},{"o":"izmir","d":"istanbul","oc":"ADB","dc":"IST","date":"2026-09-16","dur":65,"stops":0,"price":1319},{"o":"samsun","d":"istanbul","oc":"SZF","dc":"IST","date":"2026-10-23","dur":80,"stops":0,"price":1319},{"o":"istanbul","d":"izmir","oc":"SAW","dc":"ADB","date":"2026-09-15","dur":65,"stops":0,"price":1329},{"o":"kayseri","d":"istanbul","oc":"ASR","dc":"IST","date":"2026-12-24","dur":90,"stops":0,"price":1329},{"o":"konya","d":"istanbul","oc":"KYA","dc":"IST","date":"2026-10-21","dur":80,"stops":0,"price":1329},{"o":"adana","d":"istanbul","oc":"ADA","dc":"IST","date":"2026-09-23","dur":95,"stops":0,"price":1349},{"o":"izmir","d":"ankara","oc":"ADB","dc":"ESB","date":"2026-09-18","dur":80,"stops":0,"price":1359},{"o":"istanbul","d":"samsun","oc":"SAW","dc":"SZF","date":"2026-10-22","dur":85,"stops":0,"price":1369},{"o":"ankara","d":"izmir","oc":"ESB","dc":"ADB","date":"2026-12-11","dur":80,"stops":0,"price":1369},{"o":"izmir","d":"antalya","oc":"ADB","dc":"AYT","date":"2026-11-03","dur":60,"stops":0,"price":1369},{"o":"istanbul","d":"denizli","oc":"IST","dc":"DNZ","date":"2026-10-13","dur":70,"stops":0,"price":1379},{"o":"ankara","d":"trabzon","oc":"ESB","dc":"TZX","date":"2026-12-06","dur":85,"stops":0,"price":1399},{"o":"trabzon","d":"ankara","oc":"TZX","dc":"ESB","date":"2026-12-11","dur":90,"stops":0,"price":1399},{"o":"bursa","d":"antalya","oc":"YEI","dc":"AYT","date":"2026-11-25","dur":80,"stops":0,"price":1399},{"o":"antalya","d":"bursa","oc":"AYT","dc":"YEI","date":"2026-12-09","dur":80,"stops":0,"price":1399},{"o":"istanbul","d":"kayseri","oc":"SAW","dc":"ASR","date":"2026-11-18","dur":85,"stops":0,"price":1409},{"o":"istanbul","d":"adana","oc":"IST","dc":"ADA","date":"2026-11-15","dur":90,"stops":0,"price":1419},{"o":"bodrum","d":"istanbul","oc":"BJV","dc":"IST","date":"2026-10-21","dur":70,"stops":0,"price":1439},{"o":"istanbul","d":"trabzon","oc":"SAW","dc":"TZX","date":"2026-12-29","dur":105,"stops":0,"price":1449},{"o":"bursa","d":"trabzon","oc":"YEI","dc":"TZX","date":"2026-11-14","dur":95,"stops":0,"price":1459},{"o":"trabzon","d":"bursa","oc":"TZX","dc":"YEI","date":"2026-10-31","dur":100,"stops":0,"price":1469},{"o":"erzurum","d":"istanbul","oc":"ERZ","dc":"IST","date":"2026-10-15","dur":125,"stops":0,"price":1499},{"o":"gaziantep","d":"istanbul","oc":"GZT","dc":"IST","date":"2026-10-05","dur":105,"stops":0,"price":1519},{"o":"istanbul","d":"bodrum","oc":"IST","dc":"BJV","date":"2027-01-04","dur":75,"stops":0,"price":1519},{"o":"istanbul","d":"hatay","oc":"SAW","dc":"HTY","date":"2027-01-03","dur":100,"stops":0,"price":1529},{"o":"hatay","d":"istanbul","oc":"HTY","dc":"IST","date":"2026-10-03","dur":105,"stops":0,"price":1529},{"o":"ankara","d":"van","oc":"ESB","dc":"VAN","date":"2026-11-13","dur":110,"stops":0,"price":1529},{"o":"trabzon","d":"istanbul","oc":"TZX","dc":"IST","date":"2026-12-04","dur":110,"stops":0,"price":1539},{"o":"malatya","d":"istanbul","oc":"MLX","dc":"IST","date":"2026-11-26","dur":110,"stops":0,"price":1539},{"o":"ankara","d":"diyarbakir","oc":"ESB","dc":"DIY","date":"2027-01-03","dur":95,"stops":0,"price":1539},{"o":"istanbul","d":"malatya","oc":"SAW","dc":"MLX","date":"2027-01-17","dur":105,"stops":0,"price":1549},{"o":"izmir","d":"adana","oc":"ADB","dc":"ADA","date":"2026-12-09","dur":95,"stops":0,"price":1549},{"o":"ankara","d":"erzurum","oc":"ESB","dc":"ERZ","date":"2026-12-06","dur":95,"stops":0,"price":1549},{"o":"istanbul","d":"gaziantep","oc":"IST","dc":"GZT","date":"2026-10-03","dur":100,"stops":0,"price":1579},{"o":"istanbul","d":"diyarbakir","oc":"IST","dc":"DIY","date":"2026-11-14","dur":115,"stops":0,"price":1579},{"o":"diyarbakir","d":"istanbul","oc":"DIY","dc":"IST","date":"2026-12-20","dur":120,"stops":0,"price":1579},{"o":"bodrum","d":"ankara","oc":"BJV","dc":"ESB","date":"2026-10-30","dur":90,"stops":0,"price":1589},{"o":"istanbul","d":"erzurum","oc":"IST","dc":"ERZ","date":"2027-01-12","dur":120,"stops":0,"price":1609},{"o":"sanliurfa","d":"istanbul","oc":"GNY","dc":"IST","date":"2027-01-12","dur":115,"stops":0,"price":1619},{"o":"izmir","d":"trabzon","oc":"ADB","dc":"TZX","date":"2026-10-21","dur":105,"stops":0,"price":1629},{"o":"istanbul","d":"sanliurfa","oc":"IST","dc":"GNY","date":"2026-10-03","dur":110,"stops":0,"price":1679},{"o":"mardin","d":"istanbul","oc":"MQM","dc":"IST","date":"2026-10-05","dur":125,"stops":0,"price":1679},{"o":"van","d":"istanbul","oc":"VAN","dc":"IST","date":"2026-10-06","dur":130,"stops":0,"price":1689},{"o":"istanbul","d":"mardin","oc":"IST","dc":"MQM","date":"2026-12-26","dur":120,"stops":0,"price":1739},{"o":"istanbul","d":"van","oc":"IST","dc":"VAN","date":"2027-01-04","dur":125,"stops":0,"price":1749},{"o":"antalya","d":"adana","oc":"AYT","dc":"ADA","date":"2026-11-28","dur":215,"stops":1,"price":1749},{"o":"izmir","d":"gaziantep","oc":"ADB","dc":"GZT","date":"2026-10-02","dur":225,"stops":1,"price":1959},{"o":"izmir","d":"diyarbakir","oc":"ADB","dc":"DIY","date":"2026-12-14","dur":235,"stops":1,"price":1969}]}</script>
+  <script>
+    (function () {
+      var root = document.getElementById('cheap-domestic-flights');
+      var dataNode = document.getElementById('cheap-domestic-flights-data');
+      if (!root || !dataNode) return;
+      var data;
+      try { data = JSON.parse(dataNode.textContent); } catch (error) { return; }
+
+      var q = function (selector) { return root.querySelector(selector); };
+      var citiesNav = q('[data-cf-cities]');
+      var chips = root.querySelectorAll('.cheap-flights__chip');
+      var toggle = q('[data-cf-toggle]');
+      var toggleText = q('[data-cf-toggle-text]');
+      var clearButton = q('[data-cf-clear]');
+      var searchWrap = q('[data-cf-search-wrap]');
+      var searchInput = q('[data-cf-search]');
+      var searchClear = q('[data-cf-search-clear]');
+      var count = q('[data-cf-count]');
+      var tableWrap = q('[data-cf-table-wrap]');
+      var body = q('[data-cf-body]');
+      var moreButton = q('[data-cf-more]');
+      var moreText = q('[data-cf-more-text]');
+      var updated = q('[data-cf-updated]');
+      if (updated) updated.textContent = data.updated;
+
+      var MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+      var DAYS = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
+      var PAGE_SIZE = 8;
+      var state = { city: '', query: '', sortKey: 'price', sortDir: 'asc', limit: PAGE_SIZE };
+
+      function parseDate(iso) {
+        var parts = iso.split('-');
+        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+      }
+      function formatDate(iso) {
+        var date = parseDate(iso);
+        return date.getDate() + ' ' + MONTHS[date.getMonth()] + ' ' + date.getFullYear();
+      }
+      function formatDay(iso) { return DAYS[parseDate(iso).getDay()]; }
+      function formatDuration(minutes) {
+        var hours = Math.floor(minutes / 60);
+        var rest = minutes % 60;
+        return hours + ' sa' + (rest ? ' ' + (rest < 10 ? '0' + rest : rest) + ' dk' : '');
+      }
+      function formatPrice(value) { return value.toLocaleString('tr-TR') + ' TL'; }
+      function normalize(text) { return String(text).toLocaleLowerCase('tr-TR').replace(/\s+/g, ' ').trim(); }
+      function svg(markup) {
+        var wrapper = document.createElement('span');
+        wrapper.innerHTML = markup;
+        return wrapper.firstChild;
+      }
+
+      /* ---------- rows ---------- */
+      var rows = data.rows.map(function (row, index) {
+        var origin = data.cities[row.o];
+        var destination = data.cities[row.d];
+        var routeName = origin.name + ' - ' + destination.name;
+        var href = 'https://www.ucuzabilet.com/' + origin.slug + '-' + destination.slug + '-ucak-bileti';
+        var priceText = formatPrice(row.price);
+        var dateText = formatDate(row.date);
+        var stopsText = row.stops === 0 ? 'Direkt' : row.stops + ' aktarma';
+        var durationText = formatDuration(row.dur);
+
+        var tr = document.createElement('tr');
+        tr.className = 'cheap-flights__row';
+        tr.setAttribute('data-href', href);
+
+        var routeCell = document.createElement('td');
+        var route = document.createElement('div');
+        route.className = 'cheap-flights__route';
+        var main = document.createElement('div');
+        main.className = 'cheap-flights__route-main';
+        var link = document.createElement('a');
+        link.href = href;
+        link.textContent = routeName;
+        link.setAttribute('aria-label', routeName + ' uçak bileti');
+        var codes = document.createElement('span');
+        codes.className = 'cheap-flights__codes';
+        codes.appendChild(document.createTextNode(row.oc));
+        codes.appendChild(svg('<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+        codes.appendChild(document.createTextNode(row.dc));
+        main.appendChild(link);
+        main.appendChild(codes);
+        var info = document.createElement('button');
+        info.type = 'button';
+        info.className = 'cheap-flights__info';
+        info.textContent = 'i';
+        info.setAttribute('aria-label', routeName + ' fiyat bilgisi');
+        info.setAttribute('aria-describedby', 'cf-tip-' + index);
+        info.setAttribute('aria-expanded', 'false');
+        var tip = document.createElement('span');
+        tip.className = 'cheap-flights__tooltip';
+        tip.id = 'cf-tip-' + index;
+        tip.setAttribute('role', 'tooltip');
+        tip.appendChild(document.createTextNode(routeName + ' için en ucuz uçak bileti '));
+        var tipPrice = document.createElement('strong');
+        tipPrice.textContent = priceText;
+        tip.appendChild(tipPrice);
+        tip.appendChild(document.createTextNode(' ile '));
+        var tipDate = document.createElement('strong');
+        tipDate.textContent = dateText;
+        tip.appendChild(tipDate);
+        tip.appendChild(document.createTextNode(' tarihindedir.'));
+        route.appendChild(main);
+        route.appendChild(info);
+        route.appendChild(tip);
+        routeCell.appendChild(route);
+
+        var dateCell = document.createElement('td');
+        dateCell.className = 'cheap-flights__date';
+        var dateStrong = document.createElement('strong');
+        dateStrong.textContent = dateText;
+        var dateSmall = document.createElement('small');
+        dateSmall.textContent = formatDay(row.date);
+        dateCell.appendChild(dateStrong);
+        dateCell.appendChild(dateSmall);
+
+        var durationCell = document.createElement('td');
+        var duration = document.createElement('span');
+        duration.className = 'cheap-flights__duration';
+        duration.appendChild(svg('<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M8 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>'));
+        duration.appendChild(document.createTextNode(durationText));
+        durationCell.appendChild(duration);
+
+        var stopsCell = document.createElement('td');
+        var stops = document.createElement('span');
+        stops.className = 'cheap-flights__stops ' + (row.stops === 0 ? 'cheap-flights__stops--direct' : 'cheap-flights__stops--transfer');
+        stops.textContent = stopsText;
+        stopsCell.appendChild(stops);
+
+        var priceCell = document.createElement('td');
+        var price = document.createElement('div');
+        price.className = 'cheap-flights__price';
+        var priceValue = document.createElement('span');
+        priceValue.className = 'cheap-flights__price-value';
+        var priceStrong = document.createElement('strong');
+        priceStrong.textContent = priceText;
+        var priceSmall = document.createElement('small');
+        priceSmall.textContent = '’den başlayan';
+        priceValue.appendChild(priceStrong);
+        priceValue.appendChild(priceSmall);
+        var arrow = document.createElement('span');
+        arrow.className = 'cheap-flights__price-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.appendChild(svg('<svg viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+        price.appendChild(priceValue);
+        price.appendChild(arrow);
+        priceCell.appendChild(price);
+
+        tr.appendChild(routeCell);
+        tr.appendChild(dateCell);
+        tr.appendChild(durationCell);
+        tr.appendChild(stopsCell);
+        tr.appendChild(priceCell);
+        body.appendChild(tr);
+
+        return {
+          el: tr, info: info, href: href, cities: [row.o, row.d],
+          date: row.date, dur: row.dur, price: row.price,
+          haystack: normalize([routeName, row.oc, row.dc, dateText, formatDay(row.date), durationText, stopsText, priceText, String(row.price)].join(' '))
+        };
+      });
+
+      /* ---------- filtering, sorting, paging ---------- */
+      function matches(row) {
+        if (state.city && row.cities.indexOf(state.city) === -1) return false;
+        if (state.query && row.haystack.indexOf(state.query) === -1) return false;
+        return true;
+      }
+
+      function apply() {
+        var sorted = rows.slice().sort(function (a, b) {
+          var av = a[state.sortKey], bv = b[state.sortKey];
+          var result = av < bv ? -1 : av > bv ? 1 : 0;
+          if (result === 0) result = a.price - b.price;
+          return state.sortDir === 'asc' ? result : -result;
+        });
+        var matched = 0, shown = 0;
+        sorted.forEach(function (row) {
+          var ok = matches(row);
+          if (ok) matched += 1;
+          var visible = ok && shown < state.limit;
+          if (visible) shown += 1;
+          row.el.hidden = !visible;
+          if (visible) body.appendChild(row.el);
+        });
+        tableWrap.classList.toggle('is-empty', matched === 0);
+        moreButton.hidden = shown >= matched;
+        moreText.textContent = 'Daha fazla göster (' + (matched - shown) + ')';
+        count.innerHTML = '';
+        var strong = document.createElement('strong');
+        if (matched === 0) {
+          count.textContent = 'Sonuç bulunamadı';
+        } else {
+          strong.textContent = shown + ' / ' + matched;
+          count.appendChild(strong);
+          var cityName = state.city && data.cities[state.city] ? data.cities[state.city].name : '';
+          count.appendChild(document.createTextNode(' uçuş gösteriliyor' + (cityName ? ' · ' + cityName : '')));
+        }
+        root.querySelectorAll('[data-cf-sort-col]').forEach(function (th) {
+          if (th.getAttribute('data-cf-sort-col') === state.sortKey) th.setAttribute('aria-sort', state.sortDir === 'asc' ? 'ascending' : 'descending');
+          else th.removeAttribute('aria-sort');
+        });
+        closeTooltips();
+      }
+
+      /* ---------- city chips ---------- */
+      function setCity(city) {
+        state.city = city;
+        state.limit = PAGE_SIZE;
+        chips.forEach(function (chip) {
+          var active = chip.getAttribute('data-city') === city && city !== '';
+          chip.classList.toggle('is-active', active);
+          if (active) chip.setAttribute('aria-current', 'true'); else chip.removeAttribute('aria-current');
+        });
+        citiesNav.classList.toggle('has-active', city !== '');
+        apply();
+      }
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function (event) {
+          event.preventDefault();
+          var city = chip.getAttribute('data-city');
+          setCity(state.city === city ? '' : city);
+          if (state.city) {
+            var top = tableWrap.getBoundingClientRect().top;
+            if (top < 0 || top > window.innerHeight - 160) tableWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+      clearButton.addEventListener('click', function () { setCity(''); });
+      toggle.addEventListener('click', function () {
+        var expanded = citiesNav.classList.toggle('is-expanded');
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        toggleText.textContent = expanded ? 'Daha az göster' : 'Tüm şehirleri göster';
+      });
+
+      /* ---------- search ---------- */
+      searchInput.addEventListener('input', function () {
+        state.query = normalize(searchInput.value);
+        state.limit = PAGE_SIZE;
+        searchWrap.classList.toggle('has-value', searchInput.value !== '');
+        apply();
+      });
+      searchClear.addEventListener('click', function () {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      });
+
+      /* ---------- sort & paging ---------- */
+      root.querySelectorAll('[data-cf-sort]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var key = button.getAttribute('data-cf-sort');
+          if (state.sortKey === key) state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+          else { state.sortKey = key; state.sortDir = 'asc'; }
+          apply();
+        });
+      });
+      moreButton.addEventListener('click', function () {
+        state.limit += PAGE_SIZE;
+        apply();
+      });
+
+      /* ---------- row click & info tooltips ---------- */
+      function closeTooltips(except) {
+        rows.forEach(function (row) {
+          if (row.info !== except && row.info.classList.contains('is-open')) {
+            row.info.classList.remove('is-open');
+            row.info.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      body.addEventListener('click', function (event) {
+        var info = event.target.closest('.cheap-flights__info');
+        if (info) {
+          event.preventDefault();
+          event.stopPropagation();
+          var open = !info.classList.contains('is-open');
+          closeTooltips(info);
+          info.classList.toggle('is-open', open);
+          info.setAttribute('aria-expanded', open ? 'true' : 'false');
+          return;
+        }
+        if (event.target.closest('.cheap-flights__tooltip')) return;
+        if (event.target.closest('a')) return;
+        var tr = event.target.closest('.cheap-flights__row');
+        if (!tr) return;
+        if (window.getSelection && String(window.getSelection())) return;
+        var href = tr.getAttribute('data-href');
+        if (event.metaKey || event.ctrlKey) window.open(href, '_blank', 'noopener'); else window.location.href = href;
+      });
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('.cheap-flights__info')) closeTooltips();
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeTooltips();
+      });
+
+      apply();
     }());
   </script>
 </section>
