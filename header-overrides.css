@@ -2641,19 +2641,12 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
   }
 }
 
-/* Keep live-deal cells on one line; tablet widths scroll horizontally instead of wrapping. */
+/* Keep live-deal cells on one line. */
 .cheap-flights--live .cheap-flights__route a,
 .cheap-flights--live .cheap-flights__date strong,
 .cheap-flights--live .live-deals__countdown,
 .cheap-flights--live .cheap-flights__duration {
   white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-  .cheap-flights--live .cheap-flights__table-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
 }
 
 /* Live-deal cards on phones: price stack on the right, date under the route. */
@@ -2699,4 +2692,9 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
   .cheap-flights--live .live-deals__disclaimer {
     margin-top: 14px;
   }
+}
+
+#cheap-domestic-flights .cheap-flights__footer,
+#cheap-international-flights .cheap-flights__footer {
+  justify-content: center;
 }
