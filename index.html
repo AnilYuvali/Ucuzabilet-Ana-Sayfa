@@ -327,7 +327,7 @@
 			<script>
 	  var userModel = ``;
 	</script>
-      <link rel="stylesheet" href="header-overrides.css?v=27">
+      <link rel="stylesheet" href="header-overrides.css?v=31">
 </head><body>
 
 
@@ -4233,6 +4233,452 @@
           var key = button.getAttribute('data-cf-sort');
           if (state.sortKey === key) state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
           else { state.sortKey = key; state.sortDir = 'asc'; }
+          apply();
+        });
+      });
+      moreButton.addEventListener('click', function () {
+        state.limit += PAGE_SIZE;
+        apply();
+      });
+
+      /* ---------- row click & info tooltips ---------- */
+      function closeTooltips(except) {
+        rows.forEach(function (row) {
+          if (row.info !== except && row.info.classList.contains('is-open')) {
+            row.info.classList.remove('is-open');
+            row.info.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      body.addEventListener('click', function (event) {
+        var info = event.target.closest('.cheap-flights__info');
+        if (info) {
+          event.preventDefault();
+          event.stopPropagation();
+          var open = !info.classList.contains('is-open');
+          closeTooltips(info);
+          info.classList.toggle('is-open', open);
+          info.setAttribute('aria-expanded', open ? 'true' : 'false');
+          return;
+        }
+        if (event.target.closest('.cheap-flights__tooltip')) return;
+        if (event.target.closest('a')) return;
+        var tr = event.target.closest('.cheap-flights__row');
+        if (!tr) return;
+        if (window.getSelection && String(window.getSelection())) return;
+        var href = tr.getAttribute('data-href');
+        if (event.metaKey || event.ctrlKey) window.open(href, '_blank', 'noopener'); else window.location.href = href;
+      });
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('.cheap-flights__info')) closeTooltips();
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeTooltips();
+      });
+
+      apply();
+    }());
+  </script>
+</section>
+<section class="cheap-flights cheap-flights--discount" id="discount-flight-deals" aria-labelledby="discount-flight-deals-title">
+  <div class="cheap-flights__header discount-deals__header">
+    <div class="discount-deals__heading">
+      <span class="cheap-flights__eyebrow">Kampanyalı Uçuşlar</span>
+      <h2 id="discount-flight-deals-title">En Uygun İndirimli Uçak Biletleri</h2>
+      <p>Havayolu kampanyaları ve son dakika indirimli uçuşları keşfedin; indirimli uçak biletlerini karşılaştırarak bütçenize en uygun uçuşu kolayca bulun.</p>
+    </div>
+  </div>
+
+  <div class="discount-deals__filters" data-dd-filters role="group" aria-label="Kampanya türüne göre filtrele">
+    <button class="discount-deals__filter is-active" type="button" data-dd-camp="">
+      Tüm kampanyalar
+      <span class="discount-deals__filter-count" data-dd-camp-count="">60</span>
+    </button>
+    <button class="discount-deals__filter" type="button" data-dd-camp="lastminute">
+      Son dakika
+      <span class="discount-deals__filter-count" data-dd-camp-count="lastminute">0</span>
+    </button>
+    <button class="discount-deals__filter" type="button" data-dd-camp="early">
+      Erken rezervasyon
+      <span class="discount-deals__filter-count" data-dd-camp-count="early">0</span>
+    </button>
+    <button class="discount-deals__filter" type="button" data-dd-camp="airline">
+      Havayolu kampanyası
+      <span class="discount-deals__filter-count" data-dd-camp-count="airline">0</span>
+    </button>
+    <button class="discount-deals__filter" type="button" data-dd-camp="route">
+      Rota promosyonu
+      <span class="discount-deals__filter-count" data-dd-camp-count="route">0</span>
+    </button>
+  </div>
+
+  <div class="cheap-flights__toolbar">
+    <label class="cheap-flights__search" data-cf-search-wrap>
+      <span class="sr-only">Rota, havayolu, kampanya veya fiyat ara</span>
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" data-cf-search placeholder="Rota, havayolu, kampanya veya fiyat girin..." autocomplete="off">
+      <button class="cheap-flights__search-clear" type="button" data-cf-search-clear aria-label="Aramayı temizle">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </label>
+    <div class="cheap-flights__sortby">
+      <label class="cheap-flights__sortby-label" for="discount-flight-deals-sort">Sırala</label>
+      <span class="cheap-flights__select">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 3v10M4.5 13 2 10.5M11.5 13V3M11.5 3 14 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <select id="discount-flight-deals-sort" data-cf-sort-select>
+          <option value="recommended">Önerilen sıralama</option>
+          <option value="rate-desc">İndirim oranı: en yüksek</option>
+          <option value="save-desc">İndirim tutarı: en yüksek</option>
+          <option value="price-asc">Fiyat: düşükten yükseğe</option>
+          <option value="date-asc">Tarih: en yakın</option>
+        </select>
+      </span>
+    </div>
+    <p class="sr-only" data-cf-count aria-live="polite"></p>
+  </div>
+
+  <div class="cheap-flights__table-wrap" data-cf-table-wrap>
+    <table class="cheap-flights__table">
+      <caption class="sr-only">Kampanyalı ve indirimli yurt içi uçak biletleri</caption>
+      <thead>
+        <tr>
+          <th scope="col">Rota</th>
+          <th scope="col" data-cf-sort-col="rate"><button class="cheap-flights__sort" type="button" data-cf-sort="rate">İndirim <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+          <th scope="col" data-cf-sort-col="date"><button class="cheap-flights__sort" type="button" data-cf-sort="date">Tarih <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+          <th scope="col" data-cf-sort-col="dur"><button class="cheap-flights__sort" type="button" data-cf-sort="dur">Uçuş Süresi <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+          <th scope="col">Aktarma Sayısı</th>
+          <th scope="col" data-cf-sort-col="price"><button class="cheap-flights__sort" type="button" data-cf-sort="price">Fiyat <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1v8M1.5 5.5 5 9l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></th>
+        </tr>
+      </thead>
+      <tbody data-cf-body></tbody>
+    </table>
+    <div class="cheap-flights__empty" role="status">
+      <strong>Aramanla eşleşen indirimli uçuş bulunamadı</strong>
+      Farklı bir kampanya seçebilir veya arama kutusunu temizleyip tüm fırsatları görebilirsin.
+    </div>
+  </div>
+
+  <div class="cheap-flights__footer">
+    <button class="cheap-flights__more" type="button" data-cf-more hidden>
+      <span data-cf-more-text>Daha fazla göster</span>
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="live-deals__disclaimer">
+    <span class="live-deals__disclaimer-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="4.9" r=".9" fill="currentColor"/></svg></span>
+    <p>Gösterilen en uygun indirimli uçak biletleri; havayollarının dönemsel kampanyaları, erken rezervasyon fırsatları, rota veya tarihe özel promosyonlar ve belirli kontenjanlara sunulan indirimli fiyatlardan oluşur. Bilet fiyatları; kampanya süresi, uçuşa kalan süre, talep ve koltuk müsaitliği gibi etkenlere bağlı olarak değişiklik gösterebilir. Firmaların uçuşlardaki talebi dengelemek amacıyla sunduğu bu anlık ve dönemsel fiyat indirimlerini takip ederek, seyahatiniz için en ekonomik seçeneği kolayca bulabilirsiniz.</p>
+  </div>
+
+  <script type="application/json" id="discount-flight-deals-data">{"updated":"9 Eylül 2026, 09:00","campaigns":{"early":"Erken rezervasyon","lastminute":"Son dakika","airline":"Havayolu kampanyası","route":"Rota promosyonu"},"cities":{"istanbul":{"name":"İstanbul","slug":"istanbul"},"ankara":{"name":"Ankara","slug":"ankara"},"izmir":{"name":"İzmir","slug":"izmir"},"antalya":{"name":"Antalya","slug":"antalya"},"trabzon":{"name":"Trabzon","slug":"trabzon"},"adana":{"name":"Adana","slug":"adana"},"gaziantep":{"name":"Gaziantep","slug":"gaziantep"},"diyarbakir":{"name":"Diyarbakır","slug":"diyarbakir"},"bodrum":{"name":"Bodrum","slug":"bodrum"},"dalaman":{"name":"Dalaman","slug":"dalaman"},"kayseri":{"name":"Kayseri","slug":"kayseri"},"van":{"name":"Van","slug":"van"},"samsun":{"name":"Samsun","slug":"samsun"},"erzurum":{"name":"Erzurum","slug":"erzurum"},"konya":{"name":"Konya","slug":"konya"},"malatya":{"name":"Malatya","slug":"malatya"},"sanliurfa":{"name":"Şanlıurfa","slug":"sanliurfa"},"hatay":{"name":"Hatay","slug":"hatay"},"elazig":{"name":"Elazığ","slug":"elazig"},"nevsehir":{"name":"Nevşehir","slug":"nevsehir"},"mardin":{"name":"Mardin","slug":"mardin"},"denizli":{"name":"Denizli","slug":"denizli"},"bursa":{"name":"Bursa","slug":"bursa"},"kars":{"name":"Kars","slug":"kars"}},"rows":[{"o":"istanbul","d":"antalya","oc":"IST","dc":"AYT","al":"SunExpress","camp":"early","date":"2026-12-29","dur":70,"stops":0,"price":899,"old":1269,"pop":1},{"o":"ankara","d":"istanbul","oc":"ESB","dc":"IST","al":"AJet","camp":"route","date":"2026-09-29","dur":70,"stops":0,"price":999,"old":1329,"pop":2},{"o":"izmir","d":"istanbul","oc":"ADB","dc":"IST","al":"AJet","camp":"early","date":"2026-12-30","dur":65,"stops":0,"price":1119,"old":1319,"pop":3},{"o":"antalya","d":"istanbul","oc":"AYT","dc":"IST","al":"Pegasus","camp":"lastminute","date":"2026-09-27","dur":75,"stops":0,"price":1019,"old":1289,"pop":4},{"o":"istanbul","d":"izmir","oc":"SAW","dc":"ADB","al":"Pegasus","camp":"early","date":"2026-12-10","dur":65,"stops":0,"price":1019,"old":1399,"pop":5},{"o":"istanbul","d":"ankara","oc":"IST","dc":"ESB","al":"THY","camp":"route","date":"2026-10-22","dur":65,"stops":0,"price":1139,"old":1379,"pop":6},{"o":"istanbul","d":"trabzon","oc":"IST","dc":"TZX","al":"AJet","camp":"early","date":"2026-12-25","dur":105,"stops":0,"price":1029,"old":1469,"pop":7},{"o":"istanbul","d":"adana","oc":"SAW","dc":"ADA","al":"Pegasus","camp":"lastminute","date":"2026-09-20","dur":90,"stops":0,"price":1129,"old":1429,"pop":8},{"o":"ankara","d":"izmir","oc":"ESB","dc":"ADB","al":"AJet","camp":"route","date":"2026-12-12","dur":80,"stops":0,"price":1099,"old":1389,"pop":9},{"o":"ankara","d":"antalya","oc":"ESB","dc":"AYT","al":"SunExpress","camp":"route","date":"2026-10-05","dur":70,"stops":0,"price":1249,"old":1409,"pop":10},{"o":"istanbul","d":"bodrum","oc":"SAW","dc":"BJV","al":"Pegasus","camp":"early","date":"2026-12-05","dur":75,"stops":0,"price":1069,"old":1509,"pop":11},{"o":"istanbul","d":"dalaman","oc":"IST","dc":"DLM","al":"THY","camp":"route","date":"2026-11-14","dur":80,"stops":0,"price":1349,"old":1569,"pop":12},{"o":"istanbul","d":"gaziantep","oc":"IST","dc":"GZT","al":"AJet","camp":"lastminute","date":"2026-09-12","dur":100,"stops":0,"price":989,"old":1549,"pop":13},{"o":"istanbul","d":"diyarbakir","oc":"SAW","dc":"DIY","al":"Pegasus","camp":"route","date":"2026-12-12","dur":115,"stops":0,"price":1299,"old":1669,"pop":14},{"o":"trabzon","d":"istanbul","oc":"TZX","dc":"IST","al":"Pegasus","camp":"lastminute","date":"2026-09-24","dur":110,"stops":0,"price":1059,"old":1449,"pop":15},{"o":"adana","d":"istanbul","oc":"ADA","dc":"IST","al":"AJet","camp":"route","date":"2026-09-27","dur":95,"stops":0,"price":1159,"old":1369,"pop":16},{"o":"istanbul","d":"kayseri","oc":"SAW","dc":"ASR","al":"Pegasus","camp":"airline","date":"2026-10-29","dur":85,"stops":0,"price":1139,"old":1499,"pop":17},{"o":"istanbul","d":"van","oc":"IST","dc":"VAN","al":"THY","camp":"early","date":"2026-12-09","dur":125,"stops":0,"price":1299,"old":1809,"pop":18},{"o":"kayseri","d":"istanbul","oc":"ASR","dc":"IST","al":"AJet","camp":"airline","date":"2026-12-04","dur":90,"stops":0,"price":1189,"old":1369,"pop":19},{"o":"van","d":"istanbul","oc":"VAN","dc":"IST","al":"Pegasus","camp":"route","date":"2026-11-11","dur":130,"stops":0,"price":1479,"old":1719,"pop":20},{"o":"izmir","d":"ankara","oc":"ADB","dc":"ESB","al":"Pegasus","camp":"airline","date":"2026-10-19","dur":80,"stops":0,"price":1189,"old":1439,"pop":21},{"o":"antalya","d":"ankara","oc":"AYT","dc":"ESB","al":"AJet","camp":"airline","date":"2026-09-30","dur":75,"stops":0,"price":1119,"old":1349,"pop":22},{"o":"istanbul","d":"samsun","oc":"SAW","dc":"SZF","al":"Pegasus","camp":"lastminute","date":"2026-09-24","dur":85,"stops":0,"price":829,"old":1359,"pop":23},{"o":"istanbul","d":"erzurum","oc":"IST","dc":"ERZ","al":"AJet","camp":"route","date":"2026-12-04","dur":120,"stops":0,"price":1409,"old":1589,"pop":24},{"o":"gaziantep","d":"istanbul","oc":"GZT","dc":"IST","al":"Pegasus","camp":"airline","date":"2026-12-17","dur":105,"stops":0,"price":1249,"old":1489,"pop":25},{"o":"diyarbakir","d":"istanbul","oc":"DIY","dc":"IST","al":"AJet","camp":"early","date":"2026-11-13","dur":120,"stops":0,"price":1219,"old":1549,"pop":26},{"o":"bodrum","d":"istanbul","oc":"BJV","dc":"IST","al":"SunExpress","camp":"route","date":"2026-12-17","dur":70,"stops":0,"price":1149,"old":1469,"pop":27},{"o":"dalaman","d":"istanbul","oc":"DLM","dc":"IST","al":"Pegasus","camp":"early","date":"2026-11-22","dur":80,"stops":0,"price":1089,"old":1449,"pop":28},{"o":"istanbul","d":"konya","oc":"SAW","dc":"KYA","al":"Pegasus","camp":"early","date":"2026-12-13","dur":75,"stops":0,"price":1099,"old":1359,"pop":29},{"o":"istanbul","d":"malatya","oc":"SAW","dc":"MLX","al":"AJet","camp":"airline","date":"2026-09-23","dur":105,"stops":0,"price":1109,"old":1559,"pop":30},{"o":"istanbul","d":"sanliurfa","oc":"IST","dc":"GNY","al":"THY","camp":"early","date":"2026-12-20","dur":110,"stops":0,"price":1339,"old":1759,"pop":31},{"o":"istanbul","d":"hatay","oc":"SAW","dc":"HTY","al":"Pegasus","camp":"early","date":"2026-12-01","dur":100,"stops":0,"price":1259,"old":1589,"pop":32},{"o":"istanbul","d":"elazig","oc":"SAW","dc":"EZS","al":"AJet","camp":"route","date":"2026-11-18","dur":105,"stops":0,"price":1409,"old":1579,"pop":33},{"o":"istanbul","d":"nevsehir","oc":"IST","dc":"NAV","al":"THY","camp":"lastminute","date":"2026-09-28","dur":80,"stops":0,"price":1009,"old":1479,"pop":34},{"o":"istanbul","d":"mardin","oc":"IST","dc":"MQM","al":"Pegasus","camp":"route","date":"2026-12-03","dur":120,"stops":0,"price":1539,"old":1729,"pop":35},{"o":"samsun","d":"istanbul","oc":"SZF","dc":"IST","al":"AJet","camp":"early","date":"2026-11-27","dur":80,"stops":0,"price":1019,"old":1399,"pop":36},{"o":"erzurum","d":"istanbul","oc":"ERZ","dc":"IST","al":"Pegasus","camp":"route","date":"2026-09-22","dur":125,"stops":0,"price":1369,"old":1519,"pop":37},{"o":"konya","d":"istanbul","oc":"KYA","dc":"IST","al":"AJet","camp":"route","date":"2026-11-15","dur":80,"stops":0,"price":1029,"old":1379,"pop":38},{"o":"malatya","d":"istanbul","oc":"MLX","dc":"IST","al":"Pegasus","camp":"lastminute","date":"2026-09-19","dur":110,"stops":0,"price":1069,"old":1579,"pop":39},{"o":"sanliurfa","d":"istanbul","oc":"GNY","dc":"IST","al":"AJet","camp":"lastminute","date":"2026-10-02","dur":115,"stops":0,"price":1179,"old":1659,"pop":40},{"o":"hatay","d":"istanbul","oc":"HTY","dc":"IST","al":"Pegasus","camp":"route","date":"2026-10-22","dur":105,"stops":0,"price":1359,"old":1509,"pop":41},{"o":"elazig","d":"istanbul","oc":"EZS","dc":"IST","al":"AJet","camp":"early","date":"2026-11-25","dur":110,"stops":0,"price":1119,"old":1539,"pop":42},{"o":"istanbul","d":"denizli","oc":"SAW","dc":"DNZ","al":"Pegasus","camp":"early","date":"2026-12-12","dur":70,"stops":0,"price":1119,"old":1419,"pop":43},{"o":"istanbul","d":"kars","oc":"SAW","dc":"KSY","al":"AJet","camp":"lastminute","date":"2026-09-13","dur":130,"stops":0,"price":1189,"old":1769,"pop":44},{"o":"ankara","d":"trabzon","oc":"ESB","dc":"TZX","al":"AJet","camp":"lastminute","date":"2026-09-22","dur":85,"stops":0,"price":939,"old":1419,"pop":45},{"o":"trabzon","d":"ankara","oc":"TZX","dc":"ESB","al":"Pegasus","camp":"early","date":"2026-11-27","dur":90,"stops":0,"price":1199,"old":1429,"pop":46},{"o":"ankara","d":"diyarbakir","oc":"ESB","dc":"DIY","al":"THY","camp":"lastminute","date":"2026-09-26","dur":95,"stops":0,"price":1279,"old":1619,"pop":47},{"o":"ankara","d":"van","oc":"ESB","dc":"VAN","al":"AJet","camp":"lastminute","date":"2026-09-24","dur":110,"stops":0,"price":1309,"old":1639,"pop":48},{"o":"ankara","d":"erzurum","oc":"ESB","dc":"ERZ","al":"AJet","camp":"lastminute","date":"2026-09-19","dur":95,"stops":0,"price":1079,"old":1539,"pop":49},{"o":"ankara","d":"adana","oc":"ESB","dc":"ADA","al":"Pegasus","camp":"early","date":"2026-11-28","dur":80,"stops":0,"price":1059,"old":1419,"pop":50},{"o":"ankara","d":"gaziantep","oc":"ESB","dc":"GZT","al":"AJet","camp":"early","date":"2026-12-28","dur":85,"stops":0,"price":1119,"old":1449,"pop":51},{"o":"izmir","d":"antalya","oc":"ADB","dc":"AYT","al":"SunExpress","camp":"airline","date":"2026-09-22","dur":60,"stops":0,"price":1079,"old":1419,"pop":52},{"o":"izmir","d":"trabzon","oc":"ADB","dc":"TZX","al":"Pegasus","camp":"early","date":"2026-11-23","dur":105,"stops":0,"price":1239,"old":1699,"pop":53},{"o":"izmir","d":"adana","oc":"ADB","dc":"ADA","al":"Pegasus","camp":"route","date":"2026-12-04","dur":95,"stops":0,"price":1269,"old":1629,"pop":54},{"o":"izmir","d":"diyarbakir","oc":"ADB","dc":"DIY","al":"AJet","camp":"airline","date":"2026-11-15","dur":230,"stops":1,"price":1619,"old":1929,"pop":55},{"o":"antalya","d":"izmir","oc":"AYT","dc":"ADB","al":"Pegasus","camp":"airline","date":"2026-12-13","dur":60,"stops":0,"price":1249,"old":1449,"pop":56},{"o":"bodrum","d":"ankara","oc":"BJV","dc":"ESB","al":"AJet","camp":"early","date":"2026-12-02","dur":90,"stops":0,"price":1269,"old":1629,"pop":57},{"o":"antalya","d":"adana","oc":"AYT","dc":"ADA","al":"Pegasus","camp":"route","date":"2026-11-10","dur":210,"stops":1,"price":1519,"old":1859,"pop":58},{"o":"bursa","d":"trabzon","oc":"YEI","dc":"TZX","al":"AJet","camp":"airline","date":"2026-12-22","dur":95,"stops":0,"price":1079,"old":1459,"pop":59},{"o":"bursa","d":"antalya","oc":"YEI","dc":"AYT","al":"Pegasus","camp":"airline","date":"2026-09-26","dur":80,"stops":0,"price":1209,"old":1509,"pop":60}]}</script>
+  <script>
+    (function () {
+      var root = document.getElementById('discount-flight-deals');
+      var dataNode = document.getElementById('discount-flight-deals-data');
+      if (!root || !dataNode) return;
+      var data;
+      try { data = JSON.parse(dataNode.textContent); } catch (error) { return; }
+
+      var q = function (selector) { return root.querySelector(selector); };
+      var searchWrap = q('[data-cf-search-wrap]');
+      var searchInput = q('[data-cf-search]');
+      var searchClear = q('[data-cf-search-clear]');
+      var count = q('[data-cf-count]');
+      var sortSelect = q('[data-cf-sort-select]');
+      var tableWrap = q('[data-cf-table-wrap]');
+      var body = q('[data-cf-body]');
+      var moreButton = q('[data-cf-more]');
+      var moreText = q('[data-cf-more-text]');
+      var filterButtons = root.querySelectorAll('[data-dd-camp]');
+
+      var MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+      var DAYS = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
+      var PAGE_SIZE = 5;
+      var SORT_OPTIONS = {
+        recommended: ['pop', 'asc'],
+        'rate-desc': ['rate', 'desc'],
+        'save-desc': ['save', 'desc'],
+        'price-asc': ['price', 'asc'],
+        'date-asc': ['date', 'asc']
+      };
+      var state = { camp: '', query: '', sortKey: 'pop', sortDir: 'asc', limit: PAGE_SIZE };
+
+      function parseDate(iso) {
+        var parts = iso.split('-');
+        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+      }
+      function formatDate(iso) {
+        var date = parseDate(iso);
+        return date.getDate() + ' ' + MONTHS[date.getMonth()] + ' ' + date.getFullYear();
+      }
+      function formatDay(iso) { return DAYS[parseDate(iso).getDay()]; }
+      function formatDuration(minutes) {
+        var hours = Math.floor(minutes / 60);
+        var rest = minutes % 60;
+        return hours + ' sa' + (rest ? ' ' + (rest < 10 ? '0' + rest : rest) + ' dk' : '');
+      }
+      function formatPrice(value) { return value.toLocaleString('tr-TR') + ' TL'; }
+      function normalize(text) { return String(text).toLocaleLowerCase('tr-TR').replace(/\s+/g, ' ').trim(); }
+      function svg(markup) {
+        var wrapper = document.createElement('span');
+        wrapper.innerHTML = markup;
+        return wrapper.firstChild;
+      }
+
+      /* ---------- rows ---------- */
+      var rows = data.rows.map(function (row, index) {
+        var origin = data.cities[row.o];
+        var destination = data.cities[row.d];
+        var routeName = origin.name + ' - ' + destination.name;
+        var href = 'https://www.ucuzabilet.com/' + origin.slug + '-' + destination.slug + '-ucak-bileti';
+        var save = row.old - row.price;
+        var rate = Math.round((save / row.old) * 100);
+        var campName = data.campaigns[row.camp];
+        var priceText = formatPrice(row.price);
+        var oldText = formatPrice(row.old);
+        var saveText = formatPrice(save);
+        var dateText = formatDate(row.date);
+        var stopsText = row.stops === 0 ? 'Direkt' : row.stops + ' aktarma';
+        var durationText = formatDuration(row.dur);
+
+        var tr = document.createElement('tr');
+        tr.className = 'cheap-flights__row';
+        tr.setAttribute('data-href', href);
+
+        var routeCell = document.createElement('td');
+        var route = document.createElement('div');
+        route.className = 'cheap-flights__route';
+        var main = document.createElement('div');
+        main.className = 'cheap-flights__route-main';
+        var link = document.createElement('a');
+        link.href = href;
+        link.textContent = routeName;
+        link.setAttribute('aria-label', routeName + ' indirimli uçak bileti');
+        var codes = document.createElement('span');
+        codes.className = 'cheap-flights__codes';
+        codes.appendChild(document.createTextNode(row.oc));
+        codes.appendChild(svg('<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+        codes.appendChild(document.createTextNode(row.dc));
+        var airline = document.createElement('span');
+        airline.className = 'live-deals__airline';
+        airline.textContent = row.al;
+        codes.appendChild(airline);
+        main.appendChild(link);
+        main.appendChild(codes);
+        var campTag = document.createElement('span');
+        campTag.className = 'discount-deals__tag discount-deals__tag--' + row.camp;
+        campTag.textContent = campName;
+        main.appendChild(campTag);
+        var info = document.createElement('button');
+        info.type = 'button';
+        info.className = 'cheap-flights__info';
+        info.textContent = 'i';
+        info.setAttribute('aria-label', routeName + ' indirim bilgisi');
+        info.setAttribute('aria-describedby', 'dd-tip-' + index);
+        info.setAttribute('aria-expanded', 'false');
+        var tip = document.createElement('span');
+        tip.className = 'cheap-flights__tooltip';
+        tip.id = 'dd-tip-' + index;
+        tip.setAttribute('role', 'tooltip');
+        tip.appendChild(document.createTextNode(routeName + ' uçak bileti ' + campName.toLocaleLowerCase('tr-TR') + ' kapsamında '));
+        var tipRate = document.createElement('strong');
+        tipRate.textContent = '%' + rate;
+        tip.appendChild(tipRate);
+        tip.appendChild(document.createTextNode(' indirimle '));
+        var tipPrice = document.createElement('strong');
+        tipPrice.textContent = priceText;
+        tip.appendChild(tipPrice);
+        tip.appendChild(document.createTextNode(' oldu; ' + dateText + ' tarihli ' + row.al + ' uçuşunda '));
+        var tipSave = document.createElement('strong');
+        tipSave.textContent = saveText;
+        tip.appendChild(tipSave);
+        tip.appendChild(document.createTextNode(' tasarruf edersiniz.'));
+        route.appendChild(main);
+        route.appendChild(info);
+        route.appendChild(tip);
+        routeCell.appendChild(route);
+
+        var discountCell = document.createElement('td');
+        var discount = document.createElement('div');
+        discount.className = 'discount-deals__discount';
+        var rateBadge = document.createElement('span');
+        rateBadge.className = 'discount-deals__rate';
+        rateBadge.appendChild(svg('<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 1.5v7M2 5.5 5 8.5l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+        rateBadge.appendChild(document.createTextNode('%' + rate));
+        var saveAmount = document.createElement('small');
+        saveAmount.className = 'discount-deals__save';
+        saveAmount.textContent = saveText + ' indirim';
+        discount.appendChild(rateBadge);
+        discount.appendChild(saveAmount);
+        discountCell.appendChild(discount);
+
+        var dateCell = document.createElement('td');
+        dateCell.className = 'cheap-flights__date';
+        var dateStrong = document.createElement('strong');
+        dateStrong.textContent = dateText;
+        var dateSmall = document.createElement('small');
+        dateSmall.textContent = formatDay(row.date);
+        dateCell.appendChild(dateStrong);
+        dateCell.appendChild(dateSmall);
+
+        var durationCell = document.createElement('td');
+        var duration = document.createElement('span');
+        duration.className = 'cheap-flights__duration';
+        duration.appendChild(svg('<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M8 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>'));
+        duration.appendChild(document.createTextNode(durationText));
+        durationCell.appendChild(duration);
+
+        var stopsCell = document.createElement('td');
+        var stops = document.createElement('span');
+        stops.className = 'cheap-flights__stops ' + (row.stops === 0 ? 'cheap-flights__stops--direct' : 'cheap-flights__stops--transfer');
+        stops.textContent = stopsText;
+        stopsCell.appendChild(stops);
+
+        var priceCell = document.createElement('td');
+        var price = document.createElement('div');
+        price.className = 'cheap-flights__price';
+        var priceValue = document.createElement('span');
+        priceValue.className = 'cheap-flights__price-value';
+        var priceStrong = document.createElement('strong');
+        priceStrong.textContent = priceText;
+        var priceSmall = document.createElement('small');
+        var oldPrice = document.createElement('s');
+        oldPrice.textContent = oldText;
+        priceSmall.appendChild(oldPrice);
+        priceValue.appendChild(priceStrong);
+        priceValue.appendChild(priceSmall);
+        var arrow = document.createElement('span');
+        arrow.className = 'cheap-flights__price-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.appendChild(svg('<svg viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+        price.appendChild(priceValue);
+        price.appendChild(arrow);
+        priceCell.appendChild(price);
+
+        tr.appendChild(routeCell);
+        tr.appendChild(discountCell);
+        tr.appendChild(dateCell);
+        tr.appendChild(durationCell);
+        tr.appendChild(stopsCell);
+        tr.appendChild(priceCell);
+        body.appendChild(tr);
+
+        return {
+          el: tr, info: info, href: href, camp: row.camp,
+          date: row.date, dur: row.dur, price: row.price, rate: rate, save: save, pop: row.pop,
+          haystack: normalize([routeName, row.oc, row.dc, row.al, campName, dateText, formatDay(row.date), durationText, stopsText, priceText, String(row.price), '%' + rate, saveText, 'indirim', 'kampanya'].join(' '))
+        };
+      });
+
+      /* ---------- campaign filter counts ---------- */
+      (function () {
+        var counts = {};
+        rows.forEach(function (row) {
+          counts[row.camp] = (counts[row.camp] || 0) + 1;
+        });
+        root.querySelectorAll('[data-dd-camp-count]').forEach(function (el) {
+          var key = el.getAttribute('data-dd-camp-count');
+          el.textContent = key === '' ? String(rows.length) : String(counts[key] || 0);
+        });
+      }());
+
+      /* ---------- filtering, sorting, paging ---------- */
+      function matches(row) {
+        if (state.camp && row.camp !== state.camp) return false;
+        if (state.query && row.haystack.indexOf(state.query) === -1) return false;
+        return true;
+      }
+
+      function apply() {
+        var sorted = rows.slice().sort(function (a, b) {
+          var av = a[state.sortKey], bv = b[state.sortKey];
+          var result = av < bv ? -1 : av > bv ? 1 : 0;
+          if (result === 0) result = a.pop - b.pop;
+          return state.sortDir === 'asc' ? result : -result;
+        });
+        var matched = 0, shown = 0;
+        sorted.forEach(function (row) {
+          var ok = matches(row);
+          if (ok) matched += 1;
+          var visible = ok && shown < state.limit;
+          if (visible) shown += 1;
+          row.el.hidden = !visible;
+          if (visible) body.appendChild(row.el);
+        });
+        tableWrap.classList.toggle('is-empty', matched === 0);
+        moreButton.hidden = shown >= matched;
+        moreText.textContent = 'Daha fazla göster (' + (matched - shown) + ')';
+        count.textContent = matched === 0 ? 'Sonuç bulunamadı' : shown + ' / ' + matched + ' indirimli uçuş gösteriliyor';
+        syncSortSelect();
+        root.querySelectorAll('[data-cf-sort-col]').forEach(function (th) {
+          if (th.getAttribute('data-cf-sort-col') === state.sortKey) th.setAttribute('aria-sort', state.sortDir === 'asc' ? 'ascending' : 'descending');
+          else th.removeAttribute('aria-sort');
+        });
+        closeTooltips();
+      }
+
+      /* ---------- campaign chips ---------- */
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var camp = button.getAttribute('data-dd-camp');
+          state.camp = state.camp === camp ? '' : camp;
+          state.limit = PAGE_SIZE;
+          filterButtons.forEach(function (other) {
+            var active = other.getAttribute('data-dd-camp') === state.camp;
+            other.classList.toggle('is-active', active);
+            if (active) other.setAttribute('aria-current', 'true'); else other.removeAttribute('aria-current');
+          });
+          apply();
+        });
+      });
+
+      /* ---------- search ---------- */
+      searchInput.addEventListener('input', function () {
+        state.query = normalize(searchInput.value);
+        state.limit = PAGE_SIZE;
+        searchWrap.classList.toggle('has-value', searchInput.value !== '');
+        apply();
+      });
+      searchClear.addEventListener('click', function () {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      });
+
+      /* ---------- sort & paging ---------- */
+      var customOption = document.createElement('option');
+      customOption.value = 'custom';
+      customOption.textContent = 'Özel sıralama';
+
+      function syncSortSelect() {
+        var current = state.sortKey + '-' + state.sortDir;
+        var value = '';
+        Object.keys(SORT_OPTIONS).forEach(function (key) {
+          if (SORT_OPTIONS[key].join('-') === current) value = key;
+        });
+        if (value) {
+          if (customOption.parentNode) customOption.parentNode.removeChild(customOption);
+          sortSelect.value = value;
+        } else {
+          if (!customOption.parentNode) sortSelect.appendChild(customOption);
+          sortSelect.value = 'custom';
+        }
+      }
+
+      sortSelect.addEventListener('change', function () {
+        var option = SORT_OPTIONS[sortSelect.value];
+        if (!option) return;
+        state.sortKey = option[0];
+        state.sortDir = option[1];
+        state.limit = PAGE_SIZE;
+        apply();
+      });
+
+      root.querySelectorAll('[data-cf-sort]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var key = button.getAttribute('data-cf-sort');
+          if (state.sortKey === key) state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+          else { state.sortKey = key; state.sortDir = key === 'rate' || key === 'save' ? 'desc' : 'asc'; }
           apply();
         });
       });

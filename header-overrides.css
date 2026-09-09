@@ -2698,3 +2698,208 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
 #cheap-international-flights .cheap-flights__footer {
   justify-content: center;
 }
+
+/* ------------------------------------------------------------------
+   Discounted deals (#discount-flight-deals): campaign filters, a
+   discount column pairing rate with saved amount, and campaign tags.
+   ------------------------------------------------------------------ */
+.discount-deals__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+
+.discount-deals__heading {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+/* Campaign filter chips. */
+.discount-deals__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.discount-deals__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px 8px 14px;
+  background: #fff;
+  border: 1px solid #d5e2ec;
+  border-radius: 999px;
+  color: #29485e;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.discount-deals__filter:hover {
+  border-color: #b9dcf8;
+  background: #f4f8fc;
+}
+
+.discount-deals__filter.is-active {
+  background: #007fe8;
+  border-color: #007fe8;
+  color: #fff;
+}
+
+.discount-deals__filter:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: 2px;
+}
+
+.discount-deals__filter-count {
+  display: inline-flex;
+  min-width: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  color: #5a6570;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.discount-deals__filter.is-active .discount-deals__filter-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+/* Campaign tag under the route. */
+.discount-deals__tag {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-top: 3px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.discount-deals__tag--lastminute { background: #ffeceb; color: #c53929; }
+.discount-deals__tag--early { background: #e8f1ff; color: #2a62c4; }
+.discount-deals__tag--airline { background: #efedfd; color: #5b4bd6; }
+.discount-deals__tag--route { background: #e7f8ef; color: #1a8a53; }
+
+/* Discount column. */
+.discount-deals__discount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.discount-deals__rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px 3px 7px;
+  background: #fff1e3;
+  border-radius: 999px;
+  color: #c2620a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.discount-deals__rate svg {
+  width: 10px;
+  height: 10px;
+}
+
+.discount-deals__save {
+  color: #6f7981;
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.cheap-flights--discount .cheap-flights__price-value small s {
+  color: #8a949c;
+  font-size: 11px;
+  text-decoration-color: #b4bcc3;
+}
+
+.cheap-flights--discount .cheap-flights__footer {
+  justify-content: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 991.98px) {
+  .cheap-flights--discount .cheap-flights__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cheap-flights--discount .cheap-flights__table-wrap {
+    overflow-x: visible;
+  }
+
+  .discount-deals__filters {
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .discount-deals__filter {
+    padding: 7px 10px 7px 12px;
+    font-size: 12px;
+  }
+
+  .cheap-flights--discount .cheap-flights__row {
+    grid-template-areas:
+      "route price"
+      "discount price"
+      "date date"
+      "duration stops";
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 12px;
+  }
+
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(1) { grid-area: route; min-width: 0; }
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(2) { grid-area: discount; }
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(3) { grid-area: date; }
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(4) { grid-area: duration; }
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(5) { grid-area: stops; justify-self: end; }
+  .cheap-flights--discount .cheap-flights__table tbody td:nth-child(6) { grid-area: price; justify-self: end; align-self: start; }
+
+  .cheap-flights--discount .discount-deals__discount {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cheap-flights--discount .cheap-flights__date {
+    display: flex !important;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .cheap-flights--discount .cheap-flights__date small {
+    display: inline;
+    font-size: 11px;
+  }
+
+  .cheap-flights--discount .cheap-flights__more {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+  }
+}
