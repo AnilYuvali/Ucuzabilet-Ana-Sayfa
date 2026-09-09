@@ -2025,7 +2025,7 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
 
 .cheap-flights__date strong {
   display: block;
-  color: #00121c !important;
+  color: #29485e !important;
   font-size: 14px;
   font-weight: 600;
   line-height: 18px;
@@ -2393,5 +2393,310 @@ th[aria-sort="descending"] .cheap-flights__sort svg {
   .cheap-flights__select select {
     width: 100%;
     min-width: 0;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Live deals (#live-flight-deals): extends .cheap-flights with a
+   live status pill, summary stats, discount badges and a disclaimer.
+   ------------------------------------------------------------------ */
+.cheap-flights--live {
+  background: linear-gradient(180deg, #fbfdff 0%, #fff 140px);
+}
+
+.live-deals__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+
+.live-deals__heading {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.live-deals__status {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 14px 8px 12px;
+  background: #f4f8fc;
+  border: 1px solid #e2ebf2;
+  border-radius: 999px;
+  color: #5a6570;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.live-deals__status-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: #007fe8;
+}
+
+/* Summary strip. */
+.live-deals__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.live-deals__stats li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px 14px;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-radius: 14px;
+}
+
+.live-deals__stat-icon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.live-deals__stat-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.live-deals__stat-icon--blue { background: #e6f4ff; color: #007fe8; }
+.live-deals__stat-icon--green { background: #e7f8ef; color: #1f9d5f; }
+.live-deals__stat-icon--orange { background: #fff4e0; color: #b7700a; }
+.live-deals__stat-icon--purple { background: #efedfd; color: #6d5ce7; }
+
+.live-deals__stat-body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.live-deals__stat-body strong {
+  color: #00121c !important;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.live-deals__stat-body small {
+  color: #6f7981;
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+/* Row details. */
+.live-deals__airline {
+  margin-left: 6px;
+  padding-left: 6px;
+  border-left: 1px solid #d5e2ec;
+  color: #5a6570;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.live-deals__countdown {
+  color: #1f9d5f !important;
+  font-weight: 600;
+}
+
+.live-deals__drop {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 3px;
+  padding: 2px 7px 2px 5px;
+  background: #e7f8ef;
+  border-radius: 999px;
+  color: #1f9d5f;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.live-deals__drop svg {
+  width: 9px;
+  height: 9px;
+}
+
+.cheap-flights--live .cheap-flights__price-value small s {
+  color: #8a949c;
+  font-size: 11px;
+  text-decoration-color: #b4bcc3;
+}
+
+/* Disclaimer below the table. */
+.live-deals__disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: #f4f8fc;
+  border: 1px solid #e6f4ff;
+  border-left: 3px solid #007fe8;
+  border-radius: 12px;
+}
+
+.live-deals__disclaimer-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  background: #e6f4ff;
+  border-radius: 50%;
+  color: #007fe8;
+}
+
+.live-deals__disclaimer-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.live-deals__disclaimer p {
+  margin: 0;
+  color: #5a6570;
+  font-size: 12.5px;
+  line-height: 19px;
+}
+
+@media (max-width: 991.98px) {
+  .live-deals__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .live-deals__status {
+    margin-top: 0;
+    padding: 6px 12px 6px 10px;
+    font-size: 11px;
+  }
+
+  .live-deals__stats {
+    gap: 8px;
+  }
+
+  .live-deals__stats li {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .live-deals__stat-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .live-deals__stat-body strong {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .cheap-flights--live .cheap-flights__date {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .cheap-flights--live .cheap-flights__date small {
+    display: block;
+    font-size: 11px;
+  }
+
+  .cheap-flights--live .cheap-flights__price-value {
+    align-items: flex-end;
+  }
+
+  .live-deals__disclaimer {
+    padding: 12px 14px;
+  }
+
+  .live-deals__disclaimer p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* Keep live-deal cells on one line; tablet widths scroll horizontally instead of wrapping. */
+.cheap-flights--live .cheap-flights__route a,
+.cheap-flights--live .cheap-flights__date strong,
+.cheap-flights--live .live-deals__countdown,
+.cheap-flights--live .cheap-flights__duration {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .cheap-flights--live .cheap-flights__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Live-deal cards on phones: price stack on the right, date under the route. */
+@media (max-width: 767.98px) {
+  .cheap-flights--live .cheap-flights__row {
+    grid-template-areas:
+      "route price"
+      "date price"
+      "duration stops";
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 12px;
+  }
+
+  .cheap-flights--live .cheap-flights__table tbody td:nth-child(1) { grid-area: route; min-width: 0; }
+  .cheap-flights--live .cheap-flights__table tbody td:nth-child(2) { grid-area: date; }
+  .cheap-flights--live .cheap-flights__table tbody td:nth-child(3) { grid-area: duration; }
+  .cheap-flights--live .cheap-flights__table tbody td:nth-child(4) { grid-area: stops; justify-self: end; }
+  .cheap-flights--live .cheap-flights__table tbody td:nth-child(5) { grid-area: price; justify-self: end; align-self: start; }
+
+  .cheap-flights--live .cheap-flights__route a,
+  .cheap-flights--live .live-deals__countdown {
+    white-space: normal;
+  }
+}
+
+/* Live deals footer holds only the "show more" button: center it, full width on phones. */
+.cheap-flights--live .cheap-flights__footer {
+  justify-content: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .cheap-flights--live .cheap-flights__footer {
+    margin-top: 4px;
+  }
+
+  .cheap-flights--live .cheap-flights__more {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+  }
+
+  .cheap-flights--live .live-deals__disclaimer {
+    margin-top: 14px;
   }
 }
