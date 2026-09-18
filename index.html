@@ -327,8 +327,12 @@
 			<script>
 	  var userModel = ``;
 	</script>
+<<<<<<< Updated upstream
       <link rel="stylesheet" href="header-overrides.css?v=46">
       <link rel="stylesheet" href="airline-comparison.css?v=5">
+=======
+      <link rel="stylesheet" href="header-overrides.css?v=56">
+>>>>>>> Stashed changes
 </head><body>
 
 
@@ -5820,6 +5824,7 @@
     }());
   </script>
 </section>
+<<<<<<< Updated upstream
 
 <section class="cheap-flights airline-compare" id="airline-price-comparison" aria-labelledby="airline-compare-title">
   <header class="cheap-flights__header">
@@ -5852,6 +5857,1035 @@
 </section>
 <script src="airline-comparison-data.js?v=2"></script>
 <script src="airline-comparison.js?v=4"></script>
+=======
+<section class="airline-compare" id="airline-price-compare" aria-labelledby="airline-price-compare-title">
+  <div class="airline-compare__header">
+    <span class="airline-compare__eyebrow">Havayolu Fiyatlarını Karşılaştır</span>
+    <h3 id="airline-price-compare-title">Hangi Havayolu Daha Ucuz Uçak Bileti Sağlıyor?</h3>
+    <p>İki havayolu ve bir kalkış şehri seç; son 12 ayın ortalama bilet fiyatlarını ve en popüler rotalardaki güncel en düşük fiyatları yan yana gör.</p>
+  </div>
+
+  <form class="flight-price-compare__filters airline-compare__filters" data-ac-filters aria-label="Havayolu karşılaştırma filtreleri" onsubmit="return false;">
+    <div class="flight-price-compare__field airline-compare__field">
+      <span id="ac-label-airline1">Havayolu 1</span>
+      <div class="ac-picker" data-ac-picker="airline1" data-ac-kind="airline"></div>
+    </div>
+    <button class="flight-price-compare__swap airline-compare__swap" type="button" data-ac-swap aria-label="Havayollarının yerini değiştir" title="Havayollarını değiştir">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 5.5h9.5L10 3M13 10.5H3.5L6 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="flight-price-compare__field airline-compare__field">
+      <span id="ac-label-airline2">Havayolu 2</span>
+      <div class="ac-picker" data-ac-picker="airline2" data-ac-kind="airline"></div>
+    </div>
+    <div class="flight-price-compare__field airline-compare__field airline-compare__field--city">
+      <span id="ac-label-city">Şehir</span>
+      <div class="ac-picker" data-ac-picker="city" data-ac-kind="city"></div>
+    </div>
+    <div class="flight-price-compare__field flight-price-compare__field--compact airline-compare__field--scope">
+      <span id="ac-scope-label">Rota tipi</span>
+      <div class="flight-price-compare__segmented airline-compare__segmented" role="group" aria-labelledby="ac-scope-label">
+        <button type="button" data-ac-scope="dom" aria-pressed="true">Yurt içi</button>
+        <button type="button" data-ac-scope="intl" aria-pressed="false">Yurt dışı</button>
+        <button type="button" data-ac-scope="all" aria-pressed="false">Tümü</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="flight-price-compare__panel airline-compare__panel">
+    <div class="flight-price-compare__panel-header airline-compare__panel-header">
+      <div class="airline-compare__pair" data-ac-pair aria-live="polite"></div>
+      <div class="flight-price-compare__meta airline-compare__meta">
+        <strong data-ac-period>Ekim 2025 – Eylül 2026</strong>
+        <span data-ac-metric>Kişi başı ortalama tek yön fiyat</span>
+      </div>
+    </div>
+
+    <p class="airline-compare__lead" data-ac-lead aria-live="polite">
+      <span class="airline-compare__lead-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M9.2 1.5 3.5 9h4l-.7 5.5L12.5 7h-4l.7-5.5Z" fill="currentColor"/></svg></span>
+      <span data-ac-lead-text>Fiyatlar hesaplanıyor…</span>
+    </p>
+
+    <ul class="flight-price-compare__legend" data-ac-legend aria-label="Havayolları"></ul>
+    <div class="flight-price-compare__chart airline-compare__chart" data-ac-chart>
+      <div class="flight-price-compare__tooltip" data-ac-tooltip role="status" hidden></div>
+    </div>
+    <p class="flight-price-compare__footnote" data-ac-footnote>Grafik, her havayolunun bu şehirden kalkan rotalarındaki aylık ortalama tek yön fiyatını gösterir; iki havayolunun ortak uçtuğu rotalar varsa ortalama yalnızca o rotalardan hesaplanır. Vergiler dahil, bagaj ve ek hizmetler hariçtir. <span data-ac-updated>17 Eylül 2026</span> itibarıyla güncellendi.</p>
+  </div>
+
+  <div class="airline-compare__routes">
+    <div class="airline-compare__routes-header">
+      <h4 class="airline-compare__routes-title" data-ac-routes-title>İstanbul çıkışlı en popüler 5 rota</h4>
+      <span class="airline-compare__routes-note">Rota başına bulunan en düşük tek yön fiyat</span>
+    </div>
+    <div class="airline-compare__table-wrap">
+      <table class="airline-compare__table">
+        <caption class="sr-only" data-ac-table-caption>Seçilen havayollarının en popüler rotalardaki en düşük fiyatları</caption>
+        <thead>
+          <tr>
+            <th scope="col">Rota</th>
+            <th scope="col">Tarih</th>
+            <th scope="col" data-ac-th="1">Havayolu 1</th>
+            <th scope="col" data-ac-th="2">Havayolu 2</th>
+          </tr>
+        </thead>
+        <tbody data-ac-rows></tbody>
+      </table>
+      <div class="airline-compare__table-empty" data-ac-table-empty hidden>
+        <strong>Bu seçim için karşılaştırılacak rota bulunamadı</strong>
+        Farklı bir havayolu, şehir veya rota tipi seçmeyi dene.
+      </div>
+    </div>
+  </div>
+
+  <div class="live-deals__disclaimer">
+    <span class="live-deals__disclaimer-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="4.9" r=".9" fill="currentColor"/></svg></span>
+    <div class="airline-compare__disclaimer" data-ac-disclaimer><p>Fiyatlar hesaplanıyor…</p></div>
+  </div>
+
+  <script type="application/json" id="airline-price-compare-data">{"updated":"17 Eylül 2026","today":"2026-09-17","defaults":{"airline1":"thy","airline2":"pegasus","city":"istanbul","scope":"dom"},"months":[{"key":"2025-10","short":"Eki","long":"Ekim 2025","year":2025},{"key":"2025-11","short":"Kas","long":"Kasım 2025","year":2025},{"key":"2025-12","short":"Ara","long":"Aralık 2025","year":2025},{"key":"2026-01","short":"Oca","long":"Ocak 2026","year":2026},{"key":"2026-02","short":"Şub","long":"Şubat 2026","year":2026},{"key":"2026-03","short":"Mar","long":"Mart 2026","year":2026},{"key":"2026-04","short":"Nis","long":"Nisan 2026","year":2026},{"key":"2026-05","short":"May","long":"Mayıs 2026","year":2026},{"key":"2026-06","short":"Haz","long":"Haziran 2026","year":2026},{"key":"2026-07","short":"Tem","long":"Temmuz 2026","year":2026},{"key":"2026-08","short":"Ağu","long":"Ağustos 2026","year":2026},{"key":"2026-09","short":"Eyl","long":"Eylül 2026","year":2026}],"nationalHubs":["istanbul","ankara","izmir","antalya"],"model":{"domestic":{"floor":1050,"floorKm":350,"perKm":0.9,"minKm":250},"intl":{"min":1600,"perKm":1.3,"longHaulKm":4000,"longHaulPerKm":1.9},"avgUplift":1.28,"season":{"dom":[0.92,0.84,0.95,0.97,0.88,0.86,0.9,0.94,1.03,1.12,1.16,1.0],"intl":[0.9,0.82,1.0,0.9,0.86,0.88,0.95,0.97,1.08,1.15,1.14,1.0]},"monthlyTrend":0.017},"cities":[{"id":"istanbul","name":"İstanbul","label":"İstanbul","code":"IST","lat":41.01,"lon":28.98,"tier":1,"pop":100,"slug":"istanbul"},{"id":"ankara","name":"Ankara","label":"Ankara","code":"ESB","lat":39.93,"lon":32.86,"tier":1,"pop":84,"slug":"ankara"},{"id":"izmir","name":"İzmir","label":"İzmir","code":"ADB","lat":38.42,"lon":27.13,"tier":1,"pop":88,"slug":"izmir"},{"id":"antalya","name":"Antalya","label":"Antalya","code":"AYT","lat":36.9,"lon":30.7,"tier":1,"pop":92,"slug":"antalya"},{"id":"adana","name":"Adana","label":"Adana (Çukurova)","code":"COV","lat":37.0,"lon":35.32,"tier":2,"pop":58,"slug":"adana","diaspora":true},{"id":"adiyaman","name":"Adıyaman","label":"Adıyaman","code":"ADF","lat":37.76,"lon":38.28,"tier":3,"pop":15,"slug":"adiyaman"},{"id":"agri","name":"Ağrı","label":"Ağrı","code":"AJI","lat":39.72,"lon":43.05,"tier":3,"pop":16,"slug":"agri"},{"id":"gazipasa","name":"Alanya","label":"Alanya (Gazipaşa)","code":"GZP","lat":36.27,"lon":32.3,"tier":3,"pop":24,"slug":"alanya"},{"id":"amasya","name":"Amasya","label":"Amasya (Merzifon)","code":"MZH","lat":40.65,"lon":35.83,"tier":3,"pop":10,"slug":"amasya"},{"id":"balikesir","name":"Balıkesir","label":"Balıkesir (Edremit)","code":"EDO","lat":39.55,"lon":27.02,"tier":3,"pop":14,"slug":"balikesir"},{"id":"batman","name":"Batman","label":"Batman","code":"BAL","lat":37.88,"lon":41.13,"tier":3,"pop":20,"slug":"batman"},{"id":"bingol","name":"Bingöl","label":"Bingöl","code":"BGG","lat":38.88,"lon":40.5,"tier":3,"pop":12,"slug":"bingol"},{"id":"bodrum","name":"Bodrum","label":"Bodrum","code":"BJV","lat":37.03,"lon":27.43,"tier":2,"pop":56,"slug":"bodrum"},{"id":"bursa","name":"Bursa","label":"Bursa (Yenişehir)","code":"YEI","lat":40.19,"lon":29.06,"tier":3,"pop":7,"slug":"bursa"},{"id":"canakkale","name":"Çanakkale","label":"Çanakkale","code":"CKZ","lat":40.15,"lon":26.41,"tier":3,"pop":8,"slug":"canakkale"},{"id":"dalaman","name":"Dalaman","label":"Dalaman","code":"DLM","lat":36.77,"lon":28.8,"tier":2,"pop":54,"slug":"dalaman"},{"id":"denizli","name":"Denizli","label":"Denizli","code":"DNZ","lat":37.77,"lon":29.09,"tier":3,"pop":25,"slug":"denizli"},{"id":"diyarbakir","name":"Diyarbakır","label":"Diyarbakır","code":"DIY","lat":37.91,"lon":40.24,"tier":2,"pop":48,"slug":"diyarbakir","diaspora":true},{"id":"elazig","name":"Elazığ","label":"Elazığ","code":"EZS","lat":38.68,"lon":39.22,"tier":3,"pop":28,"slug":"elazig","diaspora":true},{"id":"erzincan","name":"Erzincan","label":"Erzincan","code":"ERC","lat":39.75,"lon":39.49,"tier":3,"pop":17,"slug":"erzincan"},{"id":"erzurum","name":"Erzurum","label":"Erzurum","code":"ERZ","lat":39.9,"lon":41.27,"tier":2,"pop":36,"slug":"erzurum"},{"id":"eskisehir","name":"Eskişehir","label":"Eskişehir","code":"AOE","lat":39.78,"lon":30.52,"tier":3,"pop":6,"slug":"eskisehir"},{"id":"gaziantep","name":"Gaziantep","label":"Gaziantep","code":"GZT","lat":37.07,"lon":37.38,"tier":2,"pop":50,"slug":"gaziantep","diaspora":true},{"id":"hakkari","name":"Hakkari","label":"Hakkari (Yüksekova)","code":"YKO","lat":37.55,"lon":44.24,"tier":3,"pop":12,"slug":"hakkari"},{"id":"hatay","name":"Hatay","label":"Hatay","code":"HTY","lat":36.2,"lon":36.16,"tier":2,"pop":30,"slug":"hatay","diaspora":true},{"id":"igdir","name":"Iğdır","label":"Iğdır","code":"IGD","lat":39.92,"lon":44.05,"tier":3,"pop":13,"slug":"igdir"},{"id":"isparta","name":"Isparta","label":"Isparta","code":"ISE","lat":37.76,"lon":30.55,"tier":3,"pop":10,"slug":"isparta"},{"id":"kahramanmaras","name":"Kahramanmaraş","label":"Kahramanmaraş","code":"KCM","lat":37.58,"lon":36.93,"tier":3,"pop":15,"slug":"kahramanmaras"},{"id":"kars","name":"Kars","label":"Kars","code":"KSY","lat":40.6,"lon":43.1,"tier":3,"pop":27,"slug":"kars"},{"id":"kastamonu","name":"Kastamonu","label":"Kastamonu","code":"KFS","lat":41.38,"lon":33.78,"tier":3,"pop":9,"slug":"kastamonu"},{"id":"kayseri","name":"Kayseri","label":"Kayseri","code":"ASR","lat":38.72,"lon":35.48,"tier":2,"pop":40,"slug":"kayseri","diaspora":true},{"id":"kocaeli","name":"Kocaeli","label":"Kocaeli","code":"KCO","lat":40.77,"lon":29.94,"tier":3,"pop":6,"slug":"kocaeli"},{"id":"konya","name":"Konya","label":"Konya","code":"KYA","lat":37.87,"lon":32.48,"tier":2,"pop":34,"slug":"konya","diaspora":true},{"id":"kutahya","name":"Kütahya","label":"Kütahya (Zafer)","code":"KZR","lat":39.42,"lon":29.99,"tier":3,"pop":7,"slug":"kutahya"},{"id":"malatya","name":"Malatya","label":"Malatya","code":"MLX","lat":38.35,"lon":38.31,"tier":2,"pop":33,"slug":"malatya","diaspora":true},{"id":"mardin","name":"Mardin","label":"Mardin","code":"MQM","lat":37.31,"lon":40.74,"tier":3,"pop":23,"slug":"mardin"},{"id":"mus","name":"Muş","label":"Muş","code":"MSR","lat":38.73,"lon":41.49,"tier":3,"pop":18,"slug":"mus"},{"id":"nevsehir","name":"Nevşehir","label":"Nevşehir (Kapadokya)","code":"NAV","lat":38.62,"lon":34.71,"tier":3,"pop":26,"slug":"nevsehir"},{"id":"ordu-giresun","name":"Ordu-Giresun","label":"Ordu-Giresun","code":"OGU","lat":40.97,"lon":38.08,"tier":3,"pop":22,"slug":"ordu-giresun"},{"id":"rize-artvin","name":"Rize-Artvin","label":"Rize-Artvin","code":"RZV","lat":41.18,"lon":40.85,"tier":3,"pop":21,"slug":"rize-artvin"},{"id":"samsun","name":"Samsun","label":"Samsun","code":"SZF","lat":41.28,"lon":36.33,"tier":2,"pop":42,"slug":"samsun","diaspora":true},{"id":"siirt","name":"Siirt","label":"Siirt","code":"SXZ","lat":37.93,"lon":41.94,"tier":3,"pop":11,"slug":"siirt"},{"id":"sinop","name":"Sinop","label":"Sinop","code":"NOP","lat":42.02,"lon":35.15,"tier":3,"pop":10,"slug":"sinop"},{"id":"sivas","name":"Sivas","label":"Sivas","code":"VAS","lat":39.75,"lon":37.02,"tier":3,"pop":22,"slug":"sivas"},{"id":"sanliurfa","name":"Şanlıurfa","label":"Şanlıurfa","code":"GNY","lat":37.16,"lon":38.79,"tier":2,"pop":32,"slug":"sanliurfa"},{"id":"sirnak","name":"Şırnak","label":"Şırnak","code":"NKT","lat":37.52,"lon":42.46,"tier":3,"pop":13,"slug":"sirnak"},{"id":"tekirdag","name":"Tekirdağ","label":"Tekirdağ (Çorlu)","code":"TEQ","lat":41.16,"lon":27.8,"tier":3,"pop":5,"slug":"tekirdag"},{"id":"tokat","name":"Tokat","label":"Tokat","code":"TJK","lat":40.31,"lon":36.55,"tier":3,"pop":9,"slug":"tokat"},{"id":"trabzon","name":"Trabzon","label":"Trabzon","code":"TZX","lat":41.0,"lon":39.72,"tier":2,"pop":62,"slug":"trabzon","diaspora":true},{"id":"usak","name":"Uşak","label":"Uşak","code":"USQ","lat":38.68,"lon":29.4,"tier":3,"pop":8,"slug":"usak"},{"id":"van","name":"Van","label":"Van","code":"VAN","lat":38.49,"lon":43.38,"tier":2,"pop":44,"slug":"van"},{"id":"zonguldak","name":"Zonguldak","label":"Zonguldak","code":"ONQ","lat":41.45,"lon":31.79,"tier":3,"pop":8,"slug":"zonguldak"}],"destinations":[{"id":"londra","name":"Londra","country":"İngiltere","code":"LHR","lat":51.5,"lon":-0.13,"pop":80,"slug":"londra"},{"id":"manchester","name":"Manchester","country":"İngiltere","code":"MAN","lat":53.48,"lon":-2.24,"pop":40,"slug":"manchester"},{"id":"dublin","name":"Dublin","country":"İrlanda","code":"DUB","lat":53.35,"lon":-6.26,"pop":26,"slug":"dublin"},{"id":"paris","name":"Paris","country":"Fransa","code":"CDG","lat":48.86,"lon":2.35,"pop":70,"slug":"paris"},{"id":"amsterdam","name":"Amsterdam","country":"Hollanda","code":"AMS","lat":52.37,"lon":4.9,"pop":68,"slug":"amsterdam"},{"id":"bruksel","name":"Brüksel","country":"Belçika","code":"BRU","lat":50.85,"lon":4.35,"pop":45,"slug":"bruksel"},{"id":"frankfurt","name":"Frankfurt","country":"Almanya","code":"FRA","lat":50.11,"lon":8.68,"pop":66,"slug":"frankfurt"},{"id":"munih","name":"Münih","country":"Almanya","code":"MUC","lat":48.14,"lon":11.58,"pop":58,"slug":"munih"},{"id":"berlin","name":"Berlin","country":"Almanya","code":"BER","lat":52.52,"lon":13.4,"pop":62,"slug":"berlin"},{"id":"dusseldorf","name":"Düsseldorf","country":"Almanya","code":"DUS","lat":51.23,"lon":6.78,"pop":60,"slug":"dusseldorf"},{"id":"koln","name":"Köln","country":"Almanya","code":"CGN","lat":50.94,"lon":6.96,"pop":55,"slug":"koln"},{"id":"stuttgart","name":"Stuttgart","country":"Almanya","code":"STR","lat":48.78,"lon":9.18,"pop":50,"slug":"stuttgart"},{"id":"hamburg","name":"Hamburg","country":"Almanya","code":"HAM","lat":53.55,"lon":10.0,"pop":46,"slug":"hamburg"},{"id":"viyana","name":"Viyana","country":"Avusturya","code":"VIE","lat":48.21,"lon":16.37,"pop":60,"slug":"viyana"},{"id":"zurih","name":"Zürih","country":"İsviçre","code":"ZRH","lat":47.38,"lon":8.54,"pop":52,"slug":"zurih"},{"id":"roma","name":"Roma","country":"İtalya","code":"FCO","lat":41.9,"lon":12.5,"pop":58,"slug":"roma"},{"id":"milano","name":"Milano","country":"İtalya","code":"MXP","lat":45.46,"lon":9.19,"pop":56,"slug":"milano"},{"id":"madrid","name":"Madrid","country":"İspanya","code":"MAD","lat":40.42,"lon":-3.7,"pop":44,"slug":"madrid"},{"id":"barselona","name":"Barselona","country":"İspanya","code":"BCN","lat":41.39,"lon":2.17,"pop":50,"slug":"barselona"},{"id":"lizbon","name":"Lizbon","country":"Portekiz","code":"LIS","lat":38.72,"lon":-9.14,"pop":36,"slug":"lizbon"},{"id":"kopenhag","name":"Kopenhag","country":"Danimarka","code":"CPH","lat":55.68,"lon":12.57,"pop":38,"slug":"kopenhag"},{"id":"stockholm","name":"Stockholm","country":"İsveç","code":"ARN","lat":59.33,"lon":18.07,"pop":36,"slug":"stockholm"},{"id":"oslo","name":"Oslo","country":"Norveç","code":"OSL","lat":59.91,"lon":10.75,"pop":30,"slug":"oslo"},{"id":"helsinki","name":"Helsinki","country":"Finlandiya","code":"HEL","lat":60.17,"lon":24.94,"pop":28,"slug":"helsinki"},{"id":"varsova","name":"Varşova","country":"Polonya","code":"WAW","lat":52.23,"lon":21.01,"pop":34,"slug":"varsova"},{"id":"prag","name":"Prag","country":"Çekya","code":"PRG","lat":50.08,"lon":14.44,"pop":36,"slug":"prag"},{"id":"budapeste","name":"Budapeşte","country":"Macaristan","code":"BUD","lat":47.5,"lon":19.04,"pop":34,"slug":"budapeste"},{"id":"bukres","name":"Bükreş","country":"Romanya","code":"OTP","lat":44.43,"lon":26.1,"pop":30,"slug":"bukres"},{"id":"sofya","name":"Sofya","country":"Bulgaristan","code":"SOF","lat":42.7,"lon":23.32,"pop":28,"slug":"sofya"},{"id":"atina","name":"Atina","country":"Yunanistan","code":"ATH","lat":37.98,"lon":23.73,"pop":46,"slug":"atina"},{"id":"belgrad","name":"Belgrad","country":"Sırbistan","code":"BEG","lat":44.79,"lon":20.47,"pop":30,"slug":"belgrad"},{"id":"saraybosna","name":"Saraybosna","country":"Bosna-Hersek","code":"SJJ","lat":43.85,"lon":18.36,"pop":26,"slug":"saraybosna"},{"id":"uskup","name":"Üsküp","country":"Kuzey Makedonya","code":"SKP","lat":42.0,"lon":21.43,"pop":24,"slug":"uskup"},{"id":"tiran","name":"Tiran","country":"Arnavutluk","code":"TIA","lat":41.33,"lon":19.82,"pop":22,"slug":"tiran"},{"id":"kisinev","name":"Kişinev","country":"Moldova","code":"KIV","lat":47.01,"lon":28.86,"pop":20,"slug":"kisinev"},{"id":"riga","name":"Riga","country":"Letonya","code":"RIX","lat":56.95,"lon":24.11,"pop":18,"slug":"riga"},{"id":"moskova","name":"Moskova","country":"Rusya","code":"SVO","lat":55.76,"lon":37.62,"pop":48,"slug":"moskova"},{"id":"st-petersburg","name":"St. Petersburg","country":"Rusya","code":"LED","lat":59.93,"lon":30.32,"pop":30,"slug":"st-petersburg"},{"id":"minsk","name":"Minsk","country":"Belarus","code":"MSQ","lat":53.9,"lon":27.57,"pop":18,"slug":"minsk"},{"id":"baku","name":"Bakü","country":"Azerbaycan","code":"GYD","lat":40.41,"lon":49.87,"pop":50,"slug":"baku"},{"id":"tiflis","name":"Tiflis","country":"Gürcistan","code":"TBS","lat":41.72,"lon":44.83,"pop":44,"slug":"tiflis"},{"id":"taskent","name":"Taşkent","country":"Özbekistan","code":"TAS","lat":41.3,"lon":69.24,"pop":30,"slug":"taskent"},{"id":"almati","name":"Almatı","country":"Kazakistan","code":"ALA","lat":43.24,"lon":76.9,"pop":26,"slug":"almati"},{"id":"dubai","name":"Dubai","country":"BAE","code":"DXB","lat":25.2,"lon":55.27,"pop":64,"slug":"dubai"},{"id":"sarika","name":"Şarika","country":"BAE","code":"SHJ","lat":25.33,"lon":55.52,"pop":26,"slug":"sarika"},{"id":"abu-dabi","name":"Abu Dabi","country":"BAE","code":"AUH","lat":24.45,"lon":54.65,"pop":34,"slug":"abu-dabi"},{"id":"doha","name":"Doha","country":"Katar","code":"DOH","lat":25.29,"lon":51.53,"pop":40,"slug":"doha"},{"id":"riyad","name":"Riyad","country":"Suudi Arabistan","code":"RUH","lat":24.71,"lon":46.68,"pop":36,"slug":"riyad"},{"id":"cidde","name":"Cidde","country":"Suudi Arabistan","code":"JED","lat":21.49,"lon":39.19,"pop":34,"slug":"cidde"},{"id":"kuveyt","name":"Kuveyt","country":"Kuveyt","code":"KWI","lat":29.38,"lon":47.99,"pop":30,"slug":"kuveyt"},{"id":"bahreyn","name":"Bahreyn","country":"Bahreyn","code":"BAH","lat":26.23,"lon":50.59,"pop":22,"slug":"bahreyn"},{"id":"maskat","name":"Maskat","country":"Umman","code":"MCT","lat":23.59,"lon":58.41,"pop":20,"slug":"maskat"},{"id":"amman","name":"Amman","country":"Ürdün","code":"AMM","lat":31.95,"lon":35.93,"pop":28,"slug":"amman"},{"id":"beyrut","name":"Beyrut","country":"Lübnan","code":"BEY","lat":33.89,"lon":35.5,"pop":30,"slug":"beyrut"},{"id":"kahire","name":"Kahire","country":"Mısır","code":"CAI","lat":30.04,"lon":31.24,"pop":36,"slug":"kahire"},{"id":"tahran","name":"Tahran","country":"İran","code":"IKA","lat":35.69,"lon":51.39,"pop":34,"slug":"tahran"},{"id":"erbil","name":"Erbil","country":"Irak","code":"EBL","lat":36.19,"lon":44.01,"pop":24,"slug":"erbil"},{"id":"addis-ababa","name":"Addis Ababa","country":"Etiyopya","code":"ADD","lat":9.03,"lon":38.74,"pop":20,"slug":"addis-ababa"},{"id":"kazablanka","name":"Kazablanka","country":"Fas","code":"CMN","lat":33.57,"lon":-7.59,"pop":22,"slug":"kazablanka"},{"id":"new-york","name":"New York","country":"ABD","code":"JFK","lat":40.71,"lon":-74.01,"pop":50,"slug":"new-york"},{"id":"chicago","name":"Chicago","country":"ABD","code":"ORD","lat":41.88,"lon":-87.63,"pop":24,"slug":"chicago"},{"id":"washington","name":"Washington","country":"ABD","code":"IAD","lat":38.9,"lon":-77.04,"pop":22,"slug":"washington"},{"id":"toronto","name":"Toronto","country":"Kanada","code":"YYZ","lat":43.65,"lon":-79.38,"pop":26,"slug":"toronto"},{"id":"singapur","name":"Singapur","country":"Singapur","code":"SIN","lat":1.35,"lon":103.82,"pop":24,"slug":"singapur"},{"id":"seul","name":"Seul","country":"Güney Kore","code":"ICN","lat":37.57,"lon":126.98,"pop":22,"slug":"seul"},{"id":"pekin","name":"Pekin","country":"Çin","code":"PEK","lat":39.9,"lon":116.4,"pop":22,"slug":"pekin"},{"id":"delhi","name":"Delhi","country":"Hindistan","code":"DEL","lat":28.61,"lon":77.21,"pop":26,"slug":"delhi"},{"id":"mumbai","name":"Mumbai","country":"Hindistan","code":"BOM","lat":19.08,"lon":72.88,"pop":20,"slug":"mumbai"},{"id":"kuala-lumpur","name":"Kuala Lumpur","country":"Malezya","code":"KUL","lat":3.14,"lon":101.69,"pop":22,"slug":"kuala-lumpur"},{"id":"bangkok","name":"Bangkok","country":"Tayland","code":"BKK","lat":13.76,"lon":100.5,"pop":32,"slug":"bangkok"}],"airlines":[{"id":"thy","name":"Türk Hava Yolları","short":"THY","code":"TK","color":"#d64550","logo":"assets/d18718bb30b2-25px-TK.png","kind":"dom","mult":{"dom":1.15,"intl":1.3},"hubs":{"istanbul":3,"ankara":3},"skip":[],"intl":{"istanbul":["londra","paris","amsterdam","frankfurt","munih","berlin","dusseldorf","koln","stuttgart","hamburg","viyana","zurih","bruksel","roma","milano","madrid","barselona","lizbon","kopenhag","stockholm","oslo","helsinki","varsova","prag","budapeste","bukres","sofya","atina","belgrad","saraybosna","uskup","tiran","kisinev","riga","manchester","dublin","moskova","st-petersburg","minsk","baku","tiflis","taskent","almati","dubai","abu-dabi","doha","riyad","cidde","kuveyt","bahreyn","maskat","amman","beyrut","kahire","tahran","erbil","addis-ababa","kazablanka","new-york","chicago","washington","toronto","singapur","seul","pekin","delhi","mumbai","kuala-lumpur","bangkok"],"ankara":["frankfurt","dusseldorf","koln","amsterdam","viyana","baku","tiflis","kuveyt","kahire"],"antalya":["moskova","st-petersburg","frankfurt","dusseldorf"]},"diasporaIntl":["frankfurt","dusseldorf","koln"]},{"id":"pegasus","name":"Pegasus","short":"Pegasus","code":"PC","color":"#d9960f","logo":"assets/38122ce71c0f-25px-PC.png","kind":"dom","mult":{"dom":1.0,"intl":0.85},"hubs":{"istanbul":3,"ankara":3,"izmir":2,"antalya":2},"skip":["sinop","siirt","usak","tokat","kastamonu","zonguldak","canakkale","tekirdag","kocaeli","bursa","eskisehir","kutahya","isparta","amasya"],"intl":{"istanbul":["londra","paris","amsterdam","frankfurt","munih","berlin","dusseldorf","koln","stuttgart","hamburg","viyana","zurih","bruksel","roma","milano","madrid","barselona","kopenhag","stockholm","oslo","varsova","prag","budapeste","bukres","sofya","atina","belgrad","saraybosna","uskup","tiran","kisinev","manchester","moskova","st-petersburg","minsk","baku","tiflis","taskent","almati","dubai","sarika","doha","riyad","cidde","kuveyt","bahreyn","amman","beyrut","kahire","tahran","erbil"],"ankara":["frankfurt","dusseldorf","amsterdam","koln","londra","baku","tiflis","dubai","kuveyt"],"izmir":["londra","frankfurt","dusseldorf","koln","stuttgart","amsterdam","viyana","paris","zurih","baku"],"antalya":["londra","manchester","frankfurt","dusseldorf","koln","amsterdam","viyana","zurih","moskova","baku","tiflis","kuveyt","dubai"]},"diasporaIntl":["frankfurt","dusseldorf","koln","stuttgart"]},{"id":"ajet","name":"AJet","short":"AJet","code":"VF","color":"#1f9d8a","logo":"assets/af314a88bf8e-25px-VF.png","kind":"dom","mult":{"dom":0.97,"intl":0.9},"hubs":{"ankara":3,"istanbul":2},"skip":["tekirdag","kocaeli","bursa","eskisehir","kutahya","isparta","canakkale","sinop"],"intl":{"ankara":["frankfurt","dusseldorf","koln","amsterdam","viyana","berlin","londra","baku","tiflis","beyrut","kuveyt","riyad"],"istanbul":["londra","amsterdam","frankfurt","berlin","viyana","paris","roma","milano","baku","tiflis","dubai","riyad","cidde"]},"diasporaIntl":[]},{"id":"sunexpress","name":"SunExpress","short":"SunExpress","code":"XQ","color":"#6d5ce7","logo":"assets/0f0c494d8b7b-25px-XQ.png","kind":"dom","mult":{"dom":1.02,"intl":0.95},"hubs":{"izmir":2,"antalya":2},"skip":[],"extra":["kars","elazig","mardin"],"intl":{"izmir":["frankfurt","munih","dusseldorf","koln","stuttgart","hamburg","berlin","viyana","zurih","amsterdam","londra"],"antalya":["frankfurt","munih","dusseldorf","koln","stuttgart","hamburg","berlin","viyana","zurih","amsterdam","londra","manchester","kopenhag","stockholm","oslo","helsinki","varsova","prag"]},"diasporaIntl":["frankfurt","dusseldorf","koln","stuttgart","hamburg","munih"]},{"id":"corendon","name":"Corendon Airlines","short":"Corendon","code":"XC","color":"#e0522f","kind":"dom","mult":{"dom":1.0,"intl":0.9},"hubs":{},"skip":[],"intl":{"antalya":["amsterdam","bruksel","dusseldorf","koln","frankfurt","munih","hamburg","viyana","zurih","kopenhag"],"izmir":["amsterdam","dusseldorf","koln","munih"],"bodrum":["amsterdam","dusseldorf","koln","londra"],"dalaman":["amsterdam","dusseldorf","manchester","londra"],"kayseri":["dusseldorf","koln"],"gaziantep":["dusseldorf","koln"],"trabzon":["dusseldorf","koln"]},"diasporaIntl":[]},{"id":"lufthansa","name":"Lufthansa","short":"Lufthansa","code":"LH","color":"#0b2a5b","kind":"intl","mult":{"intl":1.45},"intl":{"istanbul":["frankfurt","munih"],"ankara":["frankfurt","munih"],"izmir":["frankfurt","munih"],"antalya":["frankfurt","munih"]}},{"id":"klm","name":"KLM","short":"KLM","code":"KL","color":"#00a1de","kind":"intl","mult":{"intl":1.4},"intl":{"istanbul":["amsterdam"]}},{"id":"air-france","name":"Air France","short":"Air France","code":"AF","color":"#0a2a8f","kind":"intl","mult":{"intl":1.42},"intl":{"istanbul":["paris"]}},{"id":"british-airways","name":"British Airways","short":"British Airways","code":"BA","color":"#2e5c99","kind":"intl","mult":{"intl":1.5},"intl":{"istanbul":["londra"],"antalya":["londra"]}},{"id":"swiss","name":"Swiss","short":"Swiss","code":"LX","color":"#c8102e","kind":"intl","mult":{"intl":1.5},"intl":{"istanbul":["zurih"]}},{"id":"austrian-airlines","name":"Austrian Airlines","short":"Austrian","code":"OS","color":"#c8102e","kind":"intl","mult":{"intl":1.38},"intl":{"istanbul":["viyana"],"ankara":["viyana"]}},{"id":"iberia","name":"Iberia","short":"Iberia","code":"IB","color":"#d7192d","kind":"intl","mult":{"intl":1.35},"intl":{"istanbul":["madrid"]}},{"id":"tap-air-portugal","name":"TAP Air Portugal","short":"TAP","code":"TP","color":"#00843d","kind":"intl","mult":{"intl":1.3},"intl":{"istanbul":["lizbon"]}},{"id":"ita-airways","name":"ITA Airways","short":"ITA Airways","code":"AZ","color":"#0b3d91","kind":"intl","mult":{"intl":1.3},"intl":{"istanbul":["roma","milano"]}},{"id":"lot-polish-airlines","name":"LOT Polish Airlines","short":"LOT","code":"LO","color":"#1a3f8f","kind":"intl","mult":{"intl":1.2},"intl":{"istanbul":["varsova"]}},{"id":"finnair","name":"Finnair","short":"Finnair","code":"AY","color":"#0b1560","kind":"intl","mult":{"intl":1.35},"intl":{"istanbul":["helsinki"],"antalya":["helsinki"]}},{"id":"aegean-airlines","name":"Aegean Airlines","short":"Aegean","code":"A3","color":"#1e5aa8","kind":"intl","mult":{"intl":1.1},"intl":{"istanbul":["atina"],"izmir":["atina"]}},{"id":"air-serbia","name":"Air Serbia","short":"Air Serbia","code":"JU","color":"#0e2b5c","kind":"intl","mult":{"intl":1.05},"intl":{"istanbul":["belgrad"]}},{"id":"wizz-air","name":"Wizz Air","short":"Wizz Air","code":"W6","color":"#c6007e","kind":"intl","mult":{"intl":0.7},"intl":{"istanbul":["londra","roma","milano","viyana","budapeste","varsova","bukres","sofya"],"antalya":["londra","viyana","budapeste","varsova"],"izmir":["londra","roma"],"dalaman":["londra","budapeste"],"bodrum":["londra"]}},{"id":"easyjet","name":"easyJet","short":"easyJet","code":"U2","color":"#ff6600","kind":"intl","mult":{"intl":0.78},"intl":{"istanbul":["londra","manchester"],"antalya":["londra","manchester","zurih"],"dalaman":["londra","manchester"],"bodrum":["londra","manchester"],"izmir":["londra"]}},{"id":"eurowings","name":"Eurowings","short":"Eurowings","code":"EW","color":"#a4157a","kind":"intl","mult":{"intl":0.9},"intl":{"antalya":["dusseldorf","koln","stuttgart","hamburg","berlin"],"izmir":["dusseldorf","koln","stuttgart"],"dalaman":["dusseldorf","koln"],"bodrum":["dusseldorf","koln","hamburg"]}},{"id":"condor","name":"Condor","short":"Condor","code":"DE","color":"#f2c400","kind":"intl","mult":{"intl":0.95},"intl":{"antalya":["frankfurt","munih","dusseldorf","hamburg"],"dalaman":["frankfurt","munih"],"izmir":["frankfurt","dusseldorf"],"bodrum":["frankfurt","munih"]}},{"id":"vueling","name":"Vueling","short":"Vueling","code":"VY","color":"#f6c400","kind":"intl","mult":{"intl":0.8},"intl":{"istanbul":["barselona"]}},{"id":"transavia","name":"Transavia","short":"Transavia","code":"HV","color":"#00a86b","kind":"intl","mult":{"intl":0.85},"intl":{"istanbul":["amsterdam","paris"],"antalya":["amsterdam","paris"],"izmir":["amsterdam"],"bodrum":["amsterdam"],"dalaman":["amsterdam"]}},{"id":"norwegian","name":"Norwegian","short":"Norwegian","code":"DY","color":"#d81939","kind":"intl","mult":{"intl":0.85},"intl":{"antalya":["oslo","stockholm","kopenhag"]}},{"id":"airbaltic","name":"airBaltic","short":"airBaltic","code":"BT","color":"#7ab800","kind":"intl","mult":{"intl":1.0},"intl":{"istanbul":["riga"],"antalya":["riga"]}},{"id":"bulgaria-air","name":"Bulgaria Air","short":"Bulgaria Air","code":"FB","color":"#0e4c92","kind":"intl","mult":{"intl":1.0},"intl":{"istanbul":["sofya"]}},{"id":"tarom","name":"TAROM","short":"TAROM","code":"RO","color":"#1b4f9c","kind":"intl","mult":{"intl":1.0},"intl":{"istanbul":["bukres"]}},{"id":"aeroflot","name":"Aeroflot","short":"Aeroflot","code":"SU","color":"#0f3d8c","kind":"intl","mult":{"intl":1.1},"intl":{"istanbul":["moskova","st-petersburg"],"antalya":["moskova","st-petersburg"],"dalaman":["moskova"],"bodrum":["moskova"]}},{"id":"azerbaijan-airlines","name":"Azerbaijan Airlines","short":"AZAL","code":"J2","color":"#0072bc","kind":"intl","mult":{"intl":1.05},"intl":{"istanbul":["baku"],"ankara":["baku"],"izmir":["baku"],"antalya":["baku"]}},{"id":"uzbekistan-airways","name":"Uzbekistan Airways","short":"Uzbekistan Airways","code":"HY","color":"#0a7bc2","kind":"intl","mult":{"intl":1.1},"intl":{"istanbul":["taskent"]}},{"id":"air-astana","name":"Air Astana","short":"Air Astana","code":"KC","color":"#1c9ad6","kind":"intl","mult":{"intl":1.15},"intl":{"istanbul":["almati"],"antalya":["almati"]}},{"id":"belavia","name":"Belavia","short":"Belavia","code":"B2","color":"#2b6cb0","kind":"intl","mult":{"intl":1.0},"intl":{"istanbul":["minsk"],"antalya":["minsk"]}},{"id":"emirates","name":"Emirates","short":"Emirates","code":"EK","color":"#d71920","kind":"intl","mult":{"intl":1.5},"intl":{"istanbul":["dubai"]}},{"id":"flydubai","name":"flydubai","short":"flydubai","code":"FZ","color":"#f58220","kind":"intl","mult":{"intl":0.95},"intl":{"istanbul":["dubai"],"ankara":["dubai"],"izmir":["dubai"],"antalya":["dubai"],"trabzon":["dubai"],"bodrum":["dubai"]}},{"id":"qatar-airways","name":"Qatar Airways","short":"Qatar Airways","code":"QR","color":"#5c0632","kind":"intl","mult":{"intl":1.45},"intl":{"istanbul":["doha"],"ankara":["doha"],"antalya":["doha"],"bodrum":["doha"],"trabzon":["doha"]}},{"id":"etihad-airways","name":"Etihad Airways","short":"Etihad","code":"EY","color":"#b08d57","kind":"intl","mult":{"intl":1.4},"intl":{"istanbul":["abu-dabi"]}},{"id":"air-arabia","name":"Air Arabia","short":"Air Arabia","code":"G9","color":"#c8102e","kind":"intl","mult":{"intl":0.8},"intl":{"istanbul":["sarika"],"antalya":["sarika"],"trabzon":["sarika"]}},{"id":"gulf-air","name":"Gulf Air","short":"Gulf Air","code":"GF","color":"#b8860b","kind":"intl","mult":{"intl":1.2},"intl":{"istanbul":["bahreyn"]}},{"id":"oman-air","name":"Oman Air","short":"Oman Air","code":"WY","color":"#8b1a2b","kind":"intl","mult":{"intl":1.3},"intl":{"istanbul":["maskat"]}},{"id":"saudia","name":"Saudia","short":"Saudia","code":"SV","color":"#006c35","kind":"intl","mult":{"intl":1.2},"intl":{"istanbul":["riyad","cidde"]}},{"id":"flynas","name":"flynas","short":"flynas","code":"XY","color":"#7ac143","kind":"intl","mult":{"intl":0.85},"intl":{"istanbul":["riyad","cidde"],"antalya":["riyad","cidde"],"trabzon":["riyad"]}},{"id":"kuwait-airways","name":"Kuwait Airways","short":"Kuwait Airways","code":"KU","color":"#1d3f9a","kind":"intl","mult":{"intl":1.05},"intl":{"istanbul":["kuveyt"],"trabzon":["kuveyt"],"bodrum":["kuveyt"]}},{"id":"jazeera-airways","name":"Jazeera Airways","short":"Jazeera","code":"J9","color":"#6b2c91","kind":"intl","mult":{"intl":0.85},"intl":{"istanbul":["kuveyt"],"trabzon":["kuveyt"],"antalya":["kuveyt"]}},{"id":"royal-jordanian","name":"Royal Jordanian","short":"Royal Jordanian","code":"RJ","color":"#8a1c2b","kind":"intl","mult":{"intl":1.15},"intl":{"istanbul":["amman"]}},{"id":"middle-east-airlines","name":"Middle East Airlines","short":"MEA","code":"ME","color":"#0d4d8c","kind":"intl","mult":{"intl":1.15},"intl":{"istanbul":["beyrut"]}},{"id":"egyptair","name":"EgyptAir","short":"EgyptAir","code":"MS","color":"#1b4e9b","kind":"intl","mult":{"intl":1.05},"intl":{"istanbul":["kahire"]}},{"id":"ethiopian-airlines","name":"Ethiopian Airlines","short":"Ethiopian","code":"ET","color":"#2b8a3e","kind":"intl","mult":{"intl":1.15},"intl":{"istanbul":["addis-ababa"]}},{"id":"royal-air-maroc","name":"Royal Air Maroc","short":"Royal Air Maroc","code":"AT","color":"#c1272d","kind":"intl","mult":{"intl":1.1},"intl":{"istanbul":["kazablanka"]}},{"id":"singapore-airlines","name":"Singapore Airlines","short":"Singapore Airlines","code":"SQ","color":"#0b2f6b","kind":"intl","mult":{"intl":1.6},"intl":{"istanbul":["singapur"]}},{"id":"korean-air","name":"Korean Air","short":"Korean Air","code":"KE","color":"#0b5da8","kind":"intl","mult":{"intl":1.55},"intl":{"istanbul":["seul"]}},{"id":"air-china","name":"Air China","short":"Air China","code":"CA","color":"#c8102e","kind":"intl","mult":{"intl":1.3},"intl":{"istanbul":["pekin"]}},{"id":"indigo","name":"IndiGo","short":"IndiGo","code":"6E","color":"#1c3f94","kind":"intl","mult":{"intl":0.85},"intl":{"istanbul":["delhi","mumbai"]}},{"id":"united-airlines","name":"United Airlines","short":"United","code":"UA","color":"#1d3d8f","kind":"intl","mult":{"intl":1.5},"intl":{"istanbul":["new-york"]}},{"id":"delta-air-lines","name":"Delta Air Lines","short":"Delta","code":"DL","color":"#c8102e","kind":"intl","mult":{"intl":1.5},"intl":{"istanbul":["new-york"]}}],"overrides":{"istanbul-antalya":{"sunexpress":899,"pegasus":1199,"thy":1309},"ankara-trabzon":{"ajet":939},"istanbul-gaziantep":{"ajet":989,"thy":1689},"ankara-istanbul":{"ajet":999,"pegasus":1369,"thy":1419},"istanbul-ankara":{"pegasus":999,"thy":1139},"samsun-istanbul":{"ajet":1019},"konya-istanbul":{"ajet":1029},"istanbul-trabzon":{"ajet":1029,"pegasus":1509,"thy":1529},"ankara-erzurum":{"ajet":1079},"izmir-antalya":{"sunexpress":1079},"ankara-izmir":{"ajet":1099,"thy":1519},"antalya-ankara":{"ajet":1119},"izmir-istanbul":{"ajet":1119,"pegasus":1369,"thy":1479},"bodrum-istanbul":{"sunexpress":1149},"adana-istanbul":{"ajet":1159},"antalya-istanbul":{"pegasus":1169,"sunexpress":1279,"thy":1309},"sanliurfa-istanbul":{"ajet":1179},"kayseri-istanbul":{"ajet":1189},"diyarbakir-istanbul":{"ajet":1219},"denizli-istanbul":{"pegasus":1249},"ankara-antalya":{"sunexpress":1249,"pegasus":1419},"istanbul-sanliurfa":{"pegasus":1259,"thy":1339},"ankara-diyarbakir":{"thy":1279},"istanbul-van":{"pegasus":1279,"thy":1299},"istanbul-izmir":{"pegasus":1289,"thy":1429},"ankara-van":{"ajet":1309},"antalya-izmir":{"pegasus":1339},"istanbul-konya":{"pegasus":1339},"antalya-samsun":{"sunexpress":1389},"istanbul-kayseri":{"pegasus":1399},"istanbul-erzurum":{"ajet":1409,"thy":1849},"istanbul-adana":{"pegasus":1469,"thy":1549},"antalya-trabzon":{"sunexpress":1489},"istanbul-bodrum":{"pegasus":1529,"thy":1639},"izmir-erzurum":{"sunexpress":1559},"izmir-van":{"sunexpress":1599},"trabzon-istanbul":{"thy":1669},"izmir-trabzon":{"sunexpress":1719}}}</script>
+  <script>
+    (function () {
+      var root = document.getElementById('airline-price-compare');
+      var dataNode = document.getElementById('airline-price-compare-data');
+      if (!root || !dataNode) return;
+      var data;
+      try { data = JSON.parse(dataNode.textContent); } catch (error) { return; }
+
+      var months = data.months;
+      var model = data.model;
+      var cities = data.cities;
+      var airlines = data.airlines;
+      var dests = data.destinations;
+      var cityById = {}, airlineById = {}, destById = {};
+      cities.forEach(function (city) { cityById[city.id] = city; });
+      airlines.forEach(function (airline) { airlineById[airline.id] = airline; });
+      dests.forEach(function (dest) { destById[dest.id] = dest; });
+      var isHub = {};
+      data.nationalHubs.forEach(function (id) { isHub[id] = true; });
+
+      var q = function (selector) { return root.querySelector(selector); };
+      var chartHost = q('[data-ac-chart]');
+      var tooltip = q('[data-ac-tooltip]');
+      var legend = q('[data-ac-legend]');
+      var scopeButtons = root.querySelectorAll('[data-ac-scope]');
+
+      var MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+      var MONTHS_SHORT = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+      var DAYS_SHORT = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+      var SCOPE_LABEL = { dom: 'yurt içi', intl: 'yurt dışı', all: '' };
+      var ORDINAL = ['0’ında', '1’inde', '2’sinde', '3’ünde', '4’ünde', '5’inde', '6’sında', '7’sinde', '8’inde', '9’unda', '10’unda', '11’inde', 'tamamında'];
+
+      var state = { airline1: data.defaults.airline1, airline2: data.defaults.airline2, city: data.defaults.city, scope: data.defaults.scope, hoverIndex: -1 };
+      var current = null;
+      var resizeTimer = null;
+
+      /* ---------- helpers ---------- */
+      function hashNoise(key) {
+        var h = 2166136261;
+        for (var i = 0; i < key.length; i += 1) {
+          h ^= key.charCodeAt(i);
+          h = Math.imul(h, 16777619);
+        }
+        return ((h >>> 0) % 1000) / 1000 * 0.07 - 0.035;
+      }
+      function hashInt(key, mod) {
+        var h = 2166136261;
+        for (var i = 0; i < key.length; i += 1) { h ^= key.charCodeAt(i); h = Math.imul(h, 16777619); }
+        return (h >>> 0) % mod;
+      }
+      function roundPrice(value) { return Math.max(Math.round(value / 10) * 10 - 1, 199); }
+      function formatPrice(value) { return value.toLocaleString('tr-TR') + ' TL'; }
+      function distanceKm(a, b) {
+        var rad = Math.PI / 180;
+        var dLat = (b.lat - a.lat) * rad, dLon = (b.lon - a.lon) * rad;
+        var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+      }
+      function trNormalize(text) {
+        return String(text).replace(/İ/g, 'i').replace(/I/g, 'ı').toLowerCase()
+          .replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/â/g, 'a').replace(/î/g, 'i').replace(/û/g, 'u');
+      }
+      function lastVowel(name) {
+        var m = name.toLowerCase().match(/[aeıioöuü](?!.*[aeıioöuü])/);
+        return m ? m[0] : 'e';
+      }
+      function ablative(name) {
+        var v = lastVowel(name);
+        var hard = /[aıou]/.test(v);
+        var soft = /[çfhkpsşt]$/.test(name.toLowerCase());
+        return name + '’' + (soft ? 't' : 'd') + (hard ? 'an' : 'en');
+      }
+      function dative(name) {
+        var v = lastVowel(name);
+        var hard = /[aıou]/.test(v);
+        var endsVowel = /[aeıioöuü]$/i.test(name);
+        return name + '’' + (endsVowel ? 'y' : '') + (hard ? 'a' : 'e');
+      }
+      function formatDate(date) { return date.getDate() + ' ' + MONTHS_SHORT[date.getMonth()] + ' ' + date.getFullYear(); }
+      function routeDate(key) {
+        var parts = data.today.split('-');
+        var date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]) + 4 + hashInt(key, 52));
+        return date;
+      }
+
+      /* ---------- route model (placeholder until the API delivers real fares) ---------- */
+      function domesticServed(airline, origin, dest) {
+        if (airline.kind !== 'dom' || !airline.hubs) return false;
+        if (origin.id === dest.id) return false;
+        if (distanceKm(origin, dest) < model.domestic.minKm) return false;
+        if (!isHub[origin.id] && !isHub[dest.id]) return false;
+        var skip = airline.skip || [];
+        if (skip.indexOf(origin.id) >= 0 || skip.indexOf(dest.id) >= 0) return false;
+        var extra = airline.extra || [];
+        var ok = false;
+        [[origin, dest], [dest, origin]].forEach(function (pair) {
+          var hubTier = airline.hubs[pair[0].id];
+          if (!hubTier) return;
+          if (pair[1].tier <= hubTier || extra.indexOf(pair[1].id) >= 0) ok = true;
+        });
+        return ok;
+      }
+
+      function intlDests(airline, city) {
+        var list = (airline.intl && airline.intl[city.id]) ? airline.intl[city.id].slice() : [];
+        if (city.diaspora && airline.diasporaIntl) {
+          airline.diasporaIntl.forEach(function (id) { if (list.indexOf(id) < 0) list.push(id); });
+        }
+        return list;
+      }
+
+      function baseFare(km, scope) {
+        if (scope === 'dom') return model.domestic.floor + Math.max(km - model.domestic.floorKm, 0) * model.domestic.perKm;
+        var value = model.intl.min + Math.min(km, model.intl.longHaulKm) * model.intl.perKm;
+        if (km > model.intl.longHaulKm) value += (km - model.intl.longHaulKm) * model.intl.longHaulPerKm;
+        return value;
+      }
+
+      function routeLow(airline, city, target, scope) {
+        var key = city.id + '-' + target.id;
+        var override = data.overrides[key] && data.overrides[key][airline.id];
+        if (override) return override;
+        var km = distanceKm(city, target);
+        return roundPrice(baseFare(km, scope) * airline.mult[scope] * (1 + hashNoise(key + airline.id)));
+      }
+
+      /* Every route an airline flies from a city: [{id, scope, target, name, code, pop, price, date, href}] */
+      var routeCache = {};
+      function routesFor(airline, city) {
+        var cacheKey = airline.id + '|' + city.id;
+        if (routeCache[cacheKey]) return routeCache[cacheKey];
+        var list = [];
+        cities.forEach(function (dest) {
+          if (!domesticServed(airline, city, dest)) return;
+          list.push(makeRoute(airline, city, dest, 'dom'));
+        });
+        intlDests(airline, city).forEach(function (id) {
+          var dest = destById[id];
+          if (dest) list.push(makeRoute(airline, city, dest, 'intl'));
+        });
+        routeCache[cacheKey] = list;
+        return list;
+      }
+      function makeRoute(airline, city, target, scope) {
+        var key = city.id + '-' + target.id;
+        return {
+          id: key, scope: scope, target: target, name: city.name + ' – ' + target.name, code: city.code + ' → ' + target.code,
+          pop: target.pop, price: routeLow(airline, city, target, scope), date: routeDate(key),
+          href: 'https://www.ucuzabilet.com/' + city.slug + '-' + target.slug + '-ucak-bileti'
+        };
+      }
+      function inScope(route, scope) { return scope === 'all' || route.scope === scope; }
+
+      /* Shared routes (both airlines fly them) give an apples-to-apples average; otherwise each airline's own routes. */
+      function sharedRouteIds(pair, city, scope) {
+        var sets = pair.map(function (airline) {
+          var map = {};
+          routesFor(airline, city).forEach(function (route) { if (inScope(route, scope)) map[route.id] = true; });
+          return map;
+        });
+        return Object.keys(sets[0]).filter(function (id) { return sets[1][id]; });
+      }
+
+      function monthlySeries(airline, city, scope, onlyIds) {
+        var routes = routesFor(airline, city).filter(function (route) { return inScope(route, scope) && (!onlyIds || onlyIds.indexOf(route.id) >= 0); });
+        if (!routes.length) return null;
+        var weighted = 0, weight = 0;
+        routes.forEach(function (route) { weighted += route.price * route.pop; weight += route.pop; });
+        var mean = weighted / weight;
+        var domShare = routes.filter(function (route) { return route.scope === 'dom'; }).length / routes.length;
+        return months.map(function (month, index) {
+          var season = model.season.dom[index] * domShare + model.season.intl[index] * (1 - domShare);
+          var trend = Math.pow(1 + model.monthlyTrend, index - (months.length - 1));
+          var noise = 1 + hashNoise(airline.id + city.id + scope + month.key) * 0.8;
+          return roundPrice(mean * model.avgUplift * season * trend * noise);
+        });
+      }
+
+      function build() {
+        var city = cityById[state.city];
+        var selected = [airlineById[state.airline1], airlineById[state.airline2]];
+        var colors = [selected[0].color, selected[1].color === selected[0].color ? '#007fe8' : selected[1].color];
+        var shared = sharedRouteIds(selected, city, state.scope);
+        var basis = shared.length ? shared : null;
+        var series = [];
+        selected.forEach(function (airline, index) {
+          var values = monthlySeries(airline, city, state.scope, basis);
+          if (values) series.push({ airline: airline, color: colors[index], values: values, slot: index });
+        });
+        var routeSets = selected.map(function (airline) {
+          var map = {};
+          routesFor(airline, city).forEach(function (route) { if (inScope(route, state.scope)) map[route.id] = route; });
+          return map;
+        });
+        var union = {};
+        routeSets.forEach(function (map) { Object.keys(map).forEach(function (id) { union[id] = map[id]; }); });
+        var rows = Object.keys(union).map(function (id) {
+          var both = routeSets[0][id] && routeSets[1][id];
+          return { id: id, route: union[id], both: !!both, prices: [routeSets[0][id] ? routeSets[0][id].price : null, routeSets[1][id] ? routeSets[1][id].price : null] };
+        }).sort(function (a, b) {
+          if (a.both !== b.both) return a.both ? -1 : 1;
+          return b.route.pop - a.route.pop;
+        }).slice(0, 5);
+        var cheapest = selected.map(function (airline, index) {
+          var best = null;
+          Object.keys(routeSets[index]).forEach(function (id) {
+            var route = routeSets[index][id];
+            if (!best || route.price < best.price) best = route;
+          });
+          return best;
+        });
+        return { city: city, airlines: selected, colors: colors, series: series, rows: rows, cheapest: cheapest, shared: shared.length };
+      }
+
+      function summarize(series) {
+        var min = null, max = null, monthMins = months.map(function () { return null; });
+        series.forEach(function (line) {
+          line.values.forEach(function (value, index) {
+            if (!min || value < min.value) min = { value: value, index: index, line: line };
+            if (!max || value > max.value) max = { value: value, index: index, line: line };
+            if (monthMins[index] === null || value < monthMins[index]) monthMins[index] = value;
+          });
+        });
+        return { min: min, max: max, monthMins: monthMins };
+      }
+
+      /* ---------- searchable pickers ---------- */
+      var pickers = {};
+      var openPicker = null;
+
+      function badgeEl(airline, size) {
+        var badge = document.createElement('span');
+        badge.className = 'ac-badge' + (size ? ' ac-badge--' + size : '');
+        if (airline.logo) {
+          var img = document.createElement('img');
+          img.src = airline.logo; img.alt = ''; img.width = 25; img.height = 19; img.loading = 'lazy';
+          badge.appendChild(img);
+        } else {
+          badge.classList.add('ac-badge--mono');
+          badge.style.setProperty('--ac-color', airline.color);
+          badge.textContent = airline.code;
+        }
+        return badge;
+      }
+
+      function createPicker(host) {
+        var name = host.getAttribute('data-ac-picker');
+        var kind = host.getAttribute('data-ac-kind');
+        var labelId = 'ac-label-' + name;
+        var listId = 'ac-list-' + name;
+        host.innerHTML = '';
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'ac-picker__button';
+        button.setAttribute('aria-haspopup', 'listbox');
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-labelledby', labelId + ' ' + labelId + '-value');
+        var lead = document.createElement('span');
+        lead.className = 'ac-picker__lead';
+        var value = document.createElement('span');
+        value.className = 'ac-picker__value';
+        value.id = labelId + '-value';
+        var chevron = document.createElement('span');
+        chevron.className = 'ac-picker__chevron';
+        chevron.setAttribute('aria-hidden', 'true');
+        button.appendChild(lead); button.appendChild(value); button.appendChild(chevron);
+
+        var pop = document.createElement('div');
+        pop.className = 'ac-picker__popover';
+        pop.hidden = true;
+        var search = document.createElement('label');
+        search.className = 'ac-picker__search';
+        search.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.6"/><path d="m10.5 10.5 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.autocomplete = 'off';
+        input.spellcheck = false;
+        input.placeholder = kind === 'airline' ? 'Havayolu ara…' : 'Şehir ara…';
+        input.setAttribute('aria-label', kind === 'airline' ? 'Havayolu ara' : 'Şehir ara');
+        input.setAttribute('role', 'combobox');
+        input.setAttribute('aria-autocomplete', 'list');
+        input.setAttribute('aria-controls', listId);
+        input.setAttribute('aria-expanded', 'true');
+        search.appendChild(input);
+        var list = document.createElement('ul');
+        list.className = 'ac-picker__list';
+        list.id = listId;
+        list.setAttribute('role', 'listbox');
+        list.setAttribute('aria-labelledby', labelId);
+        var empty = document.createElement('p');
+        empty.className = 'ac-picker__empty';
+        empty.hidden = true;
+        empty.textContent = 'Sonuç bulunamadı';
+        pop.appendChild(search); pop.appendChild(list); pop.appendChild(empty);
+        host.appendChild(button); host.appendChild(pop);
+
+        var picker = { name: name, kind: kind, host: host, button: button, lead: lead, value: value, pop: pop, input: input, list: list, empty: empty, active: -1, options: [] };
+
+        function items() {
+          if (kind === 'airline') {
+            return airlines.map(function (airline) {
+              return { id: airline.id, label: airline.name, meta: airline.code, group: airline.kind === 'dom' ? 'Türkiye merkezli havayolları' : 'Yabancı havayolları', search: trNormalize(airline.name + ' ' + airline.short + ' ' + airline.code), airline: airline };
+            });
+          }
+          return cities.map(function (city) {
+            return { id: city.id, label: city.label, meta: city.code, group: '', search: trNormalize(city.label + ' ' + city.name + ' ' + city.code), city: city };
+          });
+        }
+        var all = items();
+
+        function render(filter) {
+          var needle = trNormalize(filter || '').trim();
+          list.innerHTML = '';
+          picker.options = [];
+          var lastGroup = null;
+          all.forEach(function (item) {
+            if (needle && item.search.indexOf(needle) < 0) return;
+            if (item.group && item.group !== lastGroup) {
+              var head = document.createElement('li');
+              head.className = 'ac-picker__group';
+              head.setAttribute('role', 'presentation');
+              head.textContent = item.group;
+              list.appendChild(head);
+              lastGroup = item.group;
+            }
+            var li = document.createElement('li');
+            li.className = 'ac-picker__option';
+            li.setAttribute('role', 'option');
+            li.id = listId + '-' + item.id;
+            var selected = state[name] === item.id;
+            var taken = kind === 'airline' && state[name === 'airline1' ? 'airline2' : 'airline1'] === item.id;
+            li.setAttribute('aria-selected', selected ? 'true' : 'false');
+            if (selected) li.classList.add('is-selected');
+            if (taken) li.classList.add('is-taken');
+            if (item.airline) li.appendChild(badgeEl(item.airline, 'sm'));
+            var text = document.createElement('span');
+            text.className = 'ac-picker__option-text';
+            text.textContent = item.label;
+            li.appendChild(text);
+            var meta = document.createElement('span');
+            meta.className = 'ac-picker__option-meta';
+            meta.textContent = taken ? 'Seçili' : item.meta;
+            li.appendChild(meta);
+            li.addEventListener('mousedown', function (event) { event.preventDefault(); });
+            li.addEventListener('click', function () { choose(item.id); });
+            list.appendChild(li);
+            picker.options.push({ id: item.id, el: li });
+          });
+          empty.hidden = picker.options.length > 0;
+          setActive(picker.options.length ? Math.max(0, picker.options.map(function (o) { return o.id; }).indexOf(state[name])) : -1, false);
+        }
+
+        function setActive(index, scroll) {
+          picker.options.forEach(function (option, i) { option.el.classList.toggle('is-active', i === index); });
+          picker.active = index;
+          if (index >= 0) {
+            input.setAttribute('aria-activedescendant', picker.options[index].el.id);
+            if (scroll !== false) {
+              var el = picker.options[index].el;
+              var top = el.offsetTop - list.offsetTop, bottom = top + el.offsetHeight;
+              if (top < list.scrollTop) list.scrollTop = top - 6;
+              else if (bottom > list.scrollTop + list.clientHeight) list.scrollTop = bottom - list.clientHeight + 6;
+            }
+          } else {
+            input.removeAttribute('aria-activedescendant');
+          }
+        }
+
+        function choose(id) {
+          close();
+          select(name, id);
+        }
+
+        function open() {
+          if (openPicker && openPicker !== picker) openPicker.close();
+          openPicker = picker;
+          pop.hidden = false;
+          host.classList.add('is-open');
+          button.setAttribute('aria-expanded', 'true');
+          input.value = '';
+          render('');
+          window.requestAnimationFrame(function () {
+            input.focus();
+            if (picker.active >= 0) setActive(picker.active, true);
+          });
+        }
+        function close(refocus) {
+          if (pop.hidden) return;
+          pop.hidden = true;
+          host.classList.remove('is-open');
+          button.setAttribute('aria-expanded', 'false');
+          if (openPicker === picker) openPicker = null;
+          if (refocus) button.focus();
+        }
+        picker.open = open;
+        picker.close = close;
+
+        button.addEventListener('click', function () { if (pop.hidden) open(); else close(); });
+        button.addEventListener('keydown', function (event) {
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); open(); }
+        });
+        input.addEventListener('input', function () { render(input.value); });
+        input.addEventListener('keydown', function (event) {
+          if (event.key === 'ArrowDown') { event.preventDefault(); if (picker.options.length) setActive(Math.min(picker.active + 1, picker.options.length - 1)); }
+          else if (event.key === 'ArrowUp') { event.preventDefault(); if (picker.options.length) setActive(Math.max(picker.active - 1, 0)); }
+          else if (event.key === 'Home') { event.preventDefault(); if (picker.options.length) setActive(0); }
+          else if (event.key === 'End') { event.preventDefault(); if (picker.options.length) setActive(picker.options.length - 1); }
+          else if (event.key === 'Enter') { event.preventDefault(); if (picker.active >= 0) { choose(picker.options[picker.active].id); button.focus(); } }
+          else if (event.key === 'Escape') { event.preventDefault(); close(true); }
+          else if (event.key === 'Tab') { close(); }
+        });
+        pickers[name] = picker;
+        return picker;
+      }
+
+      function paintPicker(name) {
+        var picker = pickers[name];
+        if (!picker) return;
+        picker.lead.innerHTML = '';
+        if (picker.kind === 'airline') {
+          var airline = airlineById[state[name]];
+          picker.lead.appendChild(badgeEl(airline, 'sm'));
+          picker.value.textContent = airline.name;
+        } else {
+          var city = cityById[state[name]];
+          picker.lead.innerHTML = '<img src="assets/b0c4d3ab23b9-plane-departure.svg" width="16" height="16" alt="">';
+          picker.value.textContent = city.label + ' (' + city.code + ')';
+        }
+      }
+
+      document.addEventListener('click', function (event) {
+        if (openPicker && !openPicker.host.contains(event.target)) openPicker.close();
+      });
+
+      function select(name, id) {
+        if (state[name] === id) return;
+        if (name === 'airline1' && state.airline2 === id) { state.airline2 = state.airline1; paintPicker('airline2'); }
+        if (name === 'airline2' && state.airline1 === id) { state.airline1 = state.airline2; paintPicker('airline1'); }
+        state[name] = id;
+        paintPicker(name);
+        resolveScope();
+        update();
+      }
+
+      /* If the chosen pair has nothing in the current scope, fall back to a scope that has data. */
+      function resolveScope() {
+        var city = cityById[state.city];
+        var pair = [airlineById[state.airline1], airlineById[state.airline2]];
+        var has = function (scope) {
+          return pair.filter(function (airline) { return routesFor(airline, city).some(function (route) { return inScope(route, scope); }); }).length;
+        };
+        var order = [state.scope, 'dom', 'intl', 'all'];
+        for (var i = 0; i < order.length; i += 1) {
+          if (has(order[i]) === 2) { state.scope = order[i]; break; }
+        }
+        if (has(state.scope) === 0) {
+          for (var j = 0; j < order.length; j += 1) { if (has(order[j]) > 0) { state.scope = order[j]; break; } }
+        }
+        scopeButtons.forEach(function (button) { button.setAttribute('aria-pressed', button.getAttribute('data-ac-scope') === state.scope ? 'true' : 'false'); });
+      }
+
+      /* ---------- rendering ---------- */
+      function svgEl(name, attrs) {
+        var el = document.createElementNS('http://www.w3.org/2000/svg', name);
+        Object.keys(attrs || {}).forEach(function (key) { el.setAttribute(key, attrs[key]); });
+        return el;
+      }
+
+      function niceTicks(minValue, maxValue) {
+        var span = Math.max(maxValue - minValue, 100);
+        var rawStep = span / 4;
+        var magnitude = Math.pow(10, Math.floor(Math.log(rawStep) / Math.LN10));
+        var candidates = [1, 2, 2.5, 5, 10];
+        var step = magnitude * candidates[candidates.length - 1];
+        for (var i = 0; i < candidates.length; i += 1) {
+          if (magnitude * candidates[i] >= rawStep) { step = magnitude * candidates[i]; break; }
+        }
+        var low = Math.floor((minValue - span * 0.22) / step) * step;
+        var high = Math.ceil((maxValue + span * 0.12) / step) * step;
+        if (low < 0) low = 0;
+        var ticks = [];
+        for (var value = low; value <= high + 0.001; value += step) ticks.push(Math.round(value));
+        return { low: low, high: high, ticks: ticks };
+      }
+
+      function renderPair(result) {
+        var host = q('[data-ac-pair]');
+        host.innerHTML = '';
+        result.airlines.forEach(function (airline, index) {
+          if (index === 1) {
+            var vs = document.createElement('span');
+            vs.className = 'airline-compare__vs';
+            vs.textContent = 'vs';
+            host.appendChild(vs);
+          }
+          var chip = document.createElement('span');
+          chip.className = 'airline-compare__chip';
+          chip.style.setProperty('--ac-color', result.colors[index]);
+          chip.appendChild(badgeEl(airline));
+          var text = document.createElement('span');
+          text.className = 'airline-compare__chip-text';
+          var name = document.createElement('strong');
+          name.textContent = airline.name;
+          var line = result.series.filter(function (s) { return s.airline === airline; })[0];
+          var meta = document.createElement('small');
+          meta.textContent = line ? 'Ortalama ' + formatPrice(Math.round(line.values.reduce(function (a, b) { return a + b; }, 0) / line.values.length)) : ablative(result.city.name) + ' bu tipte uçuşu yok';
+          text.appendChild(name); text.appendChild(meta);
+          chip.appendChild(text);
+          host.appendChild(chip);
+        });
+        if (result.series.length === 2) {
+          var a = result.series[0].values, b = result.series[1].values;
+          var wins = 0, diff = 0;
+          a.forEach(function (value, index) { if (value < b[index]) wins += 1; diff += (b[index] - value) / b[index]; });
+          var cheaper = wins >= months.length / 2 ? result.series[0] : result.series[1];
+          var count = cheaper === result.series[0] ? wins : months.length - wins;
+          var pct = Math.round(Math.abs(diff / months.length) * 100);
+          var verdict = document.createElement('span');
+          verdict.className = 'airline-compare__verdict';
+          verdict.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          verdict.appendChild(document.createTextNode(cheaper.airline.short + ' son 12 ayın ' + ORDINAL[count] + ' daha ucuz' + (pct ? ' · ort. %' + pct : '')));
+          host.appendChild(verdict);
+        }
+      }
+
+      function renderLead(result) {
+        var host = q('[data-ac-lead-text]');
+        host.innerHTML = '';
+        var parts = [];
+        result.airlines.forEach(function (airline, index) {
+          var best = result.cheapest[index];
+          if (best) parts.push({ airline: airline, route: best });
+        });
+        var scopeWord = SCOPE_LABEL[state.scope] ? ' ' + SCOPE_LABEL[state.scope] : '';
+        if (!parts.length) {
+          host.textContent = ablative(result.city.name) + ' bu rota tipinde seçili havayollarıyla direkt uçuş yok; başka bir şehir veya rota tipi seç.';
+          return;
+        }
+        parts.sort(function (a, b) { return a.route.price - b.route.price; });
+        parts.forEach(function (part, index) {
+          var strong = document.createElement('strong');
+          strong.textContent = part.airline.short;
+          host.appendChild(strong);
+          host.appendChild(document.createTextNode(' ile ' + result.city.name + ' - ' + part.route.target.name + ' uçuşunu '));
+          var price = document.createElement('b');
+          price.className = 'airline-compare__lead-price';
+          price.textContent = formatPrice(part.route.price);
+          host.appendChild(price);
+          host.appendChild(document.createTextNode(index < parts.length - 1 ? ', ' : ' üzerinden karşılaştır.'));
+        });
+        if (parts.length === 1) {
+          var missing = result.airlines.filter(function (airline) { return airline !== parts[0].airline; })[0];
+          host.appendChild(document.createTextNode(' ' + missing.short + ' bu şehirden' + scopeWord + ' direkt uçuş sunmuyor.'));
+        }
+      }
+
+      function renderLegend(result) {
+        legend.innerHTML = '';
+        if (result.series.length < 2) { legend.hidden = true; return; }
+        legend.hidden = false;
+        result.series.forEach(function (line) {
+          var item = document.createElement('li');
+          var key = document.createElement('i');
+          key.style.background = line.color;
+          item.appendChild(key);
+          item.appendChild(document.createTextNode(line.airline.name));
+          legend.appendChild(item);
+        });
+      }
+
+      function renderChart(result, summary) {
+        var old = chartHost.querySelector('svg');
+        if (old) old.remove();
+        var emptyBox = chartHost.querySelector('.flight-price-compare__empty');
+        if (emptyBox) emptyBox.remove();
+        tooltip.hidden = true;
+
+        if (!result.series.length) {
+          var box = document.createElement('div');
+          box.className = 'flight-price-compare__empty';
+          box.innerHTML = '<svg width="32" height="32" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="color:#b9c7d2"><path d="M14 7.2 9.4 8.3 6.3 2H4.5l1.6 6.6-3 .7-1.4-1.6H.6l1.2 3.1L.6 14h1.1l1.4-1.6 3 .7L4.5 14h1.8l3.1-6.3L14 8.8c.5-.1.8-.5.8-.8s-.3-.7-.8-.8Z" fill="currentColor"/></svg><strong>Bu seçim için karşılaştırılacak uçuş bulunamadı</strong><span>Seçtiğin havayolları ' + ablative(result.city.name) + ' bu rota tipinde uçmuyor. Farklı bir şehir veya rota tipi dene.</span>';
+          chartHost.appendChild(box);
+          return;
+        }
+
+        var width = Math.max(chartHost.clientWidth || 640, 240);
+        var narrow = width < 480;
+        var height = narrow ? 240 : 300;
+        var pad = { top: 34, right: width < 400 ? 16 : 22, bottom: 40, left: width < 400 ? 54 : 60 };
+        var plotW = width - pad.left - pad.right;
+        var plotH = height - pad.top - pad.bottom;
+        var scale = niceTicks(summary.min.value, summary.max.value);
+        var x = function (index) { return pad.left + (plotW * index) / (months.length - 1); };
+        var y = function (value) { return pad.top + plotH - ((value - scale.low) / (scale.high - scale.low)) * plotH; };
+
+        var svg = svgEl('svg', { viewBox: '0 0 ' + width + ' ' + height, width: width, height: height, role: 'img', tabindex: '0' });
+        svg.setAttribute('aria-label', result.airlines.map(function (a) { return a.name; }).join(' ve ') + ' için ' + result.city.name + ' çıkışlı aylık ortalama uçak bileti fiyatları. En düşük ortalama ' + formatPrice(summary.min.value) + ', ' + months[summary.min.index].long + ', ' + summary.min.line.airline.name + '.');
+
+        scale.ticks.forEach(function (tick) {
+          svg.appendChild(svgEl('line', { class: 'fpc-grid', x1: pad.left, x2: width - pad.right, y1: y(tick), y2: y(tick) }));
+          var label = svgEl('text', { class: 'fpc-axis', x: pad.left - 10, y: y(tick) + 4, 'text-anchor': 'end' });
+          label.textContent = tick.toLocaleString('tr-TR') + ' TL';
+          svg.appendChild(label);
+        });
+
+        var hoverColumn = svgEl('rect', { class: 'fpc-col-hover', x: 0, y: pad.top, width: 0, height: plotH, rx: 6, opacity: 0 });
+        svg.appendChild(hoverColumn);
+
+        months.forEach(function (month, index) {
+          if (narrow && index % 2 === 1) return;
+          var label = svgEl('text', { class: 'fpc-axis', x: x(index), y: height - 16, 'text-anchor': 'middle' });
+          label.textContent = month.short;
+          svg.appendChild(label);
+          if (index === 0 || month.key.slice(5) === '01') {
+            var year = svgEl('text', { class: 'fpc-axis fpc-axis--year', x: x(index), y: height - 4, 'text-anchor': 'middle' });
+            year.textContent = month.year;
+            svg.appendChild(year);
+          }
+        });
+
+        var single = result.series.length === 1;
+        result.series.forEach(function (line) {
+          var points = line.values.map(function (value, index) { return [x(index), y(value)]; });
+          var d = points.map(function (point, index) { return (index === 0 ? 'M' : 'L') + point[0].toFixed(1) + ' ' + point[1].toFixed(1); }).join(' ');
+          if (single) {
+            var area = d + ' L' + points[points.length - 1][0].toFixed(1) + ' ' + (pad.top + plotH) + ' L' + points[0][0].toFixed(1) + ' ' + (pad.top + plotH) + ' Z';
+            svg.appendChild(svgEl('path', { class: 'fpc-area', d: area, fill: line.color }));
+          }
+          svg.appendChild(svgEl('path', { class: 'fpc-line', d: d, stroke: line.color, 'data-airline': line.airline.id }));
+        });
+        result.series.forEach(function (line) {
+          line.values.forEach(function (value, index) {
+            svg.appendChild(svgEl('circle', { class: 'fpc-dot', cx: x(index), cy: y(value), r: 4, fill: line.color, 'data-index': index }));
+          });
+        });
+
+        var crosshair = svgEl('line', { class: 'fpc-crosshair', x1: 0, x2: 0, y1: pad.top, y2: pad.top + plotH, opacity: 0 });
+        svg.appendChild(crosshair);
+
+        var minX = x(summary.min.index);
+        var minY = y(summary.min.value);
+        svg.appendChild(svgEl('circle', { cx: minX, cy: minY, r: 9, fill: 'none', stroke: summary.min.line.color, 'stroke-width': 1.5, opacity: 0.55 }));
+        var badgeText = formatPrice(summary.min.value);
+        var badgeW = badgeText.length * 7 + 82;
+        var badgeX = Math.min(Math.max(minX - badgeW / 2, pad.left), width - pad.right - badgeW);
+        var badgeY = (minY + 14 + 24 <= pad.top + plotH + 4) ? minY + 14 : minY - 40;
+        var badge = svgEl('g', { class: 'fpc-min-group' });
+        badge.appendChild(svgEl('rect', { class: 'fpc-min-badge', x: badgeX, y: badgeY, width: badgeW, height: 24, rx: 12 }));
+        var tag = svgEl('text', { class: 'fpc-min-tag', x: badgeX + 10, y: badgeY + 16 });
+        tag.textContent = 'En ucuz';
+        badge.appendChild(tag);
+        var minLabel = svgEl('text', { class: 'fpc-min-label', x: badgeX + badgeW - 10, y: badgeY + 16, 'text-anchor': 'end' });
+        minLabel.textContent = badgeText;
+        badge.appendChild(minLabel);
+        svg.appendChild(badge);
+
+        var hit = svgEl('rect', { class: 'fpc-hit', x: pad.left - 20, y: pad.top - 10, width: plotW + 40, height: plotH + 20 });
+        svg.appendChild(hit);
+        chartHost.appendChild(svg);
+
+        function showIndex(index) {
+          if (index < 0 || index >= months.length) { hideHover(); return; }
+          state.hoverIndex = index;
+          var px = x(index);
+          crosshair.setAttribute('x1', px);
+          crosshair.setAttribute('x2', px);
+          crosshair.setAttribute('opacity', 1);
+          var colW = plotW / (months.length - 1);
+          hoverColumn.setAttribute('x', px - colW / 2);
+          hoverColumn.setAttribute('width', colW);
+          hoverColumn.setAttribute('opacity', 1);
+          svg.querySelectorAll('.fpc-dot').forEach(function (dot) {
+            dot.setAttribute('r', Number(dot.getAttribute('data-index')) === index ? 5.5 : 4);
+          });
+
+          tooltip.innerHTML = '';
+          var title = document.createElement('p');
+          title.className = 'flight-price-compare__tooltip-title';
+          title.textContent = months[index].long;
+          tooltip.appendChild(title);
+          var list = document.createElement('ul');
+          var rows = result.series.map(function (line) { return { line: line, value: line.values[index] }; }).sort(function (a, b) { return a.value - b.value; });
+          rows.forEach(function (row, rowIndex) {
+            var item = document.createElement('li');
+            if (rowIndex === 0 && rows.length > 1) item.className = 'is-min';
+            var key = document.createElement('i');
+            key.style.background = row.line.color;
+            var name = document.createElement('span');
+            name.textContent = row.line.airline.name;
+            var value = document.createElement('strong');
+            value.textContent = formatPrice(row.value);
+            item.appendChild(key); item.appendChild(name); item.appendChild(value);
+            list.appendChild(item);
+          });
+          tooltip.appendChild(list);
+          if (rows.length === 2) {
+            var diff = document.createElement('p');
+            diff.className = 'airline-compare__tooltip-diff';
+            var gap = rows[1].value - rows[0].value;
+            diff.textContent = rows[0].line.airline.short + ' bu ay ' + formatPrice(gap) + ' (%' + Math.round(gap / rows[1].value * 100) + ') daha ucuz';
+            tooltip.appendChild(diff);
+          }
+          tooltip.hidden = false;
+          var hostW = chartHost.clientWidth;
+          var tipW = tooltip.offsetWidth;
+          var left = px + 16;
+          if (left + tipW > hostW - 4) left = px - tipW - 16;
+          if (left < 0) left = Math.max(px - tipW / 2, 0);
+          var topPx = Math.max(pad.top - 6, Math.min(y(summary.monthMins[index]) - tooltip.offsetHeight / 2, height - tooltip.offsetHeight - pad.bottom));
+          tooltip.style.left = left + 'px';
+          tooltip.style.top = topPx + 'px';
+        }
+
+        function hideHover() {
+          state.hoverIndex = -1;
+          crosshair.setAttribute('opacity', 0);
+          hoverColumn.setAttribute('opacity', 0);
+          tooltip.hidden = true;
+          svg.querySelectorAll('.fpc-dot').forEach(function (dot) { dot.setAttribute('r', 4); });
+        }
+
+        function indexFromEvent(event) {
+          var rect = svg.getBoundingClientRect();
+          var ratio = width / rect.width;
+          var px = (event.clientX - rect.left) * ratio;
+          var best = 0, bestDist = Infinity;
+          months.forEach(function (month, index) {
+            var dist = Math.abs(x(index) - px);
+            if (dist < bestDist) { bestDist = dist; best = index; }
+          });
+          return best;
+        }
+
+        hit.addEventListener('pointermove', function (event) { showIndex(indexFromEvent(event)); });
+        hit.addEventListener('pointerleave', hideHover);
+        svg.addEventListener('focus', function () { showIndex(state.hoverIndex >= 0 ? state.hoverIndex : summary.min.index); });
+        svg.addEventListener('blur', hideHover);
+        svg.addEventListener('keydown', function (event) {
+          var base = state.hoverIndex < 0 ? summary.min.index : state.hoverIndex;
+          if (event.key === 'ArrowRight') { event.preventDefault(); showIndex(Math.min(base + 1, months.length - 1)); }
+          if (event.key === 'ArrowLeft') { event.preventDefault(); showIndex(Math.max(base - 1, 0)); }
+          if (event.key === 'Home') { event.preventDefault(); showIndex(0); }
+          if (event.key === 'End') { event.preventDefault(); showIndex(months.length - 1); }
+          if (event.key === 'Escape') { hideHover(); }
+        });
+      }
+
+      function renderTable(result) {
+        var body = q('[data-ac-rows]');
+        var emptyBox = q('[data-ac-table-empty]');
+        var table = root.querySelector('.airline-compare__table');
+        body.innerHTML = '';
+        result.airlines.forEach(function (airline, index) {
+          var th = q('[data-ac-th="' + (index + 1) + '"]');
+          th.innerHTML = '';
+          var wrap = document.createElement('span');
+          wrap.className = 'airline-compare__th-airline';
+          wrap.appendChild(badgeEl(airline, 'sm'));
+          var name = document.createElement('span');
+          name.textContent = airline.short;
+          wrap.appendChild(name);
+          th.appendChild(wrap);
+        });
+        var scopeWord = SCOPE_LABEL[state.scope] ? SCOPE_LABEL[state.scope] + ' ' : '';
+        q('[data-ac-routes-title]').textContent = result.city.name + ' çıkışlı en popüler ' + Math.max(result.rows.length, 1) + ' ' + scopeWord + 'rota';
+        q('[data-ac-table-caption]').textContent = result.airlines[0].name + ' ve ' + result.airlines[1].name + ' için ' + result.city.name + ' çıkışlı en popüler rotalarda en düşük tek yön fiyatlar';
+        var hasRows = result.rows.length > 0;
+        table.hidden = !hasRows;
+        emptyBox.hidden = hasRows;
+        result.rows.forEach(function (row) {
+          var tr = document.createElement('tr');
+          tr.className = 'airline-compare__row';
+          var routeCell = document.createElement('td');
+          routeCell.className = 'airline-compare__route';
+          var link = document.createElement('a');
+          link.href = row.route.href;
+          link.textContent = row.route.name;
+          routeCell.appendChild(link);
+          var code = document.createElement('small');
+          code.textContent = row.route.code;
+          routeCell.appendChild(code);
+          tr.appendChild(routeCell);
+
+          var dateCell = document.createElement('td');
+          dateCell.className = 'airline-compare__date';
+          var dateStrong = document.createElement('strong');
+          dateStrong.textContent = formatDate(row.route.date);
+          dateCell.appendChild(dateStrong);
+          var day = document.createElement('small');
+          day.textContent = DAYS_SHORT[row.route.date.getDay()];
+          dateCell.appendChild(day);
+          tr.appendChild(dateCell);
+
+          var bestIndex = -1;
+          if (row.prices[0] !== null && row.prices[1] !== null) bestIndex = row.prices[0] <= row.prices[1] ? 0 : 1;
+          row.prices.forEach(function (price, index) {
+            var td = document.createElement('td');
+            td.className = 'airline-compare__price';
+            td.setAttribute('data-label', result.airlines[index].short);
+            if (price === null) {
+              td.classList.add('is-none');
+              td.innerHTML = '<span class="airline-compare__price-value">—</span><small>Direkt uçuş yok</small>';
+            } else {
+              var value = document.createElement('span');
+              value.className = 'airline-compare__price-value';
+              value.textContent = formatPrice(price);
+              td.appendChild(value);
+              if (index === bestIndex) {
+                td.classList.add('is-best');
+                var tag = document.createElement('small');
+                tag.className = 'airline-compare__best-tag';
+                var other = row.prices[1 - index];
+                tag.textContent = other === price ? 'Aynı fiyat' : formatPrice(other - price) + ' daha ucuz';
+                td.appendChild(tag);
+              } else if (bestIndex >= 0) {
+                var spacer = document.createElement('small');
+                spacer.textContent = ' ';
+                spacer.className = 'airline-compare__best-tag airline-compare__best-tag--empty';
+                td.appendChild(spacer);
+              }
+            }
+            tr.appendChild(td);
+          });
+          body.appendChild(tr);
+        });
+      }
+
+      function scopedStats(airline, city, scope, pair) {
+        var routes = routesFor(airline, city).filter(function (route) { return inScope(route, scope); });
+        if (!routes.length) return null;
+        var shared = sharedRouteIds(pair, city, scope);
+        var series = monthlySeries(airline, city, scope, shared.length ? shared : null);
+        var best = routes.slice().sort(function (a, b) { return a.price - b.price; })[0];
+        return { airline: airline, avg: series[series.length - 1], best: best };
+      }
+
+      function bestOnRoute(airline, city, scope, routeId) {
+        var list = routesFor(airline, city).filter(function (route) { return inScope(route, scope) && (!routeId || route.id === routeId); });
+        return list.slice().sort(function (a, b) { return a.price - b.price; })[0] || null;
+      }
+
+      function renderDisclaimer(result) {
+        var host = q('[data-ac-disclaimer]');
+        var city = result.city;
+        host.innerHTML = '';
+        var intro = document.createElement('p');
+        intro.textContent = 'Hangi havayolunun daha ucuz olduğunu görmek için havayolunu ve kalkış şehrini seç; seçili şehirden kalkan rotalardaki aylık ortalama uçuş fiyatlarını karşılaştır, tabloda ise en popüler beş rotadaki güncel en düşük fiyatları incele ve sana en uygun bileti seç.';
+        host.appendChild(intro);
+
+        var body = document.createElement('p');
+        var sentences = [];
+        if (result.series.length === 2) {
+          var avgs = result.series.map(function (line) { return Math.round(line.values.reduce(function (a, b) { return a + b; }, 0) / line.values.length); });
+          var w = avgs[0] <= avgs[1] ? 0 : 1, l = 1 - w;
+          var pct = Math.round((1 - avgs[w] / avgs[l]) * 100);
+          var win = result.series[w].airline, lose = result.series[l].airline;
+          sentences.push('Şu an ' + city.name + ' çıkışlı' + (SCOPE_LABEL[state.scope] ? ' ' + SCOPE_LABEL[state.scope] : '') + ' uçuşlarda ' + win.name + ', son 12 ayda ortalama ' + formatPrice(avgs[w]) + ' ile ' + genitiveFrom(lose.name) + ' (' + formatPrice(avgs[l]) + ') ortalama %' + pct + ' daha ucuz uçak bileti sunuyor.');
+          var summary = summarize(result.series);
+          sentences.push('En düşük fiyatlı uçuş ' + months[summary.min.index].long.split(' ')[0] + ' ayında ' + formatPrice(summary.min.value) + ' olarak görüldü.');
+          [['dom', 'Yurt içinde en uygun bilet '], ['intl', 'Yurt dışı rotaları arasında ise ']].forEach(function (pair) {
+            var best = bestOnRoute(win, city, pair[0]);
+            if (!best) { sentences.push(pair[1].replace(/ en uygun bilet $| ise $/, '') + ' ' + win.short + ' ile ' + ablative(city.name) + ' direkt uçuş bulunmuyor.'); return; }
+            var other = bestOnRoute(lose, city, pair[0], best.id);
+            var text = pair[1] + best.name + ' hattında ' + win.short + ' ile ' + formatPrice(best.price) + '’den';
+            text += other ? ', ' + lose.short + ' ile ' + formatPrice(other.price) + '’den başlıyor.' : ' başlıyor; ' + lose.short + ' bu hatta uçmuyor.';
+            sentences.push(text);
+          });
+        } else if (result.series.length === 1) {
+          var only = result.series[0];
+          var avg = Math.round(only.values.reduce(function (a, b) { return a + b; }, 0) / only.values.length);
+          var missing = result.airlines.filter(function (a) { return a !== only.airline; })[0];
+          sentences.push('Şu an ' + city.name + ' çıkışlı uçuşlarda yalnızca ' + only.airline.name + ' verisi var; son 12 ayda ortalama ' + formatPrice(avg) + '. ' + missing.short + ' bu şehirden bu rota tipinde uçmuyor.');
+          var bd = bestOnRoute(only.airline, city, 'dom'), bi = bestOnRoute(only.airline, city, 'intl');
+          if (bd) sentences.push('Yurt içinde en uygun bilet ' + bd.name + ' hattında ' + formatPrice(bd.price) + '’den başlıyor.');
+          if (bi) sentences.push('Yurt dışında ise ' + bi.name + ' için ' + formatPrice(bi.price) + '’den başlayan seçenekler öne çıkıyor.');
+        } else {
+          sentences.push('Seçili havayollarının ' + ablative(city.name) + ' bu rota tipinde direkt uçuşu bulunmuyor; farklı bir şehir veya rota tipi seç.');
+        }
+        sentences.push('Fiyatlar kişi başı tek yön ve vergiler dahil olup ' + data.updated + ' itibarıyla güncellendi.');
+        body.textContent = sentences.join(' ');
+        host.appendChild(body);
+      }
+
+      function genitiveFrom(name) {
+        if (/lar\u0131$/.test(name)) return name + '\u2019ndan';
+        if (/leri$/.test(name)) return name + '\u2019nden';
+        return ablative(name);
+      }
+
+      function renderMeta(result) {
+        q('[data-ac-period]').textContent = months[0].long + ' – ' + months[months.length - 1].long;
+        var basis = result.shared ? 'iki havayolunun ortak ' + result.shared + ' rotasında' : 'her havayolunun kendi rotalarında';
+        q('[data-ac-metric]').textContent = 'Kişi başı ortalama tek yön fiyat · ' + basis;
+        q('[data-ac-updated]').textContent = data.updated;
+      }
+
+      function update() {
+        current = build();
+        var summary = current.series.length ? summarize(current.series) : null;
+        chartHost.classList.add('is-updating');
+        renderPair(current);
+        renderLead(current);
+        renderLegend(current);
+        renderChart(current, summary);
+        renderTable(current);
+        renderDisclaimer(current);
+        renderMeta(current);
+        window.requestAnimationFrame(function () { chartHost.classList.remove('is-updating'); });
+      }
+
+      /* ---------- wire up ---------- */
+      root.querySelectorAll('[data-ac-picker]').forEach(createPicker);
+      ['airline1', 'airline2', 'city'].forEach(paintPicker);
+      scopeButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          state.scope = button.getAttribute('data-ac-scope');
+          scopeButtons.forEach(function (other) { other.setAttribute('aria-pressed', other === button ? 'true' : 'false'); });
+          update();
+        });
+      });
+      q('[data-ac-swap]').addEventListener('click', function () {
+        var first = state.airline1;
+        state.airline1 = state.airline2;
+        state.airline2 = first;
+        paintPicker('airline1');
+        paintPicker('airline2');
+        update();
+      });
+      window.addEventListener('resize', function () {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(function () {
+          if (!current) return;
+          var summary = current.series.length ? summarize(current.series) : null;
+          renderChart(current, summary);
+        }, 120);
+      });
+
+      resolveScope();
+      update();
+    }());
+  </script>
+</section>
+>>>>>>> Stashed changes
 <div class="mobileAppLanding">
 	<div class="row homepageMobileArea mx-0 carFromArea">
    		<div class="col-md-3 hpMobileImageArea">
