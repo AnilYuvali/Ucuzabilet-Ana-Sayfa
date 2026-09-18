@@ -327,7 +327,7 @@
 			<script>
 	  var userModel = ``;
 	</script>
-      <link rel="stylesheet" href="header-overrides.css?v=59">
+      <link rel="stylesheet" href="header-overrides.css?v=60">
 </head><body>
 
 
@@ -6443,16 +6443,28 @@
           return;
         }
         parts.sort(function (a, b) { return a.route.price - b.route.price; });
+        function cheapestMonth(airline) {
+          var line = result.series.filter(function (l) { return l.airline === airline; })[0];
+          if (!line) return null;
+          var best = 0;
+          line.values.forEach(function (v, i) { if (v < line.values[best]) best = i; });
+          return months[best].long.split(' ')[0];
+        }
         parts.forEach(function (part, index) {
           var strong = document.createElement('strong');
           strong.textContent = part.airline.short;
           host.appendChild(strong);
-          host.appendChild(document.createTextNode(' ile ' + result.city.name + ' - ' + part.route.target.name + ' uçuşunu '));
+          var month = cheapestMonth(part.airline);
+          var sameRoute = index > 0 && parts[0].route.id === part.route.id;
+          var text = index === 0
+            ? ' ile ' + result.city.name + ' - ' + part.route.target.name + ' uçuşu en ucuz ' + (month ? month + ' ayında ' : '')
+            : ' ile ise ' + (sameRoute ? '' : result.city.name + ' - ' + part.route.target.name + ' uçuşu ') + (month ? month + ' ayında ' : '');
+          host.appendChild(document.createTextNode(text));
           var price = document.createElement('b');
           price.className = 'airline-compare__lead-price';
           price.textContent = formatPrice(part.route.price);
           host.appendChild(price);
-          host.appendChild(document.createTextNode(index < parts.length - 1 ? ', ' : ' üzerinden karşılaştır.'));
+          host.appendChild(document.createTextNode(index < parts.length - 1 ? ', ' : '.'));
         });
         if (parts.length === 1) {
           var missing = result.airlines.filter(function (airline) { return airline !== parts[0].airline; })[0];
