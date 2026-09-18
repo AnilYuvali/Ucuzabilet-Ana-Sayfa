@@ -327,12 +327,7 @@
 			<script>
 	  var userModel = ``;
 	</script>
-<<<<<<< Updated upstream
-      <link rel="stylesheet" href="header-overrides.css?v=46">
-      <link rel="stylesheet" href="airline-comparison.css?v=5">
-=======
-      <link rel="stylesheet" href="header-overrides.css?v=56">
->>>>>>> Stashed changes
+      <link rel="stylesheet" href="header-overrides.css?v=57">
 </head><body>
 
 
@@ -5824,40 +5819,6 @@
     }());
   </script>
 </section>
-<<<<<<< Updated upstream
-
-<section class="cheap-flights airline-compare" id="airline-price-comparison" aria-labelledby="airline-compare-title">
-  <header class="cheap-flights__header">
-    <span class="cheap-flights__eyebrow">HAVAYOLLARINI KARŞILAŞTIR</span>
-    <h3 id="airline-compare-title">Hangi Havayolu Daha Ucuz Uçak Bileti Sağlıyor?</h3>
-    <p>İki havayolu seçin, şehrinizden uçuşların aylık fiyatlarını ve popüler rotalarını karşılaştırın.</p>
-  </header>
-  <div class="ac-filters" aria-label="Havayolu karşılaştırma seçimleri"></div>
-  <p class="ac-recommendation" aria-live="polite" aria-atomic="true"></p>
-  <div class="flight-price-compare__panel">
-    <div class="flight-price-compare__panel-header">
-      <div><strong class="ac-chart-title"></strong><span class="ac-chart-subtitle">Aylık ortalama bilet fiyatı · Tek yön / kişi</span></div>
-      <div class="flight-price-compare__meta"><strong class="ac-period"></strong><span>Son tamamlanan 12 ay</span></div>
-    </div>
-    <ul class="flight-price-compare__legend ac-legend" aria-label="Karşılaştırılan havayolları"></ul>
-    <p class="ac-scroll-hint">Tüm ayları görmek için yana kaydırın.</p>
-    <div class="ac-chart-scroll" tabindex="0" aria-label="Aylık fiyat grafiği; tüm aylar için yatay kaydırın">
-      <div class="flight-price-compare__chart ac-chart"><div class="flight-price-compare__tooltip ac-tooltip" role="status" hidden></div></div>
-    </div>
-    <p class="flight-price-compare__footnote ac-chart-note">Örnek fiyatlar · Gerçek geçmiş satış verisi değildir. Aylara dokunarak veya odaklanarak iki fiyatı karşılaştırın.</p>
-  </div>
-  <div class="ac-table-heading"><h4>Popüler rotalarda fiyat karşılaştırması</h4><span>5 rota · Tek yön / kişi</span></div>
-  <div class="ac-table-scroll" tabindex="0" aria-label="Popüler uçuşların fiyat tablosu">
-    <table class="ac-table"><caption class="sr-only">Seçilen şehir ve havayolları için popüler uçuşlar</caption><thead></thead><tbody></tbody></table>
-  </div>
-  <div class="live-deals__disclaimer"><span class="live-deals__disclaimer-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="4.9" r=".9" fill="currentColor"/></svg></span><p class="ac-disclaimer">Hangi havayolunun daha ucuz olduğunu görmek için havayolunu ve kalkış şehrini seç; seçili şehirden kalkan rotalardaki aylık ortalama uçuş fiyatları karşılaştır, tabloda ise en popüler beş rotadaki güncel en düşük fiyatları incele ve sana en uygun bileti seç.
-
-Şu an İstanbul çıkışlı uçuşlarda Pegasus, son 12 ayda ortalama 1.599 TL ile Türk Hava Yolları'ndan (1.776 TL) ortalama %11 daha ucuz uçak bileti sunuyor. En düşük fiyatlı uçuş Kasım ayında 1.249 TL olarak görüldü. Yurt içinde en uygun bilet İstanbul - Ankara hattında Pegasus ile 999 TL'den, THY ile 1.139 TL'den başlıyor. Yurt dışında rotaları arasında ise İstanbul - Berlin için Pegasus 3000 TL'den, THY ise 3500 TL'den başlayan seçenekler ile öne çıkıyor.</p></div>
-  <noscript><p>Havayolu karşılaştırmasını kullanmak için JavaScript’i etkinleştirin.</p></noscript>
-</section>
-<script src="airline-comparison-data.js?v=2"></script>
-<script src="airline-comparison.js?v=4"></script>
-=======
 <section class="airline-compare" id="airline-price-compare" aria-labelledby="airline-price-compare-title">
   <div class="airline-compare__header">
     <span class="airline-compare__eyebrow">Havayolu Fiyatlarını Karşılaştır</span>
@@ -6463,7 +6424,7 @@
           var verdict = document.createElement('span');
           verdict.className = 'airline-compare__verdict';
           verdict.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-          verdict.appendChild(document.createTextNode(cheaper.airline.short + ' son 12 ayın ' + ORDINAL[count] + ' daha ucuz' + (pct ? ' · ort. %' + pct : '')));
+          verdict.appendChild(document.createTextNode(cheaper.airline.short + ' son 12 ayın ortalamasında %' + pct + ' daha ucuz.'));
           host.appendChild(verdict);
         }
       }
@@ -6885,7 +6846,6 @@
     }());
   </script>
 </section>
->>>>>>> Stashed changes
 <div class="mobileAppLanding">
 	<div class="row homepageMobileArea mx-0 carFromArea">
    		<div class="col-md-3 hpMobileImageArea">
